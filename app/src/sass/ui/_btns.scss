@@ -1,0 +1,46 @@
+button,
+.btn,
+input[type="submit"] {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  font-family: $base-font;
+  transition: all $base-duration $base-timing;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-main {
+  @extend .btn;
+  background-color: #78859d;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  &:hover {
+    color: #fff;
+    background-color: rgba($color: #78859d, $alpha: 0.8);
+  }
+}
+.btn-white-border {
+  @extend .btn;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  &:hover {
+    opacity: 0.8;
+  }
+}

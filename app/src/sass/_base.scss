@@ -1,0 +1,17 @@
+// IMPORT SECTION
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/nouislider/dist/nouislider";
+@import "vars";
+@import "fonts";
+@import "config";
+@import "./ui/layout_ui";
+@import "./components/layout_components";
+@import "./pages/layout_pages";
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+@import "node_modules/@fancyapps/fancybox/dist/jquery.fancybox";

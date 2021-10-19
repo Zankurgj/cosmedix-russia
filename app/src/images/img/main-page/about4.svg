@@ -1,0 +1,31 @@
+<svg width="118" height="134" viewBox="0 0 118 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_703:2159)">
+<path d="M58.5715 127.948L4 96.5063V33.4419L58.5715 2L113.143 33.4419V96.5063L58.5715 127.948ZM5.44558 95.6028L58.5715 126.322L111.697 95.6028V34.3454L58.5715 3.62629L5.44558 34.3454V95.6028Z" fill="url(#paint0_angular_703:2159)"/>
+</g>
+<path d="M68.3384 38L29.072 61.536L29.5099 62.2666L68.7763 38.7305L68.3384 38Z" fill="#78859D" stroke="#78859D" stroke-width="2"/>
+<path d="M68.2664 47.9952L29 71.5312L29.4379 72.2618L68.7043 48.7258L68.2664 47.9952Z" fill="#78859D" stroke="#78859D" stroke-width="2"/>
+<path d="M85.1779 48.031L47.7416 69.4225L48.1642 70.162L85.6004 48.7705L85.1779 48.031Z" fill="#78859D" stroke="#78859D" stroke-width="2"/>
+<path d="M81.4506 61.3106L42.1842 84.8467L42.6221 85.5772L81.8885 62.0412L81.4506 61.3106Z" fill="#78859D" stroke="#78859D" stroke-width="2"/>
+<path d="M81.324 71.2143L42.0576 94.7504L42.4955 95.4809L81.7619 71.9449L81.324 71.2143Z" fill="#78859D" stroke="#78859D" stroke-width="2"/>
+<path d="M94.2549 74.6926L58.2047 96.1407L58.6402 96.8727L94.6904 75.4246L94.2549 74.6926Z" fill="#78859D" stroke="#78859D" stroke-width="2"/>
+<defs>
+<filter id="filter0_d_703:2159" x="0" y="0" width="117.143" height="133.948" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_703:2159"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_703:2159" result="shape"/>
+</filter>
+<radialGradient id="paint0_angular_703:2159" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(142.11 103.701) rotate(149.443) scale(96.7104 138.926)">
+<stop offset="0.0112334" stop-color="#E8EACD"/>
+<stop offset="0.0701059" stop-color="#D1CDD5"/>
+<stop offset="0.178522" stop-color="#B8E4D8"/>
+<stop offset="0.240926" stop-color="#B9DAE5"/>
+<stop offset="0.311261" stop-color="#BBCDF6"/>
+<stop offset="0.800112" stop-color="#DCCFDF"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,0 +1,42 @@
+<header class="main_header">
+    <div class="main_header__top">
+        <div class="c-container c-container_main_header_top">
+            <button class="main_header__top_btn main_header__top_btn_search">
+                <span class="visually-hidden">Поиск</span>
+            </button>
+            <button class="main_header__top_btn main_header__top_btn_lk">
+                <span class="visually-hidden">Личный кабинет</span>
+            </button>
+            <button class="main_header__top_btn main_header__top_btn_basket">
+                <span class="visually-hidden">Корзина</span>
+            </button>
+        </div>
+    </div>
+    <div class="main_header__bottom">
+        <div class="c-container c-container_main_header">
+            <a href="/" class="main_header__logo">
+                <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+            </a>
+            <nav class="main_header__nav">
+                <ul class="main_header__list">
+                    {% set headerNav = [
+                    'Главная',
+                    'АКЦИИ',
+                    'Новинки',
+                    'Бестселлеры',
+                    'КАТАЛОГ ПРОДУКТОВ',
+                    'Профессионалам',
+                    'Адреса магазинов &салонов',
+                    'НАШ БЛОГ'
+                    ] %}
+                    {% for item in headerNav %}
+                    <li class="main_header__list-item">
+                        <a href="#"
+                            class="main_header__nav-item {%if loop.index == 6%}main_header__list-item_active {%endif%}">{{item}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
