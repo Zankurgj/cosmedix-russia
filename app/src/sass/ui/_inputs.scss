@@ -1,0 +1,38 @@
+.base-radio-input {
+  @extend .visually-hidden;
+  &:checked + .basket__item-radio-fake {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+.basket__item-radio-fake {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #746f6f;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #746f6f;
+    opacity: 0;
+    transition: opacity $base-timing $base-duration;
+  }
+}
+
+.base-text-input {
+  display: block;
+  width: 100%;
+  padding: 17px 24px 15px 24px;
+  border: 1px solid #78859d;
+  font-size: 18px;
+  line-height: 20px;
+  color: #78859d;
+}

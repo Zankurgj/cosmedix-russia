@@ -1,0 +1,48 @@
+<div class="range-slider-wrapper">
+    <div class="range-slider-inputs">
+        <label class="range-slider-input-wrapper">
+            <span class="visually-hidden">Стартовое значение</span>
+            <input class="range-slider-input js--catalog-range-start" type="number">
+        </label>
+        <label class="range-slider-input-wrapper">
+            <span class="visually-hidden">Конечное значение</span>
+            <input class="range-slider-input js--catalog-range-stop" type="number">
+        </label>
+    </div>
+
+    <div class="range-slider js--catalog-range"></div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var slider = document.querySelector(".js--catalog-range");
+        var startRangeInput = document.querySelector(".js--catalog-range-start");
+        var stopRangeInput = document.querySelector(".js--catalog-range-stop");
+        var minVal = 0;
+        var maxVal = 8999;
+        noUiSlider.create(slider, {
+            start: [999, 4999],
+            connect: true,
+            range: {
+                min: minVal,
+                max: maxVal,
+            },
+        });
+
+        slider.noUiSlider.on("update", function (values, handle) {
+            var value = Math.round(values[handle]);
+
+            if (handle) {
+                stopRangeInput.value = value;
+            } else {
+                startRangeInput.value = value;
+            }
+        });
+        startRangeInput.addEventListener("change", function () {
+            slider.noUiSlider.set([this.value, null]);
+        });
+
+        stopRangeInput.addEventListener("change", function () {
+            slider.noUiSlider.set([null, this.value]);
+        });
+    });
+</script>

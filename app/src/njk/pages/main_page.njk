@@ -1,235 +1,266 @@
 {% set pageTitle = 'Главная страница' %}
 {% extends "app/src/njk/layout/index.njk" %}
 {% block content %}
-<section class="mp-slider-section">
-    <div class="mp-slider js--mp-top-slider">
-        {% for i in range(0, 4) %}
-        <div class="mp-slide">
-            <div class="mp-slide__inner" style="background-image:url('../images/img/main-page/top-slider-img.jpg')">
-                <div class="mp-slide__text-inner">
-                    <div class="c-container mp-slide__container">
-                        <p class="mp-slide__text mp-slide__text_bold">Натуральное <br> превосходство — </p>
-                        <p class="mp-slide__text">главное внутри</p>
-                        <a href="#" class="btn-main btn-main_mp-slide">В каталог</a>
+<div class="main-page-container">
+    <section class="mp-slider-section">
+        <div class="mp-slider js--mp-top-slider">
+            {% for i in range(0, 4) %}
+            <div class="mp-slide">
+                <div class="mp-slide__inner">
+                    <div class="mp-slide__img-wrapper">
+                        <img src="../images/img/main-page/top-slider-img.jpg" alt="Продукция космедикс"
+                            class="mp-slide__img">
+                    </div>
+                    <div class="mp-slide__text-inner">
+                        <div class="c-container mp-slide__container">
+                            <p class="mp-slide__text mp-slide__text_bold">Натуральное <br> превосходство — </p>
+                            <p class="mp-slide__text">главное внутри</p>
+                            <a href="#" class="btn-main btn-main_mp-slide">В каталог</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="mp-about-section">
+        <img src="../images/img/main-page/mp-bg1.png" alt="Фон" class="mp-about__img" aria-hidden="true">
+        <div class="c-container c-container_mp-about">
+            <h1 class="base-page-title base-page-title_mp-about">COSMEDIX. НА ШАГ ВПЕРЕДИ!</h1>
+            <p class="mp-about__text">COSMEDIX – американский бренд космецевтики, основанный в 1999 году в штате
+                Атланта.
+                На сегодняшний день – это единственный бренд, которому удалось создать высокоэффективные средства с
+                быстрым
+                результатом без побочных эффектов на коже. <br>
+                COSMEDIX производит запатентованные рецептурные системы, которые успешно внедряет в свои продуктовые
+                линии.
+                Каждая линия бренда  уникальна и основана на изобретениях и новейших технологиях, аналогов которых нет в
+                мире. <br>
+                Благодаря удачному воплощению высоких концентрации активных веществ и мягкости воздействия на кожу,
+                позволило бренду создать уникальную линию продуктов домашнего ухода , которая может использоваться без
+                специальных назначений косметолога, а также получить признание ведущих косметологов мира.
+                Препараты Cosmedix активно используют и рекоммендуют косметологи Голливуда, а мировые звезды выбирают
+                бренд
+                для ежедневного ухода за лицом и телом.
+            </p>
+            <div class="mp-about__items-inner">
+                <div class="c-row c-row_mp-about base-slider-arrow js--mp-mobile-slider">
+                    <div class="mp-about__item-col">
+                        {% set aboutItems1 = [
+                        {
+                        img: '../images/img/main-page/about1.png',
+                        title: 'CLEAN. Чистота ингредиентов и натуральность',
+                        text: 'Натуральные и растительные ингредиенты;
+                        Мягкие, но эффективные ана-кислоты;
+                        Инкапсулированный витамин А;
+                        Омолаживающие пептиды;
+                        Мощные антиоксиданты;
+                        Эфирные масла.'
+                        },
+                        {
+                        img: '../images/img/main-page/about2.png',
+                        title: 'CLINICAL. Доказанная эффективность',
+                        text: 'формулы cosmedix эффективно работают даже с самыми серьёзными проблемами кожи.'
+                        },
+                        {
+                        img: '../images/img/main-page/about3.png',
+                        title: 'ТЕХНОЛОГИЯ ХИРАЛЬНОЙ КОРРЕКЦИИ',
+                        text: 'Молекулы входящие в состав COSMEDIX лучше распознаются рецепторами кожи, как следствие,
+                        более
+                        эффективны.'
+                        }
+                        ] %}
+                        {% for item in aboutItems1%}
+                        <div class="mp-about__item">
+                            <div class="mp-about__item-col-img">
+                                <img src="{{item.img}}" alt="Продукция" class="mp-about__item-img">
+                                <p class="mp-about__item-title">{{item.title|safe}}</p>
+                            </div>
+                            <div class="mp-about__item-col-text">
+                                <p class="mp-about__item-text">{{item.text}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="mp-about__item-col">
+                        {% set aboutItems2 = [
+                        {
+                        img: '../images/img/main-page/about4.png',
+                        title: 'КОМПЛЕКС AGP RETINOL',
+                        text: 'позволяет осуществлять быструю доставку высокодозированного ретинола без риска
+                        воспалительных
+                        реакций.'
+                        },
+                        {
+                        img: '../images/img/main-page/about5.png',
+                        title: 'СОБСТВЕННАЯ ЗАПАТЕНТОВАННАЯ ФОРМУЛА LG-RETINEX',
+                        text: 'Содержит сразу два высокодозированных ретинойда: ретинол и ретиналь . это инновационный
+                        комплекс
+                        – аналог омолаживающих рецептурных препаратов , обладающий гипоаллергенными свойствами.'
+                        },
+                        {
+                        img: '../images/img/main-page/about6.png',
+                        title: 'LUXURIOUS. Роскошь текстур',
+                        text: 'СOSMEDIX уникален своим разнообразием ярких и насыщенных палитр. Насыщенная текстура
+                        средств
+                        приятно взаимодействует с кожей, превращая повседневный уход в несравнимое удовольствие.'
+                        }
+                        ] %}
+                        {% for item in aboutItems2%}
+                        <div class="mp-about__item">
+                            <div class="mp-about__item-col-img">
+                                <img src="{{item.img}}" alt="Продукция" class="mp-about__item-img">
+                                <p class="mp-about__item-title">{{item.title|safe}}</p>
+                            </div>
+                            <div class="mp-about__item-col-text">
+                                <p class="mp-about__item-text">{{item.text}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
-        {% endfor %}
-    </div>
-</section>
-<section class="mp-about-section">
-    <img src="../images/img/main-page/mp-bg1.png" alt="Фон" class="mp-about__img" aria-hidden="true">
-    <div class="c-container c-container_mp-about">
-        <h1 class="base-page-title base-page-title_mp-about">COSMEDIX. НА ШАГ ВПЕРЕДИ!</h1>
-        <p class="mp-about__text">COSMEDIX – американский бренд космецевтики, основанный в 1999 году в штате Атланта.
-            На сегодняшний день – это единственный бренд, которому удалось создать высокоэффективные средства с быстрым
-            результатом без побочных эффектов на коже. <br>
-            COSMEDIX производит запатентованные рецептурные системы, которые успешно внедряет в свои продуктовые линии.
-            Каждая линия бренда  уникальна и основана на изобретениях и новейших технологиях, аналогов которых нет в
-            мире. <br>
-            Благодаря удачному воплощению высоких концентрации активных веществ и мягкости воздействия на кожу,
-            позволило бренду создать уникальную линию продуктов домашнего ухода , которая может использоваться без
-            специальных назначений косметолога, а также получить признание ведущих косметологов мира.
-            Препараты Cosmedix активно используют и рекоммендуют косметологи Голливуда, а мировые звезды выбирают бренд
-            для ежедневного ухода за лицом и телом.
-        </p>
-        <div class="mp-about__items-inner">
-            <div class="c-row">
-                {% set aboutItems = [
+    </section>
+    <section class="mp-bestsellers-section">
+        <div class="c-container mp-bestsellers-container">
+            <h1 class="base-page-title mp-bestsellers__mobile-title">Bestsellers</h1>
+            <div class="c-row mp-bestsellers__row mp-bestsellers__slider base-slider-arrow js--mp-mobile-slider">
+                <div class="mp-bestsellers__col mp-bestsellers__col_small">
+                    <div class="mp-bestsellers__item-small">
+                        <div class="mp-bestsellers__item-img-wrapper">
+                            <img src="../images/img/main-page/bestsellers1.png" alt="Lumi CRYSTAL"
+                                class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                        </div>
+                        <p class="mp-bestsellers__item-title">Lumi CRYSTAL</p>
+                        <p class="mp-bestsellers__item-text">Притягательная сила ваших губ</p>
+                        <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                    </div>
+                    <div class="mp-bestsellers__item-small">
+                        <div class="mp-bestsellers__item-img-wrapper">
+                            <img src="../images/img/main-page/bestsellers2.png" alt="Purity Balance"
+                                class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                        </div>
+                        <p class="mp-bestsellers__item-title">Purity Balance</p>
+                        <p class="mp-bestsellers__item-text">Чистая кожа
+                            с
+                            максимальным
+                            увлажнением
+                        </p>
+                        <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                    </div>
+                </div>
+                <div class="mp-bestsellers__col mp-bestsellers__col_big">
+                    <div class="mp-bestsellers__item-big">
+                        <div class="base-page-title mp-bestsellers__page-title">Bestsellers </div>
+                        <div class="mp-bestsellers_outer-inner">
+                            <p class="mp-bestsellers__item-title">Opti CRYSTAL</p>
+                            <p class="mp-bestsellers__item-text">Красота <br>
+                                и молодость ваших глаз
+                            </p>
+                            <a href="#"
+                                class="btn-main mp-bestsellers__item-btn mp-bestsellers__item-btn_bottom">подробнее...</a>
+                        </div>
+                        <img src="../images/img/main-page/bestsellers3.png" alt="Opti CRYSTAL"
+                            class="mp-bestsellers__item-img mp-bestsellers__item-img_full">
+                    </div>
+                </div>
+                <div class="mp-bestsellers__col mp-bestsellers__col_small">
+                    <div class="mp-bestsellers__item-small">
+                        <div class="mp-bestsellers__item-img-wrapper">
+                            <img src="../images/img/main-page/bestsellers4.png" alt="ENHANCE"
+                                class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                        </div>
+                        <p class="mp-bestsellers__item-title">ENHANCE</p>
+                        <p class="mp-bestsellers__item-text">Объем и совершенство
+                            ваших губ</p>
+                        <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                    </div>
+                    <div class="mp-bestsellers__item-small">
+                        <div class="mp-bestsellers__item-img-wrapper">
+                            <img src="../images/img/main-page/bestsellers5.png" alt="Shineless"
+                                class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                        </div>
+                        <p class="mp-bestsellers__item-title">Shineless</p>
+                        <p class="mp-bestsellers__item-text">Ровная кожа без
+                            жирного блеска
+                        </p>
+                        <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mp-stars-section">
+        <div class="c-container c-container_mp-stars">
+            <h1 class="base-page-title base-page-title_mp-stars">Звездный выбор </h1>
+        </div>
+        <div class="mp-stars__slider-wrapper">
+            <div class="mp-stars__slider js--mp-stars-slider">
+                {% set starSliderData = [
                 {
-                img: '../images/img/main-page/about1.png',
-                title: 'CLEAN. <br> Чистота <br> ингредиентов <br> и натуральность',
-                text: 'Натуральные и растительные ингредиенты;
-                Мягкие, но эффективные ана-кислоты;
-                Инкапсулированный витамин А;
-                Омолаживающие пептиды;
-                Мощные антиоксиданты;
-                Эфирные масла.'
+                img: '../images/img/main-page/star-img1.png',
+                productImg: '../images/img/main-page/star-product.png',
+                title: 'Выбор Виктории Бэкхэм',
+                text: '<b>EYE GENIOUS</b> содержит гиалуроновую кислоту, пептиды и светоотражающие частицы, которые
+                делают
+                глаза более бодрыми и свежими ',
+                color: 'pink'
                 },
                 {
-                img: '../images/img/main-page/about2.png',
-                title: 'CLINICAL. <br> Доказанная <br> эффективность',
-                text: 'формулы cosmedix эффективно работают даже с самыми серьёзными проблемами кожи.'
+                img: '../images/img/main-page/star-img2.png',
+                productImg: '../images/img/main-page/star-product.png',
+                title: 'Выбор Деми Мур',
+                text: '<b>BENEFIT CLEAN</b> отлично подходит для моей чувствительной кожи',
+                color: 'blue'
                 },
                 {
-                img: '../images/img/main-page/about3.png',
-                title: 'ТЕХНОЛОГИЯ <br> ХИРАЛЬНОЙ <br> КОРРЕКЦИИ',
-                text: 'Молекулы входящие в состав COSMEDIX лучше распознаются рецепторами кожи, как следствие, более
-                эффективны.'
+                img: '../images/img/main-page/star-img3.png',
+                productImg: '../images/img/main-page/star-product.png',
+                title: 'Выбор Роузи Хантингтон –УАЙТЛИ',
+                text: 'Спрей с антиоксидантами для проблемной кожи <b>Mystic</b>',
+                color: 'gray'
                 },
                 {
-                img: '../images/img/main-page/about4.png',
-                title: 'КОМПЛЕКС <br> AGP RETINOL',
-                text: 'позволяет осуществлять быструю доставку высокодозированного ретинола без риска воспалительных
-                реакций.'
-                },
-                {
-                img: '../images/img/main-page/about5.png',
-                title: 'СОБСТВЕННАЯ <br> ЗАПАТЕНТОВАННАЯ <br> ФОРМУЛА <br> LG-RETINEX',
-                text: 'Содержит сразу два высокодозированных ретинойда: ретинол и ретиналь . это инновационный комплекс
-                – аналог омолаживающих рецептурных препаратов , обладающий гипоаллергенными свойствами.'
-                },
-                {
-                img: '../images/img/main-page/about6.png',
-                title: 'LUXURIOUS.<br> Роскошь текстур',
-                text: 'СOSMEDIX уникален своим разнообразием ярких и насыщенных палитр. Насыщенная текстура средств
-                приятно взаимодействует с кожей, превращая повседневный уход в несравнимое удовольствие.'
+                img: '../images/img/main-page/star-img4.png',
+                productImg: '../images/img/main-page/star-product.png',
+                title: 'Выбор Ким Карадашьян ',
+                text: '<b>Сыворотка Serum</b> 16 райский продукт. Сыворотка от cosmedix за одну ночь очистила поры.
+                Препарат
+                действительно работает',
+                color: 'green'
                 }
                 ] %}
-                {% for item in aboutItems%}
-                <div class="mp-about__item-col">
-                    <div class="mp-about__item">
-                        <div class="mp-about__item-col-img">
-                            <img src="{{item.img}}" alt="Продукция" class="mp-about__item-img">
-                            <p class="mp-about__item-title">{{item.title|safe}}</p>
+                {% for item in starSliderData %}
+                <div class="mp-stars__slide-wrapper">
+                    <div class="mp-stars__slide">
+                        <div class="mp-stars__slider-img-block">
+                            <img src="{{item.img}}" alt="Деми Мур" class="mp-stars__slider-img">
+                            <p class="mp-stars__slider-title">{{item.title}}</p>
+                            <img src="{{item.productImg}}" alt="Продукция" class="mp-stars__slider-img-product">
                         </div>
-                        <div class="mp-about__item-col-text">
-                            <p class="mp-about__item-text">{{item.text}}</p>
+                        <div class="mp-stars__slider-text-block mp-stars__slider-text-block_{{item.color}}">
+                            <p class="mp-stars__slider-text">
+                                {{item.text|safe}}
+                            </p>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
-    </div>
-</section>
-<section class="mp-bestsellers-section">
-    <div class="c-container mp-bestsellers-container">
-        <div class="c-row mp-bestsellers__row">
-            <div class="mp-bestsellers__col mp-bestsellers__col_small">
-                <div class="mp-bestsellers__item-small">
-                    <div class="mp-bestsellers__item-img-wrapper">
-                        <img src="../images/img/main-page/bestsellers1.png" alt="Lumi CRYSTAL"
-                            class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                    </div>
-                    <p class="mp-bestsellers__item-title">Lumi CRYSTAL</p>
-                    <p class="mp-bestsellers__item-text">Притягательная сила ваших губ</p>
-                    <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
-                </div>
-                <div class="mp-bestsellers__item-small">
-                    <div class="mp-bestsellers__item-img-wrapper">
-                        <img src="../images/img/main-page/bestsellers2.png" alt="Purity Balance"
-                            class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                    </div>
-                    <p class="mp-bestsellers__item-title">Purity Balance</p>
-                    <p class="mp-bestsellers__item-text">Чистая кожа
-                        с
-                        максимальным
-                        увлажнением
-                    </p>
-                    <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
-                </div>
-            </div>
-            <div class="mp-bestsellers__col mp-bestsellers__col_big">
-                <div class="mp-bestsellers__item-big">
-                    <div class="base-page-title mp-bestsellers__page-title">Bestsellers </div>
-                    <div class="mp-bestsellers_outer-inner">
-                        <p class="mp-bestsellers__item-title">Opti CRYSTAL</p>
-                        <p class="mp-bestsellers__item-text">Красота <br>
-                            и молодость ваших глаз
-                        </p>
-                        <a href="#"
-                            class="btn-main mp-bestsellers__item-btn mp-bestsellers__item-btn_bottom">подробнее...</a>
-                    </div>
-                    <img src="../images/img/main-page/bestsellers3.png" alt="Opti CRYSTAL"
-                        class="mp-bestsellers__item-img mp-bestsellers__item-img_full">
-                </div>
-            </div>
-            <div class="mp-bestsellers__col mp-bestsellers__col_small">
-                <div class="mp-bestsellers__item-small">
-                    <div class="mp-bestsellers__item-img-wrapper">
-                        <img src="../images/img/main-page/bestsellers4.png" alt="ENHANCE"
-                            class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                    </div>
-                    <p class="mp-bestsellers__item-title">ENHANCE</p>
-                    <p class="mp-bestsellers__item-text">Объем и совершенство
-                        ваших губ</p>
-                    <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
-                </div>
-                <div class="mp-bestsellers__item-small">
-                    <div class="mp-bestsellers__item-img-wrapper">
-                        <img src="../images/img/main-page/bestsellers5.png" alt="Shineless"
-                            class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                    </div>
-                    <p class="mp-bestsellers__item-title">Shineless</p>
-                    <p class="mp-bestsellers__item-text">Ровная кожа без
-                        жирного блеска
-                    </p>
-                    <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
-                </div>
-            </div>
+        <div class="c-container c-container_mp-stars">
+            <p class="mp-stars__text">Формулы COSMEDIX разработаны на основе чистых, натуральных ингредиентов
+                растительного
+                происхождения в комбинации с активными веществами фармакологического уровня эффективности.
+                Космецевтические продукты COSMEDIX позволяют избавиться от многих серьезных проблем с кожей у женщин и
+                мужчин различного возраста, благодаря хирально правильной коррекции и мощным активным ингредиентам.
+            </p>
         </div>
-    </div>
-</section>
-<section class="mp-stars-section">
-    <div class="c-container c-container_mp-stars">
-        <h1 class="base-page-title base-page-title_mp-stars">Звездный выбор </h1>
-    </div>
-    <div class="mp-stars__slider-wrapper">
-        <div class="mp-stars__slider js--mp-stars-slider">
-            {% set starSliderData = [
-            {
-            img: '../images/img/main-page/star-img1.png',
-            productImg: '../images/img/main-page/star-product.png',
-            title: 'Выбор Виктории Бэкхэм',
-            text: '<b>EYE GENIOUS</b> содержит гиалуроновую кислоту, пептиды и светоотражающие частицы, которые делают
-            глаза более бодрыми и свежими ',
-            color: 'pink'
-            },
-            {
-            img: '../images/img/main-page/star-img2.png',
-            productImg: '../images/img/main-page/star-product.png',
-            title: 'Выбор Деми Мур',
-            text: '<b>BENEFIT CLEAN</b> отлично подходит для моей чувствительной кожи',
-            color: 'blue'
-            },
-            {
-            img: '../images/img/main-page/star-img3.png',
-            productImg: '../images/img/main-page/star-product.png',
-            title: 'Выбор Роузи Хантингтон –УАЙТЛИ',
-            text: 'Спрей с антиоксидантами для проблемной кожи <b>Mystic</b>',
-            color: 'gray'
-            },
-            {
-            img: '../images/img/main-page/star-img4.png',
-            productImg: '../images/img/main-page/star-product.png',
-            title: 'Выбор Ким Карадашьян ',
-            text: '<b>Сыворотка Serum</b> 16 райский продукт. Сыворотка от cosmedix за одну ночь очистила поры. Препарат
-            действительно работает',
-            color: 'green'
-            }
-            ] %}
-            {% for item in starSliderData %}
-            <div class="mp-stars__slide-wrapper">
-                <div class="mp-stars__slide">
-                    <div class="mp-stars__slider-img-block">
-                        <img src="{{item.img}}" alt="Деми Мур" class="mp-stars__slider-img">
-                        <p class="mp-stars__slider-title">{{item.title}}</p>
-                        <img src="{{item.productImg}}" alt="Продукция" class="mp-stars__slider-img-product">
-                    </div>
-                    <div class="mp-stars__slider-text-block mp-stars__slider-text-block_{{item.color}}">
-                        <p class="mp-stars__slider-text">
-                            {{item.text|safe}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="c-container c-container_mp-stars">
-        <p class="mp-stars__text">Формулы COSMEDIX разработаны на основе чистых, натуральных ингредиентов растительного
-            происхождения в комбинации с активными веществами фармакологического уровня эффективности.
-            Космецевтические продукты COSMEDIX позволяют избавиться от многих серьезных проблем с кожей у женщин и
-            мужчин различного возраста, благодаря хирально правильной коррекции и мощным активным ингредиентам.
-        </p>
-    </div>
-</section>
-<section class="mp-feature-section">
-    <div class="c-container c-container_mp-feature">
-        <h1 class="base-page-title base-page-title_mp-feature">УНИКАЛЬНЫЕ АКТИВНЫЕ <br> КОМПОНЕНТЫ COSMEDIX: </h1>
-        <div class="c-row c-row_mp-feature">
+    </section>
+    <section class="mp-feature-section">
+        <div class="c-container c-container_mp-feature">
+            <h1 class="base-page-title base-page-title_mp-feature">УНИКАЛЬНЫЕ АКТИВНЫЕ <br> КОМПОНЕНТЫ COSMEDIX: </h1>
             {% set featureData = [
             {
             img: '../images/img/main-page/feature1.png',
@@ -264,9 +295,41 @@
             глубокие слои кожи.'
             }
             ] %}
-            {% for item in featureData %}
-            <div class="mp-feature-item-col">
-                <div class="mp-feature-item">
+            <div class="c-row c-row_mp-feature">
+                {% for item in featureData %}
+                <div class="mp-feature-item-col">
+                    <div class="mp-feature-item">
+                        <div class="mp-feature-item__left-side">
+                            <img src="{{item.img}}" alt="Продукция" class="mp-feature-item__img">
+                            <p class="mp-feature-item__title">{{item.title|safe}}</p>
+                        </div>
+                        <div class="mp-feature-item__right-side">
+                            <p class="mp-feature-item__text">{{item.text}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="mp-feature__mobile-slider base-slider-arrow js--mp-mobile-slider">
+                <div class="mp-feature__mobile-slide">
+                    {% for item in featureData %}
+                    {% if (loop.index <= 3) %} <div class="mp-feature-item mp-feature-item_mobile">
+                        <div class="mp-feature-item__left-side">
+                            <img src="{{item.img}}" alt="Продукция" class="mp-feature-item__img">
+                            <p class="mp-feature-item__title">{{item.title|safe}}</p>
+                        </div>
+                        <div class="mp-feature-item__right-side">
+                            <p class="mp-feature-item__text">{{item.text}}</p>
+                        </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="mp-feature__mobile-slide">
+                {% for item in featureData %}
+                {% if (loop.index > 3) %}
+                <div class="mp-feature-item mp-feature-item_mobile">
                     <div class="mp-feature-item__left-side">
                         <img src="{{item.img}}" alt="Продукция" class="mp-feature-item__img">
                         <p class="mp-feature-item__title">{{item.title|safe}}</p>
@@ -275,10 +338,11 @@
                         <p class="mp-feature-item__text">{{item.text}}</p>
                     </div>
                 </div>
+                {% endif %}
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    </div>
+</div>
 </section>
 <section class="mp-catalog-section">
     <div class="c-container c-container_mp-catalog">
@@ -317,7 +381,7 @@
 <section class="mp-blog-section">
     <div class="c-container">
         <h1 class="base-page-title base-page-title_mp-blog">наш блог</h1>
-        <div class="c-row c-row_mp-blog">
+        <div class="c-row c-row_mp-blog base-slider-arrow js--mp-mobile-slider">
             {% for i in range(0, 3) %}
             <div class="mp-blog__col">
                 <div class="mp-blog-item">
@@ -348,4 +412,5 @@
         </div>
     </div>
 </section>
+</div>
 {% endblock %}

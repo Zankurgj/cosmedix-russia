@@ -1,0 +1,183 @@
+{% set pageTitle = 'Тоник-мист с антиоксидантами Benefit Balance' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="basket-page-container">
+    <article class="basket-breadcrumbs">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Блог'],[' Корзина']]) }}
+        </div>
+    </article>
+    <section class="basket">
+        <div class="c-container">
+            <h1 class="base-page-title basket__title">корзина</h1>
+            <div class="c-row">
+                <div class="basket_col-left">
+                    {% for i in range(0, 3) %}
+                    <div class="basket__item">
+                        <button class="basket__item-delete">
+                            <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                        <div class="basket__item-first-col">
+                            <div class="basket__item-img-wrapper">
+                                <img src="../images/img/basket/basket.png" alt="BENEFIT BALANCE"
+                                    class="basket__item-img">
+                            </div>
+                            <div class="basket__item-title-col">
+                                <p class="basket__item-title">ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE</p>
+                            </div>
+                        </div>
+                        <div class="basket__item-second-col">
+                            <div class="basket__item-counter-col">
+                                <div class="basket__item-counter">
+                                    <span class="basket__item-counter__title">Кол-во</span>
+                                    {% from "app/src/njk/components/counter.njk" import counter %}
+                                    {{ counter(loop.index) }}
+                                </div>
+                            </div>
+                            <div class="basket__item-cost-col">
+                                <span class="basket__item-cost">3 864 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="basket__item">
+                        <button class="basket__item-delete">
+                            <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                        <div class="basket__item-first-col">
+                            <div class="basket__item-img-wrapper">
+                                <div class="basket__item-gift">
+                                    <img src="../images/img/basket/gift.png" alt="Illuminate & Lift"
+                                        class="basket__item-gift-img">
+                                    <span class="basket__item-gift-text">подарок</span>
+                                </div>
+                            </div>
+                            <div class="basket__item-title-col">
+                                <p class="basket__item-title">Крем для кожи шеи и декольте Illuminate & Lift (пробный
+                                    образец)
+                                </p>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize1"
+                                        checked>
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Крем для кожи шеи и декольте Illuminate & Lift
+                                        (пробный образец)</span>
+                                </label>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize1">
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Детокс-скраб Purity Detox (пробный
+                                        образец)</span>
+                                </label>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize1">
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Увлажняющий крем против жирного блеска для
+                                        проблемной кожи Shineless (пробный образец)</span>
+                                </label>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize1">
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Бустер-сыворотка для лица с гиалуроновой
+                                        кислотой Surge (пробный образец)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="basket__item-second-col">
+                            <div class="basket__item-counter-col">
+                                <div class="basket__item-counter">
+                                    <span class="basket__item-counter__title">Кол-во</span>
+                                    <input class="base-counter__input basket__item-counter-empty-input" type="number"
+                                        value="1" size="4" min="1" readonly>
+                                </div>
+                            </div>
+                            <div class="basket__item-cost-col">
+                                <span class="basket__item-cost">0 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__item">
+                        <button class="basket__item-delete">
+                            <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                        <div class="basket__item-first-col">
+                            <div class="basket__item-img-wrapper">
+                                <div class="basket__item-gift">
+                                    <img src="../images/img/basket/gift.png" alt="Illuminate & Lift"
+                                        class="basket__item-gift-img">
+                                    <span class="basket__item-gift-text">подарок</span>
+                                </div>
+                            </div>
+                            <div class="basket__item-title-col">
+                                <p class="basket__item-title">Крем для кожи шеи и декольте Illuminate & Lift (пробный
+                                    образец)
+                                </p>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize2"
+                                        checked>
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Крем для кожи шеи и декольте Illuminate & Lift
+                                        (пробный образец)</span>
+                                </label>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize2">
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Детокс-скраб Purity Detox (пробный
+                                        образец)</span>
+                                </label>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize2">
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Увлажняющий крем против жирного блеска для
+                                        проблемной кожи Shineless (пробный образец)</span>
+                                </label>
+                                <label class="basket__item-radio-label">
+                                    <input type="radio" class="basket__item-radio base-radio-input" name="prize2">
+                                    <span class="base-radio-fake basket__item-radio-fake"></span>
+                                    <span class="basket__item-radio-text">Бустер-сыворотка для лица с гиалуроновой
+                                        кислотой Surge (пробный образец)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="basket__item-second-col">
+                            <div class="basket__item-counter-col">
+                                <div class="basket__item-counter">
+                                    <span class="basket__item-counter__title">Кол-во</span>
+                                    <input class="base-counter__input basket__item-counter-empty-input" type="number"
+                                        value="1" size="4" min="1" readonly>
+                                </div>
+                            </div>
+                            <div class="basket__item-cost-col">
+                                <span class="basket__item-cost">0 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket_col-right">
+                    <label class="basket__code-input-label">
+                        <input type="text" class="base-text-input" placeholder="Промокод">
+                    </label>
+                    <button class="btn-main basket__code-btn">Примениить</button>
+                    <div class="basket__info">
+                        <div class="basket__info-item">
+                            <span class="basket__info-item-text">Стоимость товаров</span>
+                            <span class="basket__info-item-cost">3 864 ₽</span>
+                        </div>
+                        <div class="basket__info-item">
+                            <span class="basket__info-item-text">Скидка</span>
+                            <span class="basket__info-item-cost">0 ₽</span>
+                        </div>
+                        <div class="basket__info-item">
+                            <span class="basket__info-item-text">Итого</span>
+                            <span class="basket__info-item-cost">3 864 ₽</span>
+                        </div>
+                    </div>
+                    <button class="btn-main basket__info-btn">оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

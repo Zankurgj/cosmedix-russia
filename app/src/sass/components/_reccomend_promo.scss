@@ -1,0 +1,98 @@
+.reccomend-promo__slider {
+  .slick-track {
+    display: flex !important;
+  }
+  .slick-slide {
+    height: inherit !important;
+    > div {
+      height: 100%;
+    }
+  }
+}
+.reccomend-promo__slide {
+  height: 100%;
+}
+.reccomend-promo__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 236px;
+  padding-top: 20px;
+}
+.reccomend-promo__badge {
+  position: absolute;
+  top: -15px;
+  right: -40px;
+  width: 94px;
+  height: 112px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  background-image: url("../images/icons/star-badge.png");
+  z-index: 1;
+}
+.reccomend-promo__img-block {
+  position: relative;
+  margin: 0 auto;
+  width: 186px;
+  height: 186px;
+  margin-bottom: 14px;
+}
+.reccomend-promo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.reccomend-promo__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #78859d;
+}
+.reccomend-promo__text {
+  margin-bottom: 3px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+}
+.reccomend-promo__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 0 34px 0;
+}
+.reccomend-promo__cost {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 28px;
+  color: #000;
+}
+.reccomend-promo__stars {
+  display: flex;
+  justify-content: flex-end;
+}
+.reccomend-promo__star {
+  flex: 0 0 auto;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  background-image: url("../images/icons/star-icon.svg");
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.reccomend-promo__btn {
+  margin: 0 auto;
+  padding: 8px 0 10px;
+  max-width: 162px;
+  width: 100%;
+}

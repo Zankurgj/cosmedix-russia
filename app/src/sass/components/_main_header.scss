@@ -13,9 +13,15 @@
   width: 100%;
   height: 58px;
   background-color: #dee3ed;
+  @media all and (max-width: $mobile-bp) {
+    position: relative;
+    height: 50px;
+    background-color: #fff;
+  }
 }
 .c-container_main_header_top {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   width: 100%;
   height: 100%;
@@ -29,11 +35,55 @@
     opacity: 0.7;
   }
 }
+// SEACRH
+.main_header__search {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  max-width: 500px;
+  margin-right: 90px;
+  flex-grow: 1;
+  @media all and (max-width: $mobile-bp) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 41px;
+    background-color: rgba(156, 173, 204, 0.3);
+  }
+}
+.main_header__search-wrapper {
+  flex-grow: 1;
+  display: none;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  @media all and (max-width: $mobile-bp) {
+    display: flex;
+  }
+}
+.main_header__search-input {
+  width: 100%;
+  padding: 11px 10px 12px;
+  background-color: #fff;
+  border: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333;
+  @media all and (max-width: $mobile-bp) {
+    background-color: transparent;
+  }
+}
 .main_header__top_btn_search {
   background-image: url("../images/icons/header-search.svg");
   width: 30px;
-  margin-right: 90px;
+  @media all and (max-width: $mobile-bp) {
+    width: 48px;
+    background-position: left 4px center;
+  }
 }
+// BTNS
 .main_header__top_btn_lk {
   background-image: url("../images/icons/header-lk.svg");
   width: 40px;
@@ -42,9 +92,35 @@
   background-image: url("../images/icons/header-basket.svg");
   width: 40px;
 }
+// BOTTOM HEADER
+.main_header__bottom {
+  height: 98px;
+  @media all and (max-width: $mobile-bp) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 // LOGO
+.main_header__mobile-logo {
+  display: table;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main_header__mobile-logo-img {
+  display: none;
+  width: 173px;
+  height: 15px;
+  @media all and (max-width: $mobile-bp) {
+    display: block;
+  }
+}
 .main_header__logo {
-  display: block;
+  display: table;
   padding: 20px 0 0 10px;
 }
 .main_header__logo_img {
@@ -111,3 +187,4 @@
   letter-spacing: 0.2em;
   color: #000;
 }
+// MOBILE MENU BTN

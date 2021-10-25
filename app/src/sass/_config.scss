@@ -37,6 +37,9 @@ body {
   width: 100%;
   min-width: 0;
   flex-grow: 1;
+  @media all and (max-width: $mobile-bp) {
+    padding-top: 91px;
+  }
 }
 .c-container-fluid {
   width: 100%;
@@ -65,6 +68,11 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #78859d;
+  @media all and (max-width: $mobile-bp) {
+    text-align: left;
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 // HELP CLASSES

@@ -1,0 +1,117 @@
+{% set pageTitle = 'Каталог' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="catalog-page-container">
+    <article class="catalog-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Каталог']]) }}
+        </div>
+    </article>
+    <section class="catalog-section">
+        <div class="c-container">
+            <div class="c-row">
+                <div class="catalog__sidebar-col">
+                    <div class="base-sidebar catalog__sidebar">
+                        <div class="base-sidebar__item-wrapper">
+                            <p class="base-sidebar__title">КАТЕГОРИИ</p>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Очищение и увлажнение</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Сыворотки</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Маски</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Уход за телом</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Уход для глаз и губ</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Солнцезащитные средства</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Наборы</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Аксессуары </span>
+                            </div>
+                        </div>
+                        <div class="base-sidebar__item-wrapper">
+                            <p class="base-sidebar__title">проблема</p>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Акне</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Морщины</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Пигментация</span>
+                            </div>
+                        </div>
+                        <div class="base-sidebar__item-wrapper">
+                            <p class="base-sidebar__title">Цена продажи</p>
+                            {% include "app/src/njk/components/range_slider.njk" %}
+                        </div>
+                        <div class="base-sidebar__item-wrapper">
+                            <button class="btn-main base-sidebar__search-btn" type="button">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn">Сбросить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__product-col">
+                    <div class="c-row">
+                        {% for i in range(0, 9) %}
+                        <div class="catalog__product-item-col">
+                            {% set catalogItemData = {
+                            img: '../images/img/catalog/catalog-item.png',
+                            starBadge: true,
+                            title: 'СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.',
+                            text: 'Настоящее спасение от красноты и раздражения',
+                            stars: 4,
+                            cost: '5 288'
+                            }%}
+                            {% from "app/src/njk/components/catalog_item.njk" import catalogItem %}
+                            {{ catalogItem(catalogItemData) }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="catalog-promo">
+        <div class="c-container">
+            <h1 class="base-page-title catalog-promo_title">Рекомендуем</h1>
+            <div class="c-row">
+                {% for i in range(0, 3) %}
+                <div class="catalog-promo__col">
+                    {% set promoItemData = {
+                    title: 'Люкс Уход МОЛОДАЯ КОЖА',
+                    starBadge: true,
+                    items: [
+                    {
+                    img:'../images/img/catalog/promo1.png',
+                    title: 'МАСКА ДЛЯ ЛИЦА AWAKEN'
+                    },
+                    {
+                    img:'../images/img/catalog/promo2.png',
+                    title: 'ANTI-AGE КРЕМ ДЛЯ ЛИЦА X-AGE'
+                    }
+                    ],
+                    cost: '21 288',
+                    profit: '2 685'
+                    }%}
+                    {% from "app/src/njk/components/double_promo_item.njk" import doublePromoItem %}
+                    {{ doublePromoItem(promoItemData) }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% macro doublePromoItem(data) %}
+<div class="double-promo-item">
+    <p class="double-promo-item__title">{{data.title}}</p>
+    <div class="double-promo-item__img-wrapper">
+        {% if data.starBadge %}
+        <span class="double-promo-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+        </span>
+        {% endif %}
+        {% for promoItem in data.items %}
+        <div class="double-promo-item__img-item">
+            <div class="double-promo-item__img-item__wrapper">
+                <img src="{{promoItem.img}}" alt="{{promoItem.title}}" class="double-promo-item__img">
+            </div>
+            <p class="double-promo-item__img-name">{{promoItem.title}}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="double-promo-item__bottom">
+        <span class="double-promo-item__text"><b>{{data.cost}} ₽</b></span>
+        <span class="double-promo-item__text"><b>Выгода:</b> {{data.profit}} ₽</span>
+    </div>
+    <button class="btn-main double-promo-item__btn" type="button">
+        <span class="double-promo-item__btn-text">добавить в корзину</span>
+    </button>
+</div>
+{% endmacro %}

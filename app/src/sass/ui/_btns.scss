@@ -44,3 +44,72 @@ input[type="submit"] {
     opacity: 0.8;
   }
 }
+
+.btn-hamburger {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  &.btn-hamburger--active {
+    .btn-hamburger-icon {
+      &::before {
+        transform: scaleX(0.5) translate(-1px, 7px) rotate(-28deg);
+      }
+      &::after {
+        transform: scaleX(0.5) translate(-2px, -7px) rotate(28deg);
+      }
+    }
+  }
+}
+.btn-hamburger_header {
+  margin-right: auto;
+  display: none;
+  @media all and (max-width: $mobile-bp) {
+    display: block;
+  }
+}
+.btn-hamburger__icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: relative;
+  background-color: #78859d;
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #78859d;
+    transition: transform $base-duration $base-timing;
+    transform-origin: left;
+  }
+  &::before {
+    top: -7px;
+  }
+  &::after {
+    bottom: -7px;
+  }
+}
+.btn-base-text {
+  color: #333;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-main__basket-text {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    right: -24px;
+    width: 17px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url("../images/icons/bas-catalog-btn.svg");
+  }
+}

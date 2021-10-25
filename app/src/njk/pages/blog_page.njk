@@ -1,0 +1,96 @@
+{% set pageTitle = 'Блог' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="blog-page-container">
+    <article class="blog-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Блог']]) }}
+        </div>
+    </article>
+    <section class="blog-section">
+        <div class="c-container">
+            <div class="c-row">
+                <div class="blog__sidebar-col">
+                    <div class="base-sidebar blog__sidebar">
+                        <div class="base-sidebar__item-wrapper">
+                            <p class="base-sidebar__title">КАТЕГОРИИ</p>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">От экспертов</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Видео обзоры</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Новинки</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Салонные процедуры</span>
+                            </div>
+                            <div class="base-sidebar__item">
+                                <span class="base-sidebar__text">Эфиры</span>
+                            </div>
+                        </div>
+                        <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
+                            <button class="btn-main base-sidebar__search-btn" type="button">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn">Сбросить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog__product-col">
+                    <h1 class="base-page-title blog-product-title">Блог</h1>
+                    <p class="blog-product-text-block">
+                        COSMEDIX — первый американский космецевтический бренд, внедривший технологию хиральной корреции
+                        , что позволило создавать высокоэффективные средства с быстрым результатом без побочных эффектов
+                        для кожи.
+                    </p>
+                    <div class="c-row">
+                        {% for i in range(0, 3) %}
+                        <div class="blog__item-col">
+                            <div class="blog-item">
+                                <div class="blog-item__img-block">
+                                    <div class="blog-item__img-wrapper">
+                                        <img src="../images/img/blog/blog.png" alt="Натуральное превосходство"
+                                            class="blog-item__img">
+                                    </div>
+                                </div>
+                                <div class="blog-item__text-block">
+                                    <div class="blog-item__head">
+                                        <span class="blog-item__head-text">
+                                            Эфиры
+                                        </span>
+                                        <span class="blog-item__head-text">
+                                            11.08.2021
+                                        </span>
+                                        <span class="blog-item__head-text">
+                                            <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                                class="blog-item__head-icon">
+                                            1050
+                                        </span>
+                                        <span class="blog-item__head-text">
+                                            <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                                class="blog-item__head-icon">
+                                            205
+                                        </span>
+                                    </div>
+                                    <div class="blog-item__inner">
+                                        <p class="blog-item__title">Натуральное
+                                            превосходство</p>
+                                        <p class="blog-item__text">
+                                            COSMEDIX – первый представитель космецевтической индустрии, который
+                                            использует мощные природные ингредиенты....
+                                        </p>
+                                        <a href="#" class="btn-main blog-item__btn">читать полностью</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

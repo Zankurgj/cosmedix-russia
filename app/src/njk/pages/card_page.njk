@@ -1,0 +1,170 @@
+{% set pageTitle = 'Тоник-мист с антиоксидантами Benefit Balance' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="card-page-container">
+    <article class="card-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Блог'],['Каталог'],['Очищение и увлажнение'],['Тоник-мист с антиоксидантами Benefit
+            Balance']]) }}
+        </div>
+    </article>
+    <section class="card-section">
+        <div class="c-container">
+            <div class="c-row c-row_card-top">
+                <div class="card__product-col">
+                    <div class="card__product-slider-nav-wrapper">
+                        <div class="card__product-slider-nav js--product-nav-slider">
+                            <div class="card__product-slide-nav">
+                                <div class="card__product-slide-nav-inner">
+                                    <img src="../images/img/card/slide-nav1.png" alt="Продукция"
+                                        class="card__product-slide-nav__img">
+                                </div>
+                            </div>
+                            <div class="card__product-slide-nav">
+                                <div class="card__product-slide-nav-inner">
+                                    <img src="../images/img/card/slide-nav2.png" alt="Продукция"
+                                        class="card__product-slide-nav__img">
+                                </div>
+                            </div>
+                            <div class="card__product-slide-nav">
+                                <div class="card__product-slide-nav-inner">
+                                    <img src="../images/img/card/slide-nav3.png" alt="Продукция"
+                                        class="card__product-slide-nav__img">
+                                </div>
+                            </div>
+                            <div class="card__product-slide-nav">
+                                <div class="card__product-slide-nav-inner">
+                                    <img src="../images/img/card/slide-nav1.png" alt="Продукция"
+                                        class="card__product-slide-nav__img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__product-slider-wrapper">
+                        <div class="card__product-slider js--product-slider">
+                            <div class="card__product-slide">
+                                <img src="../images/img/card/slide1.png" alt="Продукция"
+                                    class="card__product-slide__img">
+                            </div>
+                            <div class="card__product-slide">
+                                <img src="../images/img/card/slide-nav2.png" alt="Продукция"
+                                    class="card__product-slide__img">
+                            </div>
+                            <div class="card__product-slide">
+                                <img src="../images/img/card/slide-nav3.png" alt="Продукция"
+                                    class="card__product-slide__img">
+                            </div>
+                            <div class="card__product-slide">
+                                <img src="../images/img/card/slide-nav1.png" alt="Продукция"
+                                    class="card__product-slide__img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__product-desc-col">
+                    <h1 class="card__product-name">ТОНИК-МИСТС АНТИОКСИДАНТАМИ BENEFIT BALANCE</h1>
+                    <span class="card__product-cost">3 864 ₽</span>
+                    <div class="card__product-stars">
+                        <span class="card__product-star-icon"></span>
+                        <span class="card__product-star-icon"></span>
+                        <span class="card__product-star-icon"></span>
+                        <span class="card__product-star-icon"></span>
+                        <span class="card__product-star-icon"></span>
+                    </div>
+                    <p class="card__product-description">Финальный шаг в очищении кожи</p>
+                    <span class="card__description-text card__description-text_article">Артикул: 931102010</span>
+                    <div class="card__product-bottom">
+                        <div class="card__product-counter-wrapper">
+                            <span class="card__description-text card__description-text_counter-title">Кол-во</span>
+                            {% from "app/src/njk/components/counter.njk" import counter %}
+                            {{ counter(1) }}
+                        </div>
+                        <span class="card__description-text card__description-text_bottom">Объем 150 мл</span>
+                        <button class="card__btn-more">Оставить отзыв</button>
+                    </div>
+                    <button class="btn-main card__product-btn-basket">
+                        <span class="btn-main__basket-text">добавить в корзину</span>
+                    </button>
+                </div>
+            </div>
+            <div class="c-row">
+                <div class="card__tab-col-left">
+                    <div class="card__tab-nav-inner">
+                        <label class="card__tab-nav-item-wrapper">
+                            <input type="radio" class="card__tab-nav-item-input js--toggle-tab-input" name="cardNav"
+                                data-tab-id="productTab1" checked>
+                            <span class="card__tab-nav-item">
+                                ОПИСАНИЕ & ПРИМЕНЕНИЕ
+                            </span>
+                        </label>
+                        <label class="card__tab-nav-item-wrapper">
+                            <input type="radio" class="card__tab-nav-item-input js--toggle-tab-input" name="cardNav"
+                                data-tab-id="productTab2">
+                            <span class="card__tab-nav-item">
+                                СОСТАВ
+                            </span>
+                        </label>
+                        <label class="card__tab-nav-item-wrapper">
+                            <input type="radio" class="card__tab-nav-item-input js--toggle-tab-input" name="cardNav"
+                                data-tab-id="productTab3">
+                            <span class="card__tab-nav-item">
+                                ОТЗЫВЫ
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="card__tab-col-right">
+                    <div class="card__tab-inner">
+                        <div class="card__tab-item show" data-tab-name="cardNav" data-tab="productTab1">
+                            <div class="card__tab-text-block">
+                                <p class="card__tab-title">Назначение</p>
+                                <p class="card__tab-text">Универсальный Тоник-мист с антиоксидантами Benefit Balance для
+                                    снятия раздражения и питания кожи.
+                                </p>
+                            </div>
+                            <div class="card__tab-text-block">
+                                <p class="card__tab-title">Какие проблемы решает</p>
+                                <p class="card__tab-text">Тоник-мист с антиоксидантами Benefit Balance снимает
+                                    раздражение, успокаивает кожу и питает ее после глубокого очищения благодаря
+                                    экстрактам зеленого чая, алоэ вера и ромашки. Финальный шаг в очищении кожи
+                                    задействует силу молочной кислоты и гамамелиса для идеального результата, а
+                                    антиоксиданты в составе защищают кожу от вредоносного воздействия свободных
+                                    радикалов. D-глюкуроновая кислота и масло ши сохраняют баланс кожи и предотвращают
+                                    потерю влаги, оставляя кожу полностью подготовленной к нанесению сывороток и кремов.
+                                </p>
+                            </div>
+                            <div class="card__tab-text-block">
+                                <p class="card__tab-title">Как работает</p>
+                                <p class="card__tab-text">Сочетание научных достижений и силы растительных ингредиентов
+                                    укрепляет кожу и разглаживает как мелкие, так и глубокие морщины.
+                                    Ингредиенты в составе продукта оказывают кондиционирующий эффект, притягивая и
+                                    сохраняя драгоценную влагу.
+                                    Антиоксиданты в составе помогают бороться со свободными радикалами, защищая кожу от
+                                    негативного влияния окружающей среды, способного вызывать воспаление в коже и
+                                    разрушать коллаген и эластин.
+                                    Растительные компоненты снимают воспаление и питают кожу, сохраняя ее здоровой.
+                                    Благодаря эксфолиации текстура кожи выравнивается, а косметические продукты лучше
+                                    впитываются. После того, как верхний слой кожи отшелушивается, активным компонентам
+                                    становится легче работать.
+                                    Если у вас целиакия или герпетиформный дерматит, можете использовать данный продукт
+                                    без опасений — он абсолютно не содержит глютена.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab2">2</div>
+                        <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab3">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="card-promo">
+        <div class="c-container">
+            <h2 class="base-page-title card-promo__title">Рекомендуем</h2>
+            {% include "app/src/njk/components/reccomend_promo.njk" %}
+        </div>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+.range-slider-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 278px;
+}
+.range-slider-input-wrapper {
+  display: block;
+  margin: 0;
+}
+
+.range-slider-input {
+  width: 128px;
+  height: 30px;
+  border: 1px solid #78859d;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333;
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.range-slider {
+  width: 276px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #78859d;
+  }
+  .noUi-connect {
+    display: none;
+  }
+  .noUi-handle {
+    height: 15px;
+    width: 15px;
+    background-color: #78859d;
+    border-radius: 50%;
+    top: 1px;
+    right: -9px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

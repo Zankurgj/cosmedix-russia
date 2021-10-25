@@ -1,9 +1,22 @@
 <header class="main_header">
     <div class="main_header__top">
         <div class="c-container c-container_main_header_top">
-            <button class="main_header__top_btn main_header__top_btn_search">
-                <span class="visually-hidden">Поиск</span>
+            <a href="/" class="main_header__mobile-logo">
+                <img class="main_header__mobile-logo-img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+            </a>
+            <button class="btn-hamburger btn-hamburger_header js--btn-mobile-menu">
+                <span class="btn-hamburger__icon"></span>
+                <span class="visually-hidden">меню</span>
             </button>
+            <div class="main_header__search">
+                <label class="main_header__search-wrapper">
+                    <span class="visually-hidden">Окно поиска</span>
+                    <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
+                </label>
+                <button class="main_header__top_btn main_header__top_btn_search">
+                    <span class="visually-hidden">Поиск</span>
+                </button>
+            </div>
             <button class="main_header__top_btn main_header__top_btn_lk">
                 <span class="visually-hidden">Личный кабинет</span>
             </button>
@@ -15,6 +28,7 @@
     <div class="main_header__bottom">
         <div class="c-container c-container_main_header">
             <a href="/" class="main_header__logo">
+                <span class="visually-hidden">Главная страница</span>
                 <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
             </a>
             <nav class="main_header__nav">

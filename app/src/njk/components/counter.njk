@@ -1,0 +1,14 @@
+{% macro counter(counterId) %}
+<div class="base-counter">
+    <button class="base-counter__btn js--btn-counter" data-counter-type="minus" data-counter-id="counter{{counterId}}"
+        type="button">
+        <span>–</span>
+    </button>
+    <input class="base-counter__input js--counter" type="number" value="1" size="4" min="1" id="counter{{counterId}}"
+        required>
+    <button class="base-counter__btn js--btn-counter" data-counter-type="plus" data-counter-id="counter{{counterId}}"
+        type="button">
+        <span>+</span>
+    </button>
+</div>
+{% endmacro %}
