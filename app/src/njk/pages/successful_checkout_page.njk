@@ -1,0 +1,38 @@
+{% set pageTitle = 'Оформление заказа' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="s-checkout-page-container">
+    <article class="s-checkout-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Мои заказы']])}}
+        </div>
+    </article>
+    <section class="s-checkout">
+        <div class="c-container c-container_s-checkout">
+            <h1 class="base-page-title s-checkout__title">Спасибо за заказ!</h1>
+            <p class="s-checkout__subtitle">Заказ №459 оформлен</p>
+            <p class="s-checkout__text">Мы свяжемся с вами в ближайшее время для подтверждения заказа.</p>
+            <p class="s-checkout__text">Способ оплаты: курьеру наличными.</p>
+            <p class="s-checkout__text">Подпишитесь на наши аккаунты Инстаграм и Youtube, чтобы всегда быть в курсе
+                наших новинок и актуальных акций. Мы часто проводим конкурсы и розыгрыши!
+            </p>
+            <div class="s-checkout__social-wrapper">
+                <p class="s-checkout__social-title">Присоединяйтесь</p>
+                <div class="social-gray">
+                    <a href="#" class="social-gray_item social-gray_item_inst">
+                        <span class="visually-hidden">Космедикс в инстаграм</span>
+                    </a>
+                    <a href="#" class="social-gray_item social-gray_item_fb">
+                        <span class="visually-hidden">Космедикс в фейсбук</span>
+                    </a>
+                    <a href="#" class="social-gray_item social-gray_item_yt">
+                        <span class="visually-hidden">Космедикс в ютуб</span>
+                    </a>
+                </div>
+            </div>
+            <button class="btn-main s-checkout__btn">на главную</button>
+        </div>
+    </section>
+</div>
+{% endblock %}

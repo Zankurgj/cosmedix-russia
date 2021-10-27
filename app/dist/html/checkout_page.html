@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Оформление заказа</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="../../../dist/css/app.min.css" />
+</head>
+
+<body class="">
+    <header class="main_header">
+        <div class="main_header__top">
+            <div class="c-container c-container_main_header_top">
+                <a href="/" class="main_header__mobile-logo">
+                    <img class="main_header__mobile-logo-img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                </a>
+                <button class="btn-hamburger btn-hamburger_header js--btn-mobile-menu">
+                    <span class="btn-hamburger__icon"></span>
+                    <span class="visually-hidden">меню</span>
+                </button>
+                <div class="main_header__search">
+                    <label class="main_header__search-wrapper">
+                        <span class="visually-hidden">Окно поиска</span>
+                        <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
+                    </label>
+                    <button class="main_header__top_btn main_header__top_btn_search">
+                        <span class="visually-hidden">Поиск</span>
+                    </button>
+                </div>
+                <button class="main_header__top_btn main_header__top_btn_lk">
+                    <span class="visually-hidden">Личный кабинет</span>
+                </button>
+                <button class="main_header__top_btn main_header__top_btn_basket">
+                    <span class="visually-hidden">Корзина</span>
+                </button>
+            </div>
+        </div>
+        <div class="main_header__bottom">
+            <div class="c-container c-container_main_header">
+                <a href="/" class="main_header__logo">
+                    <span class="visually-hidden">Главная страница</span>
+                    <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                </a>
+                <nav class="main_header__nav">
+                    <ul class="main_header__list">
+
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Главная</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">АКЦИИ</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Новинки</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Бестселлеры</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">КАТАЛОГ ПРОДУКТОВ</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item main_header__list-item_active ">Профессионалам</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Адреса магазинов &amp;салонов</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">НАШ БЛОГ</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="c-page__wrapper">
+
+        <div class="checkout-page-container">
+            <article class="checkout-breadcrumbs-section">
+                <div class="c-container">
+
+
+                    <ul class="breadcrumb-item-wrapper">
+                        <li class="breadcrumb-item__list">
+                            <a href="/" class="breadcrumb-item">
+            Главная
+        </a>
+                            /
+                        </li>
+
+
+                        <li class="breadcrumb-item__list">
+                            <span href="#" aria-current="page" class="breadcrumb-item">
+            Мои заказы
+        </span>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </article>
+            <section class="checkout-section">
+                <div class="c-container c-container_checkout">
+                    <h1 class="base-page-title checkout-page-title">оформление заказа</h1>
+                    <form class="checkout">
+                        <div class="c-row">
+                            <div class="checkout__col-left">
+                                <fieldset class="checkout__field">
+                                    <legend class="checkout__field-title">Персональные данные</legend>
+                                    <label class="checkout__input-wrapper">
+                                        <span class="visually-hidden">Имя</span>
+                                        <input type="text" class="base-text-input" placeholder="Имя">
+                                    </label>
+                                    <label class="checkout__input-wrapper">
+                                        <span class="visually-hidden">Фамилия</span>
+                                        <input type="text" class="base-text-input" placeholder="Фамилия">
+                                    </label>
+                                    <label class="checkout__input-wrapper">
+                                        <span class="visually-hidden">E-Mail</span>
+                                        <input type="email" class="base-text-input" placeholder="E-Mail">
+                                    </label>
+                                    <label class="checkout__input-wrapper">
+                                        <span class="visually-hidden">Город</span>
+                                        <input type="text" class="base-text-input base-text-input_search" placeholder="Москва, Россия">
+                                    </label>
+                                </fieldset>
+                                <fieldset class="checkout__field">
+                                    <legend class="checkout__field-title">Способ получения</legend>
+                                    <label class="checkout__radio-wrapper">
+                                        <input type="radio" class="base-radio-input" name="delivery" checked>
+                                        <span class="base-radio-fake"></span>
+                                        <span class="checkout__radio-text">Доставка курьером</span>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="checkout__field">
+                                    <legend class="checkout__field-title">Адрес доставки</legend>
+                                    <label class="checkout__input-wrapper">
+                                        <span class="visually-hidden">Улица</span>
+                                        <input type="text" class="base-text-input" placeholder="Улица">
+                                    </label>
+                                    <div class="c-row">
+                                        <label class="checkout__input-wrapper checkout__input-wrapper_col-small">
+                                            <span class="visually-hidden">Дом</span>
+                                            <input type="text" class="base-text-input" placeholder="Дом">
+                                        </label>
+                                        <label class="checkout__input-wrapper checkout__input-wrapper_col-big">
+                                            <span class="visually-hidden">Квартира /офис</span>
+                                            <input type="text" class="base-text-input" placeholder="Квартира /офис">
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="checkout__field">
+                                    <legend class="checkout__field-title">Варианты оплаты</legend>
+                                    <label class="checkout__radio-wrapper">
+                                        <input type="radio" class="base-radio-input" name="pay">
+                                        <span class="base-radio-fake"></span>
+                                        <span class="checkout__radio-text">Банковской картой на сайте</span>
+                                    </label>
+                                    <label class="checkout__radio-wrapper">
+                                        <input type="radio" class="base-radio-input" name="pay">
+                                        <span class="base-radio-fake"></span>
+                                        <span class="checkout__radio-text">Оплата курьеру банковской картой</span>
+                                    </label>
+                                    <label class="checkout__radio-wrapper">
+                                        <input type="radio" class="base-radio-input" name="pay">
+                                        <span class="base-radio-fake"></span>
+                                        <span class="checkout__radio-text">Оплата курьеру наличными</span>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="checkout__field">
+                                    <legend class="checkout__field-title">Комментарий</legend>
+                                    <textarea class="base-text-input base-text-input_textarea checkout__textarea"></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="checkout__col-right">
+                                <div class="checkout__cost-list">
+                                    <span class="checkout__cost-text">Стоимость покупок</span>
+                                    <span class="checkout__cost-text">3 864 ₽</span>
+                                </div>
+                                <div class="checkout__cost-list">
+                                    <span class="checkout__cost-text">Доставка</span>
+                                    <span class="checkout__cost-text">300 ₽</span>
+                                </div>
+                                <div class="checkout__cost-total">
+                                    <span class="checkout__cost-text"><b>Итого</b></span>
+                                    <span class="checkout__cost-text"><b>3 864 ₽</b></span>
+                                </div>
+                                <button type="submit" class="btn-main checkout__form-btn">оформить заказ</button>
+                                <label class="checkout__checkbox-label">
+                                    <input type="checkbox" class="base-checkbox">
+                                    <span class="base-checkbox-fake checkout__checkbox"></span>
+                                    <span class="checkout__checkbox-text">Раньше всех получать скидки и подарки от
+                                COSMEDIX-RUSSIA</span>
+                                </label>
+                                <label class="checkout__checkbox-label">
+                                    <input type="checkbox" class="base-checkbox">
+                                    <span class="base-checkbox-fake checkout__checkbox"></span>
+                                    <span class="checkout__checkbox-text">Принимаю условия обработки персональных данных</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+    <footer class="main-footer">
+        <div class="c-container">
+            <div class="c-row c-row__main-footer">
+                <div class="main-footer__col">
+                    <div class="footer-social">
+                        <form class="email-form email-form_footer">
+                            <span class="email-form__title">Подписаться на рассылку</span>
+                            <div class="email-form__inner">
+                                <label class="email-form__label">
+                                    <input type="email" class="email-form__input" placeholder="E-mail">
+                                </label>
+                                <button class="btn-white-border btn-white-border_email-form" type="submit">подписаться</button>
+                            </div>
+                        </form>
+                        <a href="#" class="main-footer__text-link">Доставка и оплата</a>
+                        <div class="footer-social__wrapper footer-social__wrapper_desktop">
+                            <p class="footer-social__title">Присоединяйтесь</p>
+                            <div class="footer-social__items-row">
+                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                    <span class="visually-hidden">Космедикс в инстаграм</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                    <span class="visually-hidden">Космедикс в фейсбук</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                    <span class="visually-hidden">Космедикс в ютуб</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main-footer__col">
+                    <div class="main-footer__empty-top">
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Политика
+                        конфидециальности</a>
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Пользовательское
+                        соглашение</a>
+                    </div>
+                </div>
+                <div class="main-footer__col">
+                    <div class="main-footer__empty-top">
+                        <p class="main-footer__text main-footer__list-item">ООО «Бьюти Концепт» (ГК ERSTA)</p>
+                        <a href="tel:+7-495-644-00-08" class="main-footer__text-link main-footer__list-item">+7 (495)
+                        644-00-08</a>
+                        <a href="mailto:info@cosmedix-russia.ru" class="main-footer__text-link main-footer__list-item">info@cosmedix-russia.ru</a>
+                        <div class="footer-social__wrapper footer-social__wrapper_mobile">
+                            <p class="footer-social__title">Присоединяйтесь</p>
+                            <div class="footer-social__items-row">
+                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                    <span class="visually-hidden">Космедикс в инстаграм</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                    <span class="visually-hidden">Космедикс в фейсбук</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                    <span class="visually-hidden">Космедикс в ютуб</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../dist/js/app.min.js"></script>
+</body>
+
+</html>

@@ -5,12 +5,17 @@ import { initSliders } from "./common/sliders";
 import noUiSlider from "nouislider";
 import CounterNumber from "./common/counter";
 require("@fancyapps/fancybox");
+require("~/node_modules/country-select-js/build/js/countrySelect.js");
 window.noUiSlider = noUiSlider;
 
 document.addEventListener("DOMContentLoaded", function () {
   initSliders();
   new CounterNumber();
   initToggleTabListeners();
+  $(".js--country-select").countrySelect({
+    defaultCountry: "ru",
+    preferredCountries: [""],
+  });
 });
 
 const initToggleTabListeners = () => {

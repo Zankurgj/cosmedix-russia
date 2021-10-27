@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="../../../dist/css/app.min.css" />
+</head>
+
+<body class="">
+    <header class="main_header">
+        <div class="main_header__top">
+            <div class="c-container c-container_main_header_top">
+                <a href="/" class="main_header__mobile-logo">
+                    <img class="main_header__mobile-logo-img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                </a>
+                <button class="btn-hamburger btn-hamburger_header js--btn-mobile-menu">
+                    <span class="btn-hamburger__icon"></span>
+                    <span class="visually-hidden">меню</span>
+                </button>
+                <div class="main_header__search">
+                    <label class="main_header__search-wrapper">
+                        <span class="visually-hidden">Окно поиска</span>
+                        <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
+                    </label>
+                    <button class="main_header__top_btn main_header__top_btn_search">
+                        <span class="visually-hidden">Поиск</span>
+                    </button>
+                </div>
+                <button class="main_header__top_btn main_header__top_btn_lk">
+                    <span class="visually-hidden">Личный кабинет</span>
+                </button>
+                <button class="main_header__top_btn main_header__top_btn_basket">
+                    <span class="visually-hidden">Корзина</span>
+                </button>
+            </div>
+        </div>
+        <div class="main_header__bottom">
+            <div class="c-container c-container_main_header">
+                <a href="/" class="main_header__logo">
+                    <span class="visually-hidden">Главная страница</span>
+                    <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                </a>
+                <nav class="main_header__nav">
+                    <ul class="main_header__list">
+
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Главная</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">АКЦИИ</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Новинки</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Бестселлеры</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">КАТАЛОГ ПРОДУКТОВ</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item main_header__list-item_active ">Профессионалам</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Адреса магазинов &amp;салонов</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">НАШ БЛОГ</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="c-page__wrapper">
+
+        <div class="lk-page-container">
+            <article class="lk-breadcrumbs-section">
+                <div class="c-container">
+
+
+                    <ul class="breadcrumb-item-wrapper">
+                        <li class="breadcrumb-item__list">
+                            <a href="/" class="breadcrumb-item">
+            Главная
+        </a>
+                            /
+                        </li>
+
+
+                        <li class="breadcrumb-item__list">
+                            <span href="#" aria-current="page" class="breadcrumb-item">
+            Личный кабинет
+        </span>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </article>
+            <section class="lk">
+                <div class="c-container">
+                    <div class="c-container_lk">
+                        <div class="c-row">
+                            <div class="lk__col-left">
+                                <aside class="lk__sidebar">
+                                    <p class="lk__sidebar__title">Личная информация</p>
+                                    <a href="#" class="lk__sidebar__item lk__sidebar__item_active">ЛИЧНЫЕ ДАННЫЕ</a>
+                                    <a href="#" class="lk__sidebar__item">Текущие заказы</a>
+                                    <a href="#" class="lk__sidebar__item">История заказов</a>
+                                    <a href="#" class="lk__sidebar__item">Бонусы</a>
+                                    <a href="#" class="lk__sidebar__item">Корзина</a>
+                                    <a href="#" class="lk__sidebar__item">отложенные</a>
+                                </aside>
+                            </div>
+                            <div class="lk__col-right">
+                                <h1 class="base-page-title lk-page-title">личный кабинет</h1>
+                                <form class="lk__form">
+                                    <p class="lk__form-title">Персональные данные</p>
+                                    <label class="lk__form__input-wrapper">
+                                        <span class="visually-hidden">Имя</span>
+                                        <input type="text" class="base-text-input" placeholder="Имя">
+                                    </label>
+                                    <label class="lk__form__input-wrapper">
+                                        <span class="visually-hidden">Отчество</span>
+                                        <input type="text" class="base-text-input" placeholder="Отчество">
+                                    </label>
+                                    <label class="lk__form__input-wrapper">
+                                        <span class="visually-hidden">Фамилия</span>
+                                        <input type="text" class="base-text-input" placeholder="Фамилия">
+                                    </label>
+                                    <div class="lk__form__radio-block">
+                                        <label class="lk__form__radio-wrapper">
+                                            <input type="radio" class="base-radio-input" name="gender" checked>
+                                            <span class="base-radio-fake"></span>
+                                            <span class="lk__form__radio-text">Мужской</span>
+                                        </label>
+                                        <label class="lk__form__radio-wrapper">
+                                            <input type="radio" class="base-radio-input" name="gender" checked>
+                                            <span class="base-radio-fake"></span>
+                                            <span class="lk__form__radio-text">Женский</span>
+                                        </label>
+                                        <label class="lk__form__radio-wrapper">
+                                            <input type="radio" class="base-radio-input" name="gender" checked>
+                                            <span class="base-radio-fake"></span>
+                                            <span class="lk__form__radio-text">Не указан</span>
+                                        </label>
+                                    </div>
+                                    <label class="lk__form__input-wrapper">
+                                        <span class="visually-hidden">Дата рождения</span>
+                                        <input type="text" class="base-text-input" placeholder="дд\мм\гг">
+                                    </label>
+                                    <label class="lk__form__input-wrapper">
+                                        <span class="visually-hidden">E-Mail</span>
+                                        <input type="email" class="base-text-input" placeholder="E-Mail">
+                                    </label>
+                                    <label class="lk__form__input-wrapper">
+                                        <span class="visually-hidden">Страна</span>
+                                        <input type="email" class="base-text-input js--country-select">
+                                    </label>
+                                    <label class="lk__form__input-wrapper">
+                                        <span class="visually-hidden">Город</span>
+                                        <input type="text" class="base-text-input base-text-input_search" placeholder="Город">
+                                    </label>
+                                    <button class="btn-main btn-main_lk-data" type="submit">оформить заказ</button>
+                                    <label class="lk__form-checkbox-label">
+                                        <input type="checkbox" class="base-checkbox">
+                                        <span class="base-checkbox-fake lk__form-checkbox"></span>
+                                        <span class="lk__form-checkbox-text">Раньше всех получать скидки и подарки от
+                                    COSMEDIX-RUSSIA</span>
+                                    </label>
+                                    <label class="lk__form-checkbox-label">
+                                        <input type="checkbox" class="base-checkbox">
+                                        <span class="base-checkbox-fake lk__form-checkbox"></span>
+                                        <span class="lk__form-checkbox-text">Принимаю условия обработки персональных
+                                    данных</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <footer class="main-footer">
+        <div class="c-container">
+            <div class="c-row c-row__main-footer">
+                <div class="main-footer__col">
+                    <div class="footer-social">
+                        <form class="email-form email-form_footer">
+                            <span class="email-form__title">Подписаться на рассылку</span>
+                            <div class="email-form__inner">
+                                <label class="email-form__label">
+                                    <input type="email" class="email-form__input" placeholder="E-mail">
+                                </label>
+                                <button class="btn-white-border btn-white-border_email-form" type="submit">подписаться</button>
+                            </div>
+                        </form>
+                        <a href="#" class="main-footer__text-link">Доставка и оплата</a>
+                        <div class="footer-social__wrapper footer-social__wrapper_desktop">
+                            <p class="footer-social__title">Присоединяйтесь</p>
+                            <div class="footer-social__items-row">
+                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                    <span class="visually-hidden">Космедикс в инстаграм</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                    <span class="visually-hidden">Космедикс в фейсбук</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                    <span class="visually-hidden">Космедикс в ютуб</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main-footer__col">
+                    <div class="main-footer__empty-top">
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Политика
+                        конфидециальности</a>
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Пользовательское
+                        соглашение</a>
+                    </div>
+                </div>
+                <div class="main-footer__col">
+                    <div class="main-footer__empty-top">
+                        <p class="main-footer__text main-footer__list-item">ООО «Бьюти Концепт» (ГК ERSTA)</p>
+                        <a href="tel:+7-495-644-00-08" class="main-footer__text-link main-footer__list-item">+7 (495)
+                        644-00-08</a>
+                        <a href="mailto:info@cosmedix-russia.ru" class="main-footer__text-link main-footer__list-item">info@cosmedix-russia.ru</a>
+                        <div class="footer-social__wrapper footer-social__wrapper_mobile">
+                            <p class="footer-social__title">Присоединяйтесь</p>
+                            <div class="footer-social__items-row">
+                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                    <span class="visually-hidden">Космедикс в инстаграм</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                    <span class="visually-hidden">Космедикс в фейсбук</span>
+                                </a>
+                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                    <span class="visually-hidden">Космедикс в ютуб</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../dist/js/app.min.js"></script>
+</body>
+
+</html>

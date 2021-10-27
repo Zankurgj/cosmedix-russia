@@ -1,0 +1,39 @@
+{% set pageTitle = 'Личный кабинет' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="lk-page-container">
+    <article class="lk-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Личный кабинет']])}}
+        </div>
+    </article>
+    <section class="lk">
+        <div class="c-container">
+            <div class="c-container_lk">
+                <div class="c-row">
+                    <div class="lk__col-left">
+                        <aside class="lk__sidebar">
+                            <p class="lk__sidebar__title">Личная информация</p>
+                            <a href="#" class="lk__sidebar__item">ЛИЧНЫЕ ДАННЫЕ</a>
+                            <a href="#" class="lk__sidebar__item">Текущие заказы</a>
+                            <a href="#" class="lk__sidebar__item">История заказов</a>
+                            <a href="#" class="lk__sidebar__item lk__sidebar__item_active">Бонусы</a>
+                            <a href="#" class="lk__sidebar__item">Корзина</a>
+                            <a href="#" class="lk__sidebar__item">отложенные</a>
+                        </aside>
+                    </div>
+                    <div class="lk__col-right">
+                        <h1 class="base-page-title lk-page-title">Ваши бонусы</h1>
+                        <label class="lk__bonus-input-wrapper">
+                            <span class="visually-hidden">Количество бонусов</span>
+                            <input type="text" class="base-text-input lk__bonus-input" value="3 864 ₽" readonly>
+                        </label>
+                        <a href="#" class="btn-main btn-main_lk-bonus">В каталог</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

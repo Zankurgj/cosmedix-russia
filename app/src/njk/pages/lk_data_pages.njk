@@ -1,0 +1,95 @@
+{% set pageTitle = 'Личный кабинет' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="lk-page-container">
+    <article class="lk-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Личный кабинет']])}}
+        </div>
+    </article>
+    <section class="lk">
+        <div class="c-container">
+            <div class="c-container_lk">
+                <div class="c-row">
+                    <div class="lk__col-left">
+                        <aside class="lk__sidebar">
+                            <p class="lk__sidebar__title">Личная информация</p>
+                            <a href="#" class="lk__sidebar__item lk__sidebar__item_active">ЛИЧНЫЕ ДАННЫЕ</a>
+                            <a href="#" class="lk__sidebar__item">Текущие заказы</a>
+                            <a href="#" class="lk__sidebar__item">История заказов</a>
+                            <a href="#" class="lk__sidebar__item">Бонусы</a>
+                            <a href="#" class="lk__sidebar__item">Корзина</a>
+                            <a href="#" class="lk__sidebar__item">отложенные</a>
+                        </aside>
+                    </div>
+                    <div class="lk__col-right">
+                        <h1 class="base-page-title lk-page-title">личный кабинет</h1>
+                        <form class="lk__form">
+                            <p class="lk__form-title">Персональные данные</p>
+                            <label class="lk__form__input-wrapper">
+                                <span class="visually-hidden">Имя</span>
+                                <input type="text" class="base-text-input" placeholder="Имя">
+                            </label>
+                            <label class="lk__form__input-wrapper">
+                                <span class="visually-hidden">Отчество</span>
+                                <input type="text" class="base-text-input" placeholder="Отчество">
+                            </label>
+                            <label class="lk__form__input-wrapper">
+                                <span class="visually-hidden">Фамилия</span>
+                                <input type="text" class="base-text-input" placeholder="Фамилия">
+                            </label>
+                            <div class="lk__form__radio-block">
+                                <label class="lk__form__radio-wrapper">
+                                    <input type="radio" class="base-radio-input" name="gender" checked>
+                                    <span class="base-radio-fake"></span>
+                                    <span class="lk__form__radio-text">Мужской</span>
+                                </label>
+                                <label class="lk__form__radio-wrapper">
+                                    <input type="radio" class="base-radio-input" name="gender" checked>
+                                    <span class="base-radio-fake"></span>
+                                    <span class="lk__form__radio-text">Женский</span>
+                                </label>
+                                <label class="lk__form__radio-wrapper">
+                                    <input type="radio" class="base-radio-input" name="gender" checked>
+                                    <span class="base-radio-fake"></span>
+                                    <span class="lk__form__radio-text">Не указан</span>
+                                </label>
+                            </div>
+                            <label class="lk__form__input-wrapper">
+                                <span class="visually-hidden">Дата рождения</span>
+                                <input type="text" class="base-text-input" placeholder="дд\мм\гг">
+                            </label>
+                            <label class="lk__form__input-wrapper">
+                                <span class="visually-hidden">E-Mail</span>
+                                <input type="email" class="base-text-input" placeholder="E-Mail">
+                            </label>
+                            <label class="lk__form__input-wrapper">
+                                <span class="visually-hidden">Страна</span>
+                                <input type="email" class="base-text-input js--country-select">
+                            </label>
+                            <label class="lk__form__input-wrapper">
+                                <span class="visually-hidden">Город</span>
+                                <input type="text" class="base-text-input base-text-input_search" placeholder="Город">
+                            </label>
+                            <button class="btn-main btn-main_lk-data" type="submit">оформить заказ</button>
+                            <label class="lk__form-checkbox-label">
+                                <input type="checkbox" class="base-checkbox">
+                                <span class="base-checkbox-fake lk__form-checkbox"></span>
+                                <span class="lk__form-checkbox-text">Раньше всех получать скидки и подарки от
+                                    COSMEDIX-RUSSIA</span>
+                            </label>
+                            <label class="lk__form-checkbox-label">
+                                <input type="checkbox" class="base-checkbox">
+                                <span class="base-checkbox-fake lk__form-checkbox"></span>
+                                <span class="lk__form-checkbox-text">Принимаю условия обработки персональных
+                                    данных</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

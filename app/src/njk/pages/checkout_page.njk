@@ -1,0 +1,117 @@
+{% set pageTitle = 'Оформление заказа' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="checkout-page-container">
+    <article class="checkout-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Мои заказы']])}}
+        </div>
+    </article>
+    <section class="checkout-section">
+        <div class="c-container c-container_checkout">
+            <h1 class="base-page-title checkout-page-title">оформление заказа</h1>
+            <form class="checkout">
+                <div class="c-row">
+                    <div class="checkout__col-left">
+                        <fieldset class="checkout__field">
+                            <legend class="checkout__field-title">Персональные данные</legend>
+                            <label class="checkout__input-wrapper">
+                                <span class="visually-hidden">Имя</span>
+                                <input type="text" class="base-text-input" placeholder="Имя">
+                            </label>
+                            <label class="checkout__input-wrapper">
+                                <span class="visually-hidden">Фамилия</span>
+                                <input type="text" class="base-text-input" placeholder="Фамилия">
+                            </label>
+                            <label class="checkout__input-wrapper">
+                                <span class="visually-hidden">E-Mail</span>
+                                <input type="email" class="base-text-input" placeholder="E-Mail">
+                            </label>
+                            <label class="checkout__input-wrapper">
+                                <span class="visually-hidden">Город</span>
+                                <input type="text" class="base-text-input base-text-input_search"
+                                    placeholder="Москва, Россия">
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkout__field">
+                            <legend class="checkout__field-title">Способ получения</legend>
+                            <label class="checkout__radio-wrapper">
+                                <input type="radio" class="base-radio-input" name="delivery" checked>
+                                <span class="base-radio-fake"></span>
+                                <span class="checkout__radio-text">Доставка курьером</span>
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkout__field">
+                            <legend class="checkout__field-title">Адрес доставки</legend>
+                            <label class="checkout__input-wrapper">
+                                <span class="visually-hidden">Улица</span>
+                                <input type="text" class="base-text-input" placeholder="Улица">
+                            </label>
+                            <div class="c-row">
+                                <label class="checkout__input-wrapper checkout__input-wrapper_col-small">
+                                    <span class="visually-hidden">Дом</span>
+                                    <input type="text" class="base-text-input" placeholder="Дом">
+                                </label>
+                                <label class="checkout__input-wrapper checkout__input-wrapper_col-big">
+                                    <span class="visually-hidden">Квартира /офис</span>
+                                    <input type="text" class="base-text-input" placeholder="Квартира /офис">
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="checkout__field">
+                            <legend class="checkout__field-title">Варианты оплаты</legend>
+                            <label class="checkout__radio-wrapper">
+                                <input type="radio" class="base-radio-input" name="pay">
+                                <span class="base-radio-fake"></span>
+                                <span class="checkout__radio-text">Банковской картой на сайте</span>
+                            </label>
+                            <label class="checkout__radio-wrapper">
+                                <input type="radio" class="base-radio-input" name="pay">
+                                <span class="base-radio-fake"></span>
+                                <span class="checkout__radio-text">Оплата курьеру банковской картой</span>
+                            </label>
+                            <label class="checkout__radio-wrapper">
+                                <input type="radio" class="base-radio-input" name="pay">
+                                <span class="base-radio-fake"></span>
+                                <span class="checkout__radio-text">Оплата курьеру наличными</span>
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkout__field">
+                            <legend class="checkout__field-title">Комментарий</legend>
+                            <textarea class="base-text-input base-text-input_textarea checkout__textarea"></textarea>
+                        </fieldset>
+                    </div>
+                    <div class="checkout__col-right">
+                        <div class="checkout__cost-list">
+                            <span class="checkout__cost-text">Стоимость покупок</span>
+                            <span class="checkout__cost-text">3 864 ₽</span>
+                        </div>
+                        <div class="checkout__cost-list">
+                            <span class="checkout__cost-text">Доставка</span>
+                            <span class="checkout__cost-text">300 ₽</span>
+                        </div>
+                        <div class="checkout__cost-total">
+                            <span class="checkout__cost-text"><b>Итого</b></span>
+                            <span class="checkout__cost-text"><b>3 864 ₽</b></span>
+                        </div>
+                        <button type="submit" class="btn-main checkout__form-btn">оформить заказ</button>
+                        <label class="checkout__checkbox-label">
+                            <input type="checkbox" class="base-checkbox">
+                            <span class="base-checkbox-fake checkout__checkbox"></span>
+                            <span class="checkout__checkbox-text">Раньше всех получать скидки и подарки от
+                                COSMEDIX-RUSSIA</span>
+                        </label>
+                        <label class="checkout__checkbox-label">
+                            <input type="checkbox" class="base-checkbox">
+                            <span class="base-checkbox-fake checkout__checkbox"></span>
+                            <span class="checkout__checkbox-text">Принимаю условия обработки персональных данных</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
