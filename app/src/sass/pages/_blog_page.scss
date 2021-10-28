@@ -13,6 +13,10 @@
   line-height: 26px;
   color: #333;
 }
+.blog__sidebar {
+  position: sticky;
+  top: 180px;
+}
 .blog__sidebar-col {
   flex: 0 0 auto;
   width: 278px;

@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   initSliders();
   new CounterNumber();
   initToggleTabListeners();
+  initRemoveCheckSiderbarListeners();
+  showCommentBtnHandler();
   $(".js--country-select").countrySelect({
     defaultCountry: "ru",
     preferredCountries: [""],
@@ -27,4 +29,26 @@ const toggleTabHandler = (evt) => {
   const tabName = $(evt.currentTarget).attr("name");
   $(`[data-tab-name=${tabName}]`).removeClass("show");
   $(`[data-tab=${tabId}]`).addClass("show");
+};
+const initRemoveCheckSiderbarListeners = () => {
+  $(".js--sidebar-checkbox-remove").on("click", removeCheckSiderbarHandler);
+};
+
+const removeCheckSiderbarHandler = () => {
+  $(".js--sidebar-checkbox").prop("checked", false);
+};
+
+const showCommentBtnHandler = () => {
+  $(".js--toggle-comment-btn").on("click", showCommentHandler);
+};
+const showCommentHandler = (evt) => {
+  const btn = $(evt.currentTarget);
+  const parent = btn.parents(".js--comment-parent");
+  const anotherBtn = parent.children(
+    ".js--toggle-comment-btn.comment__btn_hide"
+  );
+  const textField = parent.children(".js--comment-field");
+  btn.toggleClass("comment__btn_hide");
+  anotherBtn.toggleClass("comment__btn_hide");
+  textField.toggleClass("comment__text-field_show");
 };

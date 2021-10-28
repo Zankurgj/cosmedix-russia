@@ -12,30 +12,36 @@
         <div class="c-container">
             <div class="c-row">
                 <div class="blog__sidebar-col">
-                    <div class="base-sidebar blog__sidebar">
+                    <form class="base-sidebar blog__sidebar">
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">КАТЕГОРИИ</p>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">От экспертов</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Видео обзоры</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Новинки</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Салонные процедуры</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Эфиры</span>
-                            </div>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">От экспертов</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Видео обзоры</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Новинки</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Салонные процедуры</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Эфиры</span>
+                            </label>
                         </div>
                         <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
-                            <button class="btn-main base-sidebar__search-btn" type="button">показать</button>
-                            <button class="btn-base-text base-sidebar__reset-btn">Сбросить</button>
+                            <button class="btn-main base-sidebar__search-btn" type="submit">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn js--sidebar-checkbox-remove"
+                                type="button">Сбросить</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="blog__product-col">
                     <h1 class="base-page-title blog-product-title">Блог</h1>

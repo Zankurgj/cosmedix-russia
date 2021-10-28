@@ -1,0 +1,180 @@
+{% set pageTitle = 'Блог' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="blog-page-container">
+    <article class="blog-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Блог']]) }}
+        </div>
+    </article>
+    <section class="blog-section">
+        <div class="c-container">
+            <div class="c-row">
+                <div class="blog__sidebar-col">
+                    <form class="base-sidebar blog__sidebar">
+                        <div class="base-sidebar__item-wrapper">
+                            <p class="base-sidebar__title">КАТЕГОРИИ</p>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">От экспертов</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Видео обзоры</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Новинки</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Салонные процедуры</span>
+                            </label>
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
+                                <span class="base-sidebar__text base-sidebar__text_active">Эфиры</span>
+                            </label>
+                        </div>
+                        <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
+                            <button class="btn-main base-sidebar__search-btn" type="submit">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn js--sidebar-checkbox-remove"
+                                type="button">Сбросить</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="blog__product-col">
+                    <h1 class="base-page-title base-page-title_post">Натуральное превосходство</h1>
+                    <div class="post">
+                        <div class="post__head">
+                            <span class="post__head__item">Эфиры</span>
+                            <span class="post__head__item">11.08.2021</span>
+                        </div>
+                        <img src="../images/img/blog/blog-img-small.png" alt="Продукция"
+                            class="post__img post__img_left">
+                        <p class="post__text">В рубрику «Секреты красоты», где звезды делятся с Vogue своей
+                            бьюти-рутиной, нечасто попадают мужчины. Но мы понимаем, почему редакция пригласила в
+                            качестве гостя Рики Мартина. Во-первых, он так же хорош, как и 22 года назад, когда выпустил
+                            клип Livin'La Vida Loca и стал мировой звездой. Во-вторых, его советы пригодятся не только
+                            парням, но и девушкам (мы, например, записали себе парочку лайфхаков). И, в-третьих,
+                            оказалось, что у пуэрториканского поп-музыканта не только прекрасный голос, но и отличное
+                            чувство юмора. Можно запросто поднять себе настроение за просмотром ролика!
+                        </p>
+                        <p class="post__text">
+                            В рубрику «Секреты красоты», где звезды делятся с Vogue своей бьюти-рутиной, нечасто
+                            попадают мужчины. Но мы понимаем, почему редакция пригласила в качестве гостя Рики Мартина.
+                            Во-первых, он так же хорош, как и 22 года назад, когда выпустил клип Livin'La Vida Loca и
+                            стал мировой звездой. Во-вторых, его советы пригодятся не только парням, но и девушкам (мы,
+                            например, записали себе парочку лайфхаков). И, в-третьих, оказалось, что у пуэрториканского
+                            поп-музыканта не только прекрасный голос, но и отличное чувство юмора. Можно запросто
+                            поднять себе настроение за просмотром ролика!
+                        </p>
+                        <figure class="post__figure">
+                            <img src="../images/img/blog/blog-img-big.png" alt="Elephant at sunset"
+                                class="post__figure__img">
+                            <figcaption class="post__figure__caption">В рубрику «Секреты красоты»</figcaption>
+                        </figure>
+                        <p class="post__text">
+                            В рубрику «Секреты красоты», где звезды делятся с Vogue своей бьюти-рутиной, нечасто
+                            попадают мужчины. Но мы понимаем, почему редакция пригласила в качестве гостя Рики Мартина.
+                            Во-первых, он так же хорош, как и 22 года назад, когда выпустил клип Livin'La Vida Loca и
+                            стал мировой звездой. Во-вторых, его советы пригодятся не только парням, но и девушкам (мы,
+                            например, записали себе парочку лайфхаков). И, в-третьих, оказалось, что у пуэрториканского
+                            поп-музыканта не только прекрасный голос, но и отличное чувство юмора. Можно запросто
+                            поднять себе настроение за просмотром ролика!
+                        </p>
+                        <img src="../images/img/blog/blog-img-small.png" alt="Продукция"
+                            class="post__img post__img_right">
+                        <p class="post__text">В рубрику «Секреты красоты», где звезды делятся с Vogue своей
+                            бьюти-рутиной, нечасто попадают мужчины. Но мы понимаем, почему редакция пригласила в
+                            качестве гостя Рики Мартина. Во-первых, он так же хорош, как и 22 года назад, когда выпустил
+                            клип Livin'La Vida Loca и стал мировой звездой. Во-вторых, его советы пригодятся не только
+                            парням, но и девушкам (мы, например, записали себе парочку лайфхаков). И, в-третьих,
+                            оказалось, что у пуэрториканского поп-музыканта не только прекрасный голос, но и отличное
+                            чувство юмора. Можно запросто поднять себе настроение за просмотром ролика!
+                        </p>
+                        <p class="post__text">
+                            В рубрику «Секреты красоты», где звезды делятся с Vogue своей бьюти-рутиной, нечасто
+                            попадают мужчины. Но мы понимаем, почему редакция пригласила в качестве гостя Рики Мартина.
+                            Во-первых, он так же хорош, как и 22 года назад, когда выпустил клип Livin'La Vida Loca и
+                            стал мировой звездой. Во-вторых, его советы пригодятся не только парням, но и девушкам (мы,
+                            например, записали себе парочку лайфхаков). И, в-третьих, оказалось, что у пуэрториканского
+                            поп-музыканта не только прекрасный голос, но и отличное чувство юмора. Можно запросто
+                            поднять себе настроение за просмотром ролика!
+                        </p>
+                        <div class="post__footer">
+                            <div class="post__footer__item">
+                                <button class="post__footer__like-btn">
+                                    <span class="visually-hidden">Лайк</span>
+                                </button>
+                                <span class="post__footer__text">1050</span>
+                            </div>
+                            <div class="post__footer__item">
+                                <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                    class="post__footer__icon" aria-hidden="true">
+                                <span class="post__footer__text">205</span>
+                            </div>
+                        </div>
+                        <div class="post__sharing">
+                            <script src="https://yastatic.net/share2/share.js" async></script>
+                            <div class="one-news_sharing-block">
+                                <div class="ya-share2" data-bare
+                                    data-services="vkontakte,facebook,odnoklassniki,telegram,twitter">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment__title">Комментарии</p>
+                    <div class="comment-wrapper">
+                        <div class="comment js--comment-parent">
+                            <div class="comment__head">
+                                <div class="comment__head-avatar">
+                                    <img src="../images/img/blog/ava1.png" alt="Пользователь"
+                                        class="comment__head-avatar-img" aria-hidden="true">
+                                </div>
+                                <span class="comment__head-name">Alexana</span>
+                                <span class="comment__head-date">06 августа 2021, 14:08</span>
+                            </div>
+                            <div class="comment__inner">
+                                <p class="comment__text">
+                                    Красивый холодный оттенок, жаль мои губы с такими становятся мертвецкими)
+                                </p>
+                            </div>
+                            <button class="comment__btn js--toggle-comment-btn">Ответить</button>
+                            <button class="comment__btn comment__btn_hide js--toggle-comment-btn">Скрыть</button>
+                            <div class="comment__text-field js--comment-field">
+                                <textarea class="comment__inner-textarea"></textarea>
+                                <button class="btn-main comment__btn-submit">Отправить комментарий</button>
+                            </div>
+                        </div>
+                        <div class="comment-wrapper comment-wrapper_nested">
+                            <div class="comment js--comment-parent">
+                                <div class="comment__head">
+                                    <div class="comment__head-avatar">
+                                        <img src="../images/img/blog/ava2.png" alt="Пользователь"
+                                            class="comment__head-avatar-img" aria-hidden="true">
+                                    </div>
+                                    <span class="comment__head-name comment__head-name_gray">Cosmedix</span>
+                                    <span class="comment__head-date">06 августа 2021, 14:08</span>
+                                </div>
+                                <div class="comment__inner">
+                                    <p class="comment__text">
+                                        Красивый холодный оттенок, жаль мои губы с такими становятся мертвецкими)
+                                    </p>
+                                </div>
+                                <button class="comment__btn js--toggle-comment-btn">Ответить</button>
+                                <button class="comment__btn comment__btn_hide js--toggle-comment-btn">Скрыть</button>
+                                <div class="comment__text-field js--comment-field">
+                                    <textarea class="comment__inner-textarea"></textarea>
+                                    <button class="btn-main comment__btn-submit">Отправить комментарий</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

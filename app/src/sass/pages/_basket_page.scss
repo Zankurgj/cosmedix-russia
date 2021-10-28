@@ -16,6 +16,10 @@
   flex: 0 0 auto;
   width: 390px;
 }
+.basket__sidebar {
+  position: sticky;
+  top: 180px;
+}
 // ITEM
 .basket__item {
   position: relative;

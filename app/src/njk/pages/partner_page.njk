@@ -1,0 +1,96 @@
+{% set pageTitle = 'Блог' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="partner-page-container">
+    <article class="partner-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Профессионалам'], ['Стать партнером']]) }}
+        </div>
+    </article>
+    <section class="partner-section">
+        <div class="c-container partner__container">
+            <h1 class="base-page-title partner__page-title">Ваши клиенты скажут спасибо!</h1>
+            <p class="partner__text partner__text_top">
+                COSMEDIX — первый американский космецевтический бренд которому удалось эффетивно совместить высокую
+                результативность средств без агрессивного воздействия на кожу.
+            </p>
+            <div class="partner__inner">
+                <div class="partner__item-container">
+                    <div class="partner__item">
+                        <div class="partner__item-img-wrapper">
+                            <img src="../images/img/partner/partner-icon1.png" alt="Парнтеры" class="partner__item-img"
+                                aria-hidden="true">
+                        </div>
+                        <div class="partner__item-text-block">
+                            <p class="partner__item-title">ЗАКРЫВАЕМ ВСЕ ПОТРЕБНОСТИ КЛИЕНТА</p>
+                            <p class="partner__text">Широкий и разнообразный ассортимент возможность компоновать уходы
+                                под
+                                различные
+                                проблемы. </p>
+                        </div>
+                    </div>
+                    <div class="partner__item">
+                        <div class="partner__item-img-wrapper">
+                            <img src="../images/img/partner/partner-icon2.png" alt="Парнтеры" class="partner__item-img"
+                                aria-hidden="true">
+                        </div>
+                        <div class="partner__item-text-block">
+                            <p class="partner__item-title">БЫСТРЫЙ РЕЗУЛЬТАТ</p>
+                            <p class="partner__text">Собственные запатентованные формулы, позволяющие решать самые
+                                тяжелые
+                                проблемы
+                                с кожей.</p>
+                        </div>
+                    </div>
+                    <div class="partner__item">
+                        <div class="partner__item-img-wrapper">
+                            <img src="../images/img/partner/partner-icon3.png" alt="Парнтеры" class="partner__item-img"
+                                aria-hidden="true">
+                        </div>
+                        <div class="partner__item-text-block">
+                            <p class="partner__item-title">МЯГКОЕ ВОЗДЕЙСТВИЕ</p>
+                            <p class="partner__text">Используем Технологию хиральной коррекции, благодаря которой
+                                происходит
+                                100%
+                                усвоение средств клетками кожи . Минимум аллергических реакций — максимум результата.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="partner__video-wrapper">
+                    <button class="partner__video-btn">
+                        <span class="visually-hidden">Воспроизвести видео</span>
+                    </button>
+                </div>
+                <form class="partner__form">
+                    <p class="partner__form-title">Оставьте ваши контакты, и менеджер свяжется с вами</p>
+                    <label class="partner__form-label">
+                        <span class="visually-hidden">Имя</span>
+                        <input type="text" class="base-text-input" placeholder="Имя">
+                    </label>
+                    <label class="partner__form-label">
+                        <span class="visually-hidden">Фамилия</span>
+                        <input type="text" class="base-text-input" placeholder="Фамилия">
+                    </label>
+                    <label class="partner__form-label">
+                        <span class="visually-hidden">E-Mail</span>
+                        <input type="email" class="base-text-input" placeholder="E-Mail">
+                    </label>
+                    <label class="partner__form-label">
+                        <span class="visually-hidden">Имя</span>
+                        <input type="text" class="base-text-input base-text-input_search" placeholder="Москва, Россия">
+                    </label>
+                    <button class="btn-main partner__form-btn" type="submit">отправить заявку</button>
+                    <label class="partner__form-checkbox-wrapper">
+                        <input type="checkbox" class="base-checkbox">
+                        <span class="base-checkbox-fake partner__form-checkbox"></span>
+                        <span class="partner__form-checkbox-text">Согласен на обработку моих данных *</span>
+                    </label>
+                    <span class="partner__form-subtitle">*Обязательное поле</span>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

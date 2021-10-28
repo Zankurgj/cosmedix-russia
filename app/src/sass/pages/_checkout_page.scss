@@ -19,6 +19,10 @@
   width: 388px;
   flex: 0 0 auto;
 }
+.checkout__sidebar {
+  position: sticky;
+  top: 180px;
+}
 // FORM
 .checkout__field {
   margin-bottom: 44px;

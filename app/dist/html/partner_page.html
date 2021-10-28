@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Оформление заказа</title>
+    <title>Блог</title>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <link rel="icon" href="img/favicon.png" /> -->
@@ -88,8 +88,8 @@
     </header>
     <div class="c-page__wrapper">
 
-        <div class="checkout-page-container">
-            <article class="checkout-breadcrumbs-section">
+        <div class="partner-page-container">
+            <article class="partner-breadcrumbs-section">
                 <div class="c-container">
 
 
@@ -103,8 +103,17 @@
 
 
                         <li class="breadcrumb-item__list">
+                            <a href="#" class="breadcrumb-item">
+            Профессионалам
+        </a>
+                            /
+                        </li>
+
+
+
+                        <li class="breadcrumb-item__list">
                             <span href="#" aria-current="page" class="breadcrumb-item">
-            Мои заказы
+            Стать партнером
         </span>
                         </li>
 
@@ -113,114 +122,78 @@
 
                 </div>
             </article>
-            <section class="checkout-section">
-                <div class="c-container c-container_checkout">
-                    <h1 class="base-page-title checkout-page-title">оформление заказа</h1>
-                    <form class="checkout">
-                        <div class="c-row">
-                            <div class="checkout__col-left">
-                                <fieldset class="checkout__field">
-                                    <legend class="checkout__field-title">Персональные данные</legend>
-                                    <label class="checkout__input-wrapper">
-                                        <span class="visually-hidden">Имя</span>
-                                        <input type="text" class="base-text-input" placeholder="Имя">
-                                    </label>
-                                    <label class="checkout__input-wrapper">
-                                        <span class="visually-hidden">Фамилия</span>
-                                        <input type="text" class="base-text-input" placeholder="Фамилия">
-                                    </label>
-                                    <label class="checkout__input-wrapper">
-                                        <span class="visually-hidden">E-Mail</span>
-                                        <input type="email" class="base-text-input" placeholder="E-Mail">
-                                    </label>
-                                    <label class="checkout__input-wrapper">
-                                        <span class="visually-hidden">Город</span>
-                                        <input type="text" class="base-text-input base-text-input_search" placeholder="Москва, Россия">
-                                    </label>
-                                </fieldset>
-                                <fieldset class="checkout__field">
-                                    <legend class="checkout__field-title">Способ получения</legend>
-                                    <label class="checkout__radio-wrapper">
-                                        <input type="radio" class="base-radio-input" name="delivery" checked>
-                                        <span class="base-radio-fake"></span>
-                                        <span class="checkout__radio-text">Доставка курьером</span>
-                                    </label>
-                                </fieldset>
-                                <fieldset class="checkout__field">
-                                    <legend class="checkout__field-title">Адрес доставки</legend>
-                                    <label class="checkout__input-wrapper">
-                                        <span class="visually-hidden">Улица</span>
-                                        <input type="text" class="base-text-input" placeholder="Улица">
-                                    </label>
-                                    <div class="c-row">
-                                        <label class="checkout__input-wrapper checkout__input-wrapper_col-small">
-                                            <span class="visually-hidden">Дом</span>
-                                            <input type="text" class="base-text-input" placeholder="Дом">
-                                        </label>
-                                        <label class="checkout__input-wrapper checkout__input-wrapper_col-big">
-                                            <span class="visually-hidden">Квартира /офис</span>
-                                            <input type="text" class="base-text-input" placeholder="Квартира /офис">
-                                        </label>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="checkout__field">
-                                    <legend class="checkout__field-title">Варианты оплаты</legend>
-                                    <label class="checkout__radio-wrapper">
-                                        <input type="radio" class="base-radio-input" name="pay">
-                                        <span class="base-radio-fake"></span>
-                                        <span class="checkout__radio-text">Банковской картой на сайте</span>
-                                    </label>
-                                    <label class="checkout__radio-wrapper">
-                                        <input type="radio" class="base-radio-input" name="pay">
-                                        <span class="base-radio-fake"></span>
-                                        <span class="checkout__radio-text">Оплата курьеру банковской картой</span>
-                                    </label>
-                                    <label class="checkout__radio-wrapper">
-                                        <input type="radio" class="base-radio-input" name="pay">
-                                        <span class="base-radio-fake"></span>
-                                        <span class="checkout__radio-text">Оплата курьеру наличными</span>
-                                    </label>
-                                </fieldset>
-                                <fieldset class="checkout__field">
-                                    <legend class="checkout__field-title">Комментарий</legend>
-                                    <textarea class="base-text-input base-text-input_textarea checkout__textarea"></textarea>
-                                </fieldset>
+            <section class="partner-section">
+                <div class="c-container partner__container">
+                    <h1 class="base-page-title partner__page-title">Ваши клиенты скажут спасибо!</h1>
+                    <p class="partner__text partner__text_top">
+                        COSMEDIX — первый американский космецевтический бренд которому удалось эффетивно совместить высокую результативность средств без агрессивного воздействия на кожу.
+                    </p>
+                    <div class="partner__inner">
+                        <div class="partner__item-container">
+                            <div class="partner__item">
+                                <div class="partner__item-img-wrapper">
+                                    <img src="../images/img/partner/partner-icon1.png" alt="Парнтеры" class="partner__item-img" aria-hidden="true">
+                                </div>
+                                <div class="partner__item-text-block">
+                                    <p class="partner__item-title">ЗАКРЫВАЕМ ВСЕ ПОТРЕБНОСТИ КЛИЕНТА</p>
+                                    <p class="partner__text">Широкий и разнообразный ассортимент возможность компоновать уходы под различные проблемы.</p>
+                                </div>
                             </div>
-                            <div class="checkout__col-right">
-                                <aside class="checkout__sidebar">
-                                    <div class="checkout__cost-list">
-                                        <span class="checkout__cost-text">Стоимость покупок</span>
-                                        <span class="checkout__cost-text">3 864 ₽</span>
-                                    </div>
-                                    <div class="checkout__cost-list">
-                                        <span class="checkout__cost-text">Доставка</span>
-                                        <span class="checkout__cost-text">300 ₽</span>
-                                    </div>
-                                    <div class="checkout__cost-total">
-                                        <span class="checkout__cost-text"><b>Итого</b></span>
-                                        <span class="checkout__cost-text"><b>3 864 ₽</b></span>
-                                    </div>
-                                    <button type="submit" class="btn-main checkout__form-btn">оформить заказ</button>
-                                    <label class="checkout__checkbox-label">
-                                        <input type="checkbox" class="base-checkbox">
-                                        <span class="base-checkbox-fake checkout__checkbox"></span>
-                                        <span class="checkout__checkbox-text">Раньше всех получать скидки и подарки от
-                                    COSMEDIX-RUSSIA</span>
-                                    </label>
-                                    <label class="checkout__checkbox-label">
-                                        <input type="checkbox" class="base-checkbox">
-                                        <span class="base-checkbox-fake checkout__checkbox"></span>
-                                        <span class="checkout__checkbox-text">Принимаю условия обработки персональных
-                                    данных</span>
-                                    </label>
-                                </aside>
+                            <div class="partner__item">
+                                <div class="partner__item-img-wrapper">
+                                    <img src="../images/img/partner/partner-icon2.png" alt="Парнтеры" class="partner__item-img" aria-hidden="true">
+                                </div>
+                                <div class="partner__item-text-block">
+                                    <p class="partner__item-title">БЫСТРЫЙ РЕЗУЛЬТАТ</p>
+                                    <p class="partner__text">Собственные запатентованные формулы, позволяющие решать самые тяжелые проблемы с кожей.</p>
+                                </div>
+                            </div>
+                            <div class="partner__item">
+                                <div class="partner__item-img-wrapper">
+                                    <img src="../images/img/partner/partner-icon3.png" alt="Парнтеры" class="partner__item-img" aria-hidden="true">
+                                </div>
+                                <div class="partner__item-text-block">
+                                    <p class="partner__item-title">МЯГКОЕ ВОЗДЕЙСТВИЕ</p>
+                                    <p class="partner__text">Используем Технологию хиральной коррекции, благодаря которой происходит 100% усвоение средств клетками кожи . Минимум аллергических реакций — максимум результата.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                        <div class="partner__video-wrapper">
+                            <button class="partner__video-btn">
+                                <span class="visually-hidden">Воспроизвести видео</span>
+                            </button>
+                        </div>
+                        <form class="partner__form">
+                            <p class="partner__form-title">Оставьте ваши контакты, и менеджер свяжется с вами</p>
+                            <label class="partner__form-label">
+                                <span class="visually-hidden">Имя</span>
+                                <input type="text" class="base-text-input" placeholder="Имя">
+                            </label>
+                            <label class="partner__form-label">
+                                <span class="visually-hidden">Фамилия</span>
+                                <input type="text" class="base-text-input" placeholder="Фамилия">
+                            </label>
+                            <label class="partner__form-label">
+                                <span class="visually-hidden">E-Mail</span>
+                                <input type="email" class="base-text-input" placeholder="E-Mail">
+                            </label>
+                            <label class="partner__form-label">
+                                <span class="visually-hidden">Имя</span>
+                                <input type="text" class="base-text-input base-text-input_search" placeholder="Москва, Россия">
+                            </label>
+                            <button class="btn-main partner__form-btn" type="submit">отправить заявку</button>
+                            <label class="partner__form-checkbox-wrapper">
+                                <input type="checkbox" class="base-checkbox">
+                                <span class="base-checkbox-fake partner__form-checkbox"></span>
+                                <span class="partner__form-checkbox-text">Согласен на обработку моих данных *</span>
+                            </label>
+                            <span class="partner__form-subtitle">*Обязательное поле</span>
+                        </form>
+                    </div>
                 </div>
             </section>
         </div>
-
 
     </div>
     <footer class="main-footer">

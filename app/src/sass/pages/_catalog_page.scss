@@ -37,9 +37,16 @@
   color: #000;
 }
 .base-sidebar__item {
-  margin-bottom: 5px;
+  display: block;
+  margin-bottom: 8px;
   &:last-child {
     margin-bottom: 0;
+  }
+}
+.base-sidebar__input {
+  @extend .visually-hidden;
+  &:checked + .base-sidebar__text {
+    font-weight: bold;
   }
 }
 .base-sidebar__text {
@@ -47,6 +54,14 @@
   font-size: 14px;
   line-height: 16px;
   color: #333;
+  cursor: pointer;
+}
+.base-sidebar__text_active {
+  display: table;
+  &:hover {
+    opacity: 0.8;
+    transition: opacity $base-duration $base-timing;
+  }
 }
 .base-sidebar__search-btn {
   display: block;
