@@ -4,12 +4,21 @@
   background-position: center center;
   background-size: cover;
   background-image: url("../images/img/partner/partner-bg.png");
+  @media all and (max-width: $mobile-bp) {
+    padding: 7px 0 67px;
+  }
 }
 .partner-breadcrumbs-section {
   margin-bottom: 20px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 15px;
+  }
 }
 .partner__page-title {
   margin-bottom: 18px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 23px;
+  }
 }
 .partner__container {
   max-width: 1150px;
@@ -18,9 +27,16 @@
   font-size: 21px;
   line-height: 27px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .partner__text_top {
   margin-bottom: 8px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 15px;
+  }
 }
 .partner__inner {
   display: block;
@@ -29,11 +45,17 @@
 }
 .partner__item-container {
   margin-bottom: 26px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 22px;
+  }
 }
 .partner__item {
   display: flex;
   align-items: center;
   margin-bottom: 26px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 10px;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -43,6 +65,11 @@
   height: 125px;
   flex: 0 0 auto;
   margin-right: 62px;
+  @media all and (max-width: $mobile-bp) {
+    width: 67px;
+    height: 80px;
+    margin-right: 18px;
+  }
 }
 .partner__item-img {
   display: block;
@@ -59,6 +86,11 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #78859d;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 .partner__form-title {
   margin-bottom: 20px;
@@ -66,6 +98,11 @@
   line-height: 22px;
   text-transform: uppercase;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .partner__form-label {
   display: block;
@@ -78,24 +115,42 @@
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 20px;
+  @media all and (max-width: $mobile-bp) {
+    margin: 20px 0 15px;
+  }
 }
 .partner__form-checkbox-wrapper {
   display: flex;
   margin-bottom: 13px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 6px;
+  }
 }
 .partner__form-checkbox {
   margin: 5px 20px 0 0;
+  @media all and (max-width: $mobile-bp) {
+    margin: 5px 14px 0 0;
+  }
 }
 .partner__form-checkbox-text {
   font-size: 18px;
   line-height: 26px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .partner__form-subtitle {
   padding-left: 35px;
   font-size: 16px;
   line-height: 22px;
   color: #828282;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 24px;
+  }
 }
 .partner__video-wrapper {
   position: relative;
@@ -103,6 +158,13 @@
   padding-top: 50%;
   margin-bottom: 42px;
   background-color: #a5c1cf;
+  @media all and (max-width: $mobile-bp) {
+    width: auto;
+    margin: 0 -20px 32px -20px;
+  }
+  @media all and (max-width: 500px) {
+    padding-top: 83%;
+  }
 }
 .partner__video-btn {
   position: absolute;
@@ -115,7 +177,50 @@
   background-position: center center;
   background-size: cover;
   background-image: url("../images/icons/play-video.svg");
+  @media all and (max-width: $mobile-bp) {
+    width: 207px;
+    height: 210px;
+  }
   &:hover {
     opacity: 0.8;
   }
+}
+.base-text-input_partner {
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+}
+.base-text-input_partner-file {
+  font-size: 14px;
+  line-height: 22px;
+  color: #bdbdbd;
+  &.error {
+    color: #e22f59;
+  }
+}
+.partner__form-file-field {
+  margin: 38px 0 97px;
+}
+.partner__form-file-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 0;
+  width: 100%;
+  max-width: 320px;
+}
+.partner__form-file-text {
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+}
+.partner__form-file-label {
+  display: flex;
+  margin: 20px 0 12px;
+  cursor: pointer;
+}
+.base-text-input_search-partner {
+  padding: 12px 10px 12px 45px;
 }

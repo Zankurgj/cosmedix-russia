@@ -18,17 +18,25 @@
                 <a href="/" class="main_header__mobile-logo">
                     <img class="main_header__mobile-logo-img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
                 </a>
-                <button class="btn-hamburger btn-hamburger_header js--btn-mobile-menu">
+                <button class="btn-hamburger btn-hamburger_header js--header-nav-toggle">
                     <span class="btn-hamburger__icon"></span>
                     <span class="visually-hidden">меню</span>
                 </button>
                 <div class="main_header__search">
-                    <label class="main_header__search-wrapper">
-                        <span class="visually-hidden">Окно поиска</span>
-                        <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
-                    </label>
-                    <button class="main_header__top_btn main_header__top_btn_search">
-                        <span class="visually-hidden">Поиск</span>
+                    <div class="main_header__search-field">
+                        <label class="main_header__search-wrapper js--header-search">
+                            <span class="visually-hidden">Окно поиска</span>
+                            <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
+                        </label>
+                        <button class="main_header__top_btn main_header__top_btn_search main_header__top_btn_search_field js--search-btn">
+                            <span class="visually-hidden">Поиск</span>
+                        </button>
+                    </div>
+                    <button class="main_header__top_btn main_header__top_btn_search show js--toggle-search">
+                        <span class="visually-hidden">Открыть поиск</span>
+                    </button>
+                    <button class="main_header__top_btn main_header__top_btn_search-close js--toggle-search">
+                        <span class="visually-hidden">Закрыть поиск</span>
                     </button>
                 </div>
                 <button class="main_header__top_btn main_header__top_btn_lk">
@@ -39,8 +47,12 @@
                 </button>
             </div>
         </div>
-        <div class="main_header__bottom">
+        <div class="main_header__bottom js--header-nav">
+            <div class="main_header-overlay js--header-nav-toggle"></div>
             <div class="c-container c-container_main_header">
+                <button class="main_header-btn-close js--header-nav-toggle" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                </button>
                 <a href="/" class="main_header__logo">
                     <span class="visually-hidden">Главная страница</span>
                     <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
@@ -116,20 +128,37 @@
             <section class="lk">
                 <div class="c-container">
                     <div class="c-container_lk">
+                        <h1 class="base-page-title lk-page-title lk-page-title_mobile">личный кабинет</h1>
                         <div class="c-row">
                             <div class="lk__col-left">
                                 <aside class="lk__sidebar">
                                     <p class="lk__sidebar__title">Личная информация</p>
-                                    <a href="#" class="lk__sidebar__item">ЛИЧНЫЕ ДАННЫЕ</a>
-                                    <a href="#" class="lk__sidebar__item">Текущие заказы</a>
-                                    <a href="#" class="lk__sidebar__item">История заказов</a>
-                                    <a href="#" class="lk__sidebar__item lk__sidebar__item_active">Бонусы</a>
-                                    <a href="#" class="lk__sidebar__item">Корзина</a>
-                                    <a href="#" class="lk__sidebar__item">отложенные</a>
+                                    <button class="lk__sidebar-btn-spoiler lk__sidebar-btn-spoiler_opened js--toggle-lk-spoiler" type="button">Личная информация
+                                    </button>
+                                    <ul class="lk__sidebar-list js--lk-spoiler">
+                                        <li class="lk__sidebar-list-item">
+                                            <a href="#" class="lk__sidebar__item">ЛИЧНЫЕ ДАННЫЕ</a>
+                                        </li>
+                                        <li class="lk__sidebar-list-item">
+                                            <a href="#" class="lk__sidebar__item">Текущие заказы</a>
+                                        </li>
+                                        <li class="lk__sidebar-list-item">
+                                            <a href="#" class="lk__sidebar__item">История заказов</a>
+                                        </li>
+                                        <li class="lk__sidebar-list-item">
+                                            <a href="#" class="lk__sidebar__item lk__sidebar__item_active">Бонусы</a>
+                                        </li>
+                                        <li class="lk__sidebar-list-item">
+                                            <a href="#" class="lk__sidebar__item">Корзина</a>
+                                        </li>
+                                        <li class="lk__sidebar-list-item">
+                                            <a href="#" class="lk__sidebar__item">отложенные</a>
+                                        </li>
+                                    </ul>
                                 </aside>
                             </div>
                             <div class="lk__col-right">
-                                <h1 class="base-page-title lk-page-title">Ваши бонусы</h1>
+                                <h1 class="base-page-title lk-page-title lk-page-title_bonus">Ваши бонусы</h1>
                                 <label class="lk__bonus-input-wrapper">
                                     <span class="visually-hidden">Количество бонусов</span>
                                     <input type="text" class="base-text-input lk__bonus-input" value="3 864 ₽" readonly>
@@ -161,13 +190,13 @@
                         <div class="footer-social__wrapper footer-social__wrapper_desktop">
                             <p class="footer-social__title">Присоединяйтесь</p>
                             <div class="footer-social__items-row">
-                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
                                     <span class="visually-hidden">Космедикс в инстаграм</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
                                     <span class="visually-hidden">Космедикс в фейсбук</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
                                     <span class="visually-hidden">Космедикс в ютуб</span>
                                 </a>
                             </div>
@@ -192,13 +221,13 @@
                         <div class="footer-social__wrapper footer-social__wrapper_mobile">
                             <p class="footer-social__title">Присоединяйтесь</p>
                             <div class="footer-social__items-row">
-                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
                                     <span class="visually-hidden">Космедикс в инстаграм</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
                                     <span class="visually-hidden">Космедикс в фейсбук</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
                                     <span class="visually-hidden">Космедикс в ютуб</span>
                                 </a>
                             </div>

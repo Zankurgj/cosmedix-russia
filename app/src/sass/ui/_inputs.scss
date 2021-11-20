@@ -17,6 +17,10 @@
   border-radius: 50%;
   border: 1px solid #746f6f;
   cursor: pointer;
+  @media all and (max-width: $mobile-bp) {
+    width: 10px;
+    height: 10px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -28,6 +32,12 @@
     background-color: #746f6f;
     opacity: 0;
     transition: opacity $base-timing $base-duration;
+    @media all and (max-width: $mobile-bp) {
+      left: 2px;
+      top: 2px;
+      width: 4px;
+      height: 4px;
+    }
   }
 }
 // CHECKBOX
@@ -46,6 +56,10 @@
   height: 15px;
   border: 1px solid #78859d;
   cursor: pointer;
+  @media all and (max-width: $mobile-bp) {
+    width: 10px;
+    height: 10px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -58,7 +72,16 @@
     transform: rotate(-45deg);
     opacity: 0;
     transition: opacity $base-timing $base-duration;
+    @media all and (max-width: $mobile-bp) {
+      width: 6px;
+      height: 4px;
+      left: 1px;
+      top: 1px;
+    }
   }
+}
+.base-file-input {
+  @extend .visually-hidden;
 }
 .base-text-input {
   display: block;
@@ -68,12 +91,20 @@
   font-size: 18px;
   line-height: 20px;
   color: #78859d;
+  @media all and (max-width: $mobile-bp) {
+    padding: 12px 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .base-text-input_search {
   background-repeat: no-repeat;
   background-position: center left 18px;
   background-image: url("../images/icons/input-search.svg");
   padding: 17px 24px 15px 56px;
+}
+.base-text-input_transparent {
+  background-color: transparent;
 }
 .base-text-input_textarea {
   resize: none;

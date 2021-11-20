@@ -11,40 +11,43 @@
     <section class="blog-section">
         <div class="c-container">
             <div class="c-row">
-                <div class="blog__sidebar-col">
+                <div class="blog__sidebar-col js--filter-popup">
+                    <div class="blog__sidebar-overlay js--filter-toggle"></div>
                     <form class="base-sidebar blog__sidebar">
+                        <button class="blog__sidebar-btn-close js--filter-toggle" type="button">
+                            <span class="visually-hidden">Закрыть</span>
+                        </button>
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">КАТЕГОРИИ</p>
+                            {% set filterCategory = [
+                            ['ОТ ЭКСПЕРТОВ'],
+                            ['ВИДЕО ОБЗОРЫ'],
+                            ['НОВИНКИ'],
+                            ['САЛОННЫЕ ПРОЦЕДУРЫ'],
+                            ['ЭФИРЫ']
+                            ] %}
+                            {% for name in filterCategory %}
                             <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">От экспертов</span>
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                <span class="base-sidebar__text base-sidebar__text_active">{{name}}</span>
                             </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Видео обзоры</span>
-                            </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Новинки</span>
-                            </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Салонные процедуры</span>
-                            </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Эфиры</span>
-                            </label>
+                            {% endfor %}
                         </div>
-                        <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
-                            <button class="btn-main base-sidebar__search-btn" type="submit">показать</button>
-                            <button class="btn-base-text base-sidebar__reset-btn js--sidebar-checkbox-remove"
-                                type="button">Сбросить</button>
+                        <div class="base-sidebar__item-wrapper">
+                            <button class="btn-main base-sidebar__search-btn" type="button">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn" type="submit">Сбросить</button>
                         </div>
                     </form>
                 </div>
                 <div class="blog__product-col">
                     <h1 class="base-page-title blog-product-title">Блог</h1>
+                    <p class="blog-product-subtitle">42 статьи</p>
+                    <div class="filter-nav filter-nav_mobile filter-nav_blog">
+                        <button class="filter-nav__btn js--filter-toggle" type="button">
+                            <span class="visually-hidden">Открыть фильтры</span>
+                        </button>
+                        <p class="filter-nav__title">фильтр</p>
+                    </div>
                     <p class="blog-product-text-block">
                         COSMEDIX — первый американский космецевтический бренд, внедривший технологию хиральной корреции
                         , что позволило создавать высокоэффективные средства с быстрым результатом без побочных эффектов
@@ -55,10 +58,10 @@
                         <div class="blog__item-col">
                             <div class="blog-item">
                                 <div class="blog-item__img-block">
-                                    <div class="blog-item__img-wrapper">
+                                    <a href="#" class="blog-item__img-wrapper">
                                         <img src="../images/img/blog/blog.png" alt="Натуральное превосходство"
                                             class="blog-item__img">
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="blog-item__text-block">
                                     <div class="blog-item__head">
@@ -69,19 +72,26 @@
                                             11.08.2021
                                         </span>
                                         <span class="blog-item__head-text">
-                                            <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                            <!-- Активная -->
+                                            <img src="../images/icons/blog-like-active.svg" alt="Иконка лайков новости"
                                                 class="blog-item__head-icon">
+                                            <!-- <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                                class="blog-item__head-icon blog-item__head-icon_like"> -->
                                             1050
                                         </span>
                                         <span class="blog-item__head-text">
-                                            <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
-                                                class="blog-item__head-icon">
+                                            <!-- Активная -->
+                                            <img src="../images/icons/blog-eye-active.svg"
+                                                alt="Иконка просмотра новости"
+                                                class="blog-item__head-icon blog-item__head-icon_eye">
+                                            <!-- <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                                class="blog-item__head-icon"> -->
                                             205
                                         </span>
                                     </div>
                                     <div class="blog-item__inner">
-                                        <p class="blog-item__title">Натуральное
-                                            превосходство</p>
+                                        <a href="#" class="blog-item__title">Натуральное
+                                            превосходство</a>
                                         <p class="blog-item__text">
                                             COSMEDIX – первый представитель космецевтической индустрии, который
                                             использует мощные природные ингредиенты....

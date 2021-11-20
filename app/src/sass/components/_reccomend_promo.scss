@@ -11,6 +11,18 @@
 }
 .reccomend-promo__slide {
   height: 100%;
+  @media all and (max-width: 1200px) {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+.base-slider-arrow_reccomend {
+  .slick-arrow {
+    display: none;
+    @media all and (max-width: $mobile-bp) {
+      display: block;
+    }
+  }
 }
 .reccomend-promo__item {
   display: flex;
@@ -33,11 +45,16 @@
   z-index: 1;
 }
 .reccomend-promo__img-block {
+  display: block;
   position: relative;
   margin: 0 auto;
   width: 186px;
   height: 186px;
   margin-bottom: 14px;
+  transition: opacity $base-duration $base-timing;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .reccomend-promo__img {
   display: block;
@@ -53,6 +70,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #78859d;
+  transition: color $base-duration $base-timing;
+  &:hover {
+    color: rgba($color: #78859d, $alpha: 0.8);
+    text-decoration: none;
+  }
 }
 .reccomend-promo__text {
   margin-bottom: 3px;

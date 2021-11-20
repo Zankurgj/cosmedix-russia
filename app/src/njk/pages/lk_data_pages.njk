@@ -10,17 +10,34 @@
     </article>
     <section class="lk">
         <div class="c-container">
+            <h1 class="base-page-title lk-page-title lk-page-title_mobile">личный кабинет</h1>
             <div class="c-container_lk">
                 <div class="c-row">
                     <div class="lk__col-left">
                         <aside class="lk__sidebar">
                             <p class="lk__sidebar__title">Личная информация</p>
-                            <a href="#" class="lk__sidebar__item lk__sidebar__item_active">ЛИЧНЫЕ ДАННЫЕ</a>
-                            <a href="#" class="lk__sidebar__item">Текущие заказы</a>
-                            <a href="#" class="lk__sidebar__item">История заказов</a>
-                            <a href="#" class="lk__sidebar__item">Бонусы</a>
-                            <a href="#" class="lk__sidebar__item">Корзина</a>
-                            <a href="#" class="lk__sidebar__item">отложенные</a>
+                            <button class="lk__sidebar-btn-spoiler js--toggle-lk-spoiler" type="button">Личная
+                                информация</button>
+                            <ul class="lk__sidebar-list js--lk-spoiler">
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item lk__sidebar__item_active">ЛИЧНЫЕ ДАННЫЕ</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">Текущие заказы</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">История заказов</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">Бонусы</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">Корзина</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">отложенные</a>
+                                </li>
+                            </ul>
                         </aside>
                     </div>
                     <div class="lk__col-right">
@@ -41,7 +58,7 @@
                             </label>
                             <div class="lk__form__radio-block">
                                 <label class="lk__form__radio-wrapper">
-                                    <input type="radio" class="base-radio-input" name="gender" checked>
+                                    <input type="radio" class="base-radio-input" name="gender">
                                     <span class="base-radio-fake"></span>
                                     <span class="lk__form__radio-text">Мужской</span>
                                 </label>
@@ -51,7 +68,7 @@
                                     <span class="lk__form__radio-text">Женский</span>
                                 </label>
                                 <label class="lk__form__radio-wrapper">
-                                    <input type="radio" class="base-radio-input" name="gender" checked>
+                                    <input type="radio" class="base-radio-input" name="gender">
                                     <span class="base-radio-fake"></span>
                                     <span class="lk__form__radio-text">Не указан</span>
                                 </label>
@@ -66,7 +83,7 @@
                             </label>
                             <label class="lk__form__input-wrapper">
                                 <span class="visually-hidden">Страна</span>
-                                <input type="email" class="base-text-input js--country-select">
+                                <input type="text" class="base-text-input js--country-select">
                             </label>
                             <label class="lk__form__input-wrapper">
                                 <span class="visually-hidden">Город</span>
@@ -82,8 +99,11 @@
                             <label class="lk__form-checkbox-label">
                                 <input type="checkbox" class="base-checkbox">
                                 <span class="base-checkbox-fake lk__form-checkbox"></span>
-                                <span class="lk__form-checkbox-text">Принимаю условия обработки персональных
-                                    данных</span>
+                                <span class="lk__form-checkbox-text">Принимаю условия <a
+                                        href="https://cosmedix-russia.ru/privacy/" target="_blank"
+                                        class="lk__form-checkbox-link">обработки
+                                        персональных
+                                        данных</a></span>
                             </label>
                         </form>
                     </div>

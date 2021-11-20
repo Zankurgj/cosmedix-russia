@@ -1,14 +1,14 @@
 {% macro catalogItem(data) %}
 <div class="catalog-item">
-    <div class="catalog-item__img-wrapper">
+    <a href="#" class="catalog-item__img-wrapper">
         {% if data.starBadge %}
         <span class="catalog-item__badge">
             <span class="visually-hidden">выбор звезд</span>
         </span>
         {% endif %}
         <img src="{{data.img}}" alt="{{data.title}}" class="catalog-item__img">
-    </div>
-    <p class="catalog-item__title">{{data.title}}</p>
+    </a>
+    <a href="#" class="catalog-item__title">{{data.title}}</a>
     <p class="catalog-item__text">{{data.text}}</p>
     <div class="catalog-item__bottom">
         <span class="catalog-item__cost">{{data.cost}} ₽</span>
@@ -18,6 +18,6 @@
             {% endfor %}
         </div>
     </div>
-    <button class="btn-main catalog-item_btn" type="button">добавить в корзину</button>
+    <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
 </div>
 {% endmacro %}

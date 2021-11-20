@@ -17,12 +17,25 @@
   background-size: contain;
   background-image: url("../images/icons/star-badge.png");
   z-index: 1;
+  @media all and (max-width: $mobile-bp) {
+    right: auto;
+    left: 0;
+  }
 }
 .catalog-item__img-wrapper {
+  display: block;
   margin: 0 auto;
   width: 164px;
   height: 186px;
   margin-bottom: 8px;
+  transition: opacity $base-duration $base-timing;
+  @media all and (max-width: $mobile-bp) {
+    width: 186px;
+    height: 198px;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .catalog-item__img {
   display: block;
@@ -37,6 +50,15 @@
   font-size: 16px;
   line-height: 20px;
   color: #78859d;
+  transition: color $base-duration $base-timing;
+  @media all and (max-width: $mobile-bp) {
+    min-height: auto;
+    margin-bottom: 10px;
+  }
+  &:hover {
+    color: rgba($color: #78859d, $alpha: 0.8);
+    text-decoration: none;
+  }
 }
 .catalog-item__text {
   min-height: 50px;
@@ -44,6 +66,10 @@
   font-size: 16px;
   line-height: 20px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    min-height: auto;
+    margin-bottom: 10px;
+  }
 }
 .catalog-item__bottom {
   display: flex;
@@ -84,4 +110,11 @@
   background-repeat: no-repeat;
   background-position: right 10px top 14px;
   background-image: url("../images/icons/bas-catalog-btn.svg");
+  @media all and (max-width: 1300px) {
+    font-size: 14px;
+  }
+  @media all and (max-width: $mobile-bp) {
+    font-size: 16px;
+    padding: 16px 0;
+  }
 }

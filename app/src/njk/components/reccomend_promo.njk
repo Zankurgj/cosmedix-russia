@@ -41,19 +41,19 @@ cost: '6 712'
 }
 ]%}
 <div class="reccomend-promo">
-    <div class="reccomend-promo__slider js--reccomend-slider">
+    <div class="reccomend-promo__slider base-slider-arrow base-slider-arrow_reccomend  js--reccomend-slider">
         {% for data in reccomendData %}
         <div class="reccomend-promo__slide">
             <div class="reccomend-promo__item">
-                <div class="reccomend-promo__img-block">
+                <a href="#" class="reccomend-promo__img-block">
                     {% if data.starBadge %}
                     <span class="reccomend-promo__badge">
                         <span class="visually-hidden">выбор звезд</span>
                     </span>
                     {% endif %}
                     <img src='{{data.img}}' alt="{{data.title}}" class="reccomend-promo__img">
-                </div>
-                <p class="reccomend-promo__title">{{data.title}}</p>
+                </a>
+                <a href="#" class="reccomend-promo__title">{{data.title}}</a>
                 <p class="reccomend-promo__text">{{data.text}}</p>
                 <div class="reccomend-promo__bottom">
                     <span class="reccomend-promo__cost">{{data.cost}}₽</span>

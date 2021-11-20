@@ -1,0 +1,41 @@
+<div class="popup-basket-overlay js--baket-popup-toggle js--baket-popup"></div>
+<div class="popup-basket js--baket-popup">
+    <button class="popup-close popup-close_basket js--baket-popup-toggle">
+        <span class="visually-hidden">закрыть</span>
+    </button>
+    <p class="popup-basket__title">корзина</p>
+    <p class="popup-basket__subtitle">3 товара</p>
+    <div class="popup-basket__inner">
+        {% for i in range(0, 2) %}
+        <div class="popup-basket-item">
+            <div class="popup-basket-item__img-col">
+                <img src="../images/img/common/basket-popup-item.png" alt="ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE"
+                    class="popup-basket-item__img">
+            </div>
+            <div class="popup-basket-item__info-col">
+                <p class="popup-basket-item__name">ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE</p>
+                <p class="popup-basket-item__cost">1 x 3 864 ₽</p>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="popup-basket-item">
+            <div class="popup-basket-item__img-col">
+                <img src="../images/img/common/basket-popup-prize.png"
+                    alt="ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE" class="popup-basket-item__img">
+            </div>
+            <div class="popup-basket-item__info-col">
+                <p class="popup-basket-item__name">ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE</p>
+                <p class="popup-basket-item__cost">1 x 0 ₽</p>
+            </div>
+        </div>
+    </div>
+    <div class="popup-basket__bottom">
+        <div class="popup-basket-total">
+            <span class="popup-basket-total__title">Всего:</span>
+            <span class="popup-basket-total__cost">7 728 ₽</span>
+        </div>
+        <a href="#" class="btn-main popup-basket__btn">
+            <span class="popup-basket__btn-text-icon">Перейти в корзину</span>
+        </a>
+    </div>
+</div>

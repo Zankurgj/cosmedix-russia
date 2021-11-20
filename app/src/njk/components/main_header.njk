@@ -4,17 +4,26 @@
             <a href="/" class="main_header__mobile-logo">
                 <img class="main_header__mobile-logo-img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
             </a>
-            <button class="btn-hamburger btn-hamburger_header js--btn-mobile-menu">
+            <button class="btn-hamburger btn-hamburger_header js--header-nav-toggle">
                 <span class="btn-hamburger__icon"></span>
                 <span class="visually-hidden">меню</span>
             </button>
             <div class="main_header__search">
-                <label class="main_header__search-wrapper">
-                    <span class="visually-hidden">Окно поиска</span>
-                    <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
-                </label>
-                <button class="main_header__top_btn main_header__top_btn_search">
-                    <span class="visually-hidden">Поиск</span>
+                <div class="main_header__search-field">
+                    <label class="main_header__search-wrapper js--header-search">
+                        <span class="visually-hidden">Окно поиска</span>
+                        <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
+                    </label>
+                    <button
+                        class="main_header__top_btn main_header__top_btn_search main_header__top_btn_search_field js--search-btn">
+                        <span class="visually-hidden">Поиск</span>
+                    </button>
+                </div>
+                <button class="main_header__top_btn main_header__top_btn_search show js--toggle-search">
+                    <span class="visually-hidden">Открыть поиск</span>
+                </button>
+                <button class="main_header__top_btn main_header__top_btn_search-close js--toggle-search">
+                    <span class="visually-hidden">Закрыть поиск</span>
                 </button>
             </div>
             <button class="main_header__top_btn main_header__top_btn_lk">
@@ -25,8 +34,12 @@
             </button>
         </div>
     </div>
-    <div class="main_header__bottom">
+    <div class="main_header__bottom js--header-nav">
+        <div class="main_header-overlay js--header-nav-toggle"></div>
         <div class="c-container c-container_main_header">
+            <button class="main_header-btn-close js--header-nav-toggle" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
             <a href="/" class="main_header__logo">
                 <span class="visually-hidden">Главная страница</span>
                 <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">

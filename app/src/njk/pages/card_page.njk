@@ -2,6 +2,7 @@
 {% extends "app/src/njk/layout/index.njk" %}
 {% block content %}
 <div class="card-page-container">
+    {% include "app/src/njk/components/reviews_popup.njk" %}
     <article class="card-breadcrumbs-section">
         <div class="c-container">
             {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
@@ -44,20 +45,28 @@
                     <div class="card__product-slider-wrapper">
                         <div class="card__product-slider js--product-slider">
                             <div class="card__product-slide">
-                                <img src="../images/img/card/slide1.png" alt="Продукция"
-                                    class="card__product-slide__img">
+                                <div class="card__product-slide__img-wrapper">
+                                    <img src="../images/img/card/slide1.png" alt="Продукция"
+                                        class="card__product-slide__img">
+                                </div>
                             </div>
                             <div class="card__product-slide">
-                                <img src="../images/img/card/slide-nav2.png" alt="Продукция"
-                                    class="card__product-slide__img">
+                                <div class="card__product-slide__img-wrapper">
+                                    <img src="../images/img/card/slide-nav2.png" alt="Продукция"
+                                        class="card__product-slide__img">
+                                </div>
                             </div>
                             <div class="card__product-slide">
-                                <img src="../images/img/card/slide-nav3.png" alt="Продукция"
-                                    class="card__product-slide__img">
+                                <div class="card__product-slide__img-wrapper">
+                                    <img src="../images/img/card/slide-nav3.png" alt="Продукция"
+                                        class="card__product-slide__img">
+                                </div>
                             </div>
                             <div class="card__product-slide">
-                                <img src="../images/img/card/slide-nav1.png" alt="Продукция"
-                                    class="card__product-slide__img">
+                                <div class="card__product-slide__img-wrapper">
+                                    <img src="../images/img/card/slide-nav1.png" alt="Продукция"
+                                        class="card__product-slide__img">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -65,7 +74,7 @@
                 <div class="card__product-desc-col">
                     <h1 class="card__product-name">ТОНИК-МИСТС АНТИОКСИДАНТАМИ BENEFIT BALANCE</h1>
                     <span class="card__product-cost">3 864 ₽</span>
-                    <div class="card__product-stars">
+                    <div class="card__product-stars card__product-stars_desktop">
                         <span class="card__product-star-icon"></span>
                         <span class="card__product-star-icon"></span>
                         <span class="card__product-star-icon"></span>
@@ -73,15 +82,34 @@
                         <span class="card__product-star-icon"></span>
                     </div>
                     <p class="card__product-description">Финальный шаг в очищении кожи</p>
-                    <span class="card__description-text card__description-text_article">Артикул: 931102010</span>
+                    <div class="card__product-mobile-panel">
+                        <button class="card__btn-more" data-fancybox data-src="#reviews-popup">Оставить отзыв</button>
+                        <div class="card__product-stars">
+                            <span class="card__product-star-icon"></span>
+                            <span class="card__product-star-icon"></span>
+                            <span class="card__product-star-icon"></span>
+                            <span class="card__product-star-icon"></span>
+                            <span class="card__product-star-icon"></span>
+                        </div>
+                    </div>
+                    <span
+                        class="card__description-text card__description-text_article card__description-text_article_desktop">Артикул:
+                        931102010</span>
                     <div class="card__product-bottom">
+                        <span class="card__description-text card__description-text_bottom-mobile">
+                            Артикул: <br>
+                            931102010</span>
                         <div class="card__product-counter-wrapper">
                             <span class="card__description-text card__description-text_counter-title">Кол-во</span>
                             {% from "app/src/njk/components/counter.njk" import counter %}
                             {{ counter(1) }}
                         </div>
-                        <span class="card__description-text card__description-text_bottom">Объем 150 мл</span>
-                        <button class="card__btn-more">Оставить отзыв</button>
+                        <span class="card__description-text card__description-text_bottom">
+                            <span class="description-sep">Объем</span>
+                            <span class="description-sep">150 мл</span>
+                        </span>
+                        <button class="card__btn-more card__btn-more_desktop" data-fancybox
+                            data-src="#reviews-popup">Оставить отзыв</button>
                     </div>
                     <button class="btn-main card__product-btn-basket">
                         <span class="btn-main__basket-text">добавить в корзину</span>
@@ -152,8 +180,49 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab2">2</div>
-                        <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab3">3</div>
+                        <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab2">
+                            2
+                        </div>
+                        <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab3">
+                            <div class="card__comment-wrapper">
+                                {% for i in range(0, 3) %}
+                                <div class="card__comment">
+                                    <div class="comment">
+                                        <div class="comment__head comment__head_stars">
+                                            <div class="comment__head-avatar">
+                                                <img src="../images/img/blog/ava1.png" alt="Пользователь"
+                                                    class="comment__head-avatar-img" aria-hidden="true">
+                                            </div>
+                                            <span class="comment__head-name">Alexana</span>
+                                            <span class="comment__head-date">06 августа 2021, 14:08</span>
+                                            <div class="comment__head-star-wrapper">
+                                                <div class="comment__head-star"></div>
+                                                <div class="comment__head-star"></div>
+                                                <div class="comment__head-star"></div>
+                                                <div class="comment__head-star"></div>
+                                                <div class="comment__head-star"></div>
+                                            </div>
+                                        </div>
+                                        <div class="comment__inner">
+                                            <p class="comment__text">
+                                                Мощные ингредиенты в составе сыворотки Revert специально нацелены на
+                                                уменьшение
+                                                выраженности пигментных пятен.
+                                                Комплекс растительных экстрактов нормализует выработку кожного сала и
+                                                защищает
+                                                от воздействия агрессивных факторов окружающей среды.
+                                                Благодаря производному витамина С эта сыворотка освежает тусклую,
+                                                уставшую
+                                                кожу,
+                                                выравнивая тон и даря коже сияние.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <button class="card__btn-more card__comment-more-btn">Еще 9 отзывов...</button>
+                        </div>
                     </div>
                 </div>
             </div>

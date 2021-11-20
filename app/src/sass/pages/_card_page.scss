@@ -1,30 +1,58 @@
 .card-page-container {
   padding: 60px 0 30px;
+  @media all and (max-width: $mobile-bp) {
+    padding: 8px 0 35px;
+  }
 }
 .card-breadcrumbs-section {
   margin-bottom: 45px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 10px;
+  }
 }
 .card-section {
   margin-bottom: 90px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 34px;
+  }
 }
 .c-row_card-top {
   margin-bottom: 70px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 30px;
+  }
 }
 .card__product-col {
   display: flex;
   flex-basis: 49%;
   max-width: 49%;
   padding-right: 50px;
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 18px;
+  }
 }
 .card__product-desc-col {
   flex-basis: 51%;
   max-width: 51%;
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 // SLIDER
 .card__product-slider-nav-wrapper {
   flex: 0 0 auto;
   width: 115px;
   margin-right: 15px;
+  @media all and (max-width: 1200px) {
+    width: 80px;
+  }
+  @media all and (max-width: $mobile-bp) {
+    display: none;
+  }
 }
 .card__product-slider-wrapper {
   flex-grow: 1;
@@ -45,6 +73,9 @@
     margin: 12px 0 0 0;
     padding: 0;
     list-style: none;
+    @media all and (max-width: $mobile-bp) {
+      margin: 5px 0 0 0;
+    }
     li {
       font-size: 0;
       line-height: 0;
@@ -85,6 +116,16 @@
   object-position: center;
 }
 .card__product-slide {
+  @media all and (max-width: $mobile-bp) {
+    display: block !important;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  @media all and (max-width: 600px) {
+    max-width: 220px;
+  }
+}
+.card__product-slide__img-wrapper {
   position: relative;
   padding-top: 100%;
 }
@@ -108,6 +149,11 @@
   letter-spacing: 0.05em;
   color: #78859d;
   text-transform: uppercase;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .card__product-cost {
   display: block;
@@ -118,11 +164,29 @@
   text-align: center;
   text-transform: uppercase;
   color: #000;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 23px;
+    font-size: 21px;
+  }
+}
+.card__product-mobile-panel {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  @media all and (max-width: $mobile-bp) {
+    display: flex;
+  }
 }
 .card__product-stars {
   display: flex;
   justify-content: center;
+}
+.card__product-stars_desktop {
   margin-bottom: 20px;
+  @media all and (max-width: $mobile-bp) {
+    display: none;
+  }
 }
 .card__product-star-icon {
   flex: 0 0 auto;
@@ -142,32 +206,61 @@
   line-height: 27px;
   text-align: center;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .card__description-text {
   font-size: 16px;
   line-height: 20px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+  }
+}
+.card__description-text_bottom-mobile {
+  display: none;
+  @media all and (max-width: $mobile-bp) {
+    display: block;
+  }
 }
 .card__description-text_article {
   display: block;
-  margin-bottom: 67px;
   text-align: center;
 }
-
+.card__description-text_article_desktop {
+  margin-bottom: 67px;
+  @media all and (max-width: $mobile-bp) {
+    display: none;
+  }
+}
 .card__product-bottom {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin-bottom: 37px;
+  @media all and (max-width: $mobile-bp) {
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 .card__product-counter-wrapper {
   margin-right: 23px;
+  @media all and (max-width: $mobile-bp) {
+    margin: 0 5px;
+  }
 }
 .card__description-text_counter-title {
   margin-bottom: 4px;
 }
 .card__description-text_bottom {
   margin-right: 23px;
+  @media all and (max-width: $mobile-bp) {
+    margin: 0;
+  }
 }
 .card__btn-more {
   font-size: 16px;
@@ -177,6 +270,14 @@
   color: #333;
   &:hover {
     text-decoration: none;
+  }
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+  }
+}
+.card__btn-more_desktop {
+  @media all and (max-width: $mobile-bp) {
+    display: none;
   }
 }
 .card__product-btn-basket {
@@ -194,10 +295,23 @@
   max-width: 49%;
   padding-right: 50px;
   padding: 0 50px 0 130px;
+  @media all and (max-width: 1200px) {
+    padding: 0 50px 0 95px;
+  }
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    padding: 0;
+    margin: 0 -20px 30px -20px;
+  }
 }
 .card__tab-col-right {
   flex-basis: 51%;
   max-width: 51%;
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 // TAB NAV
 .card__tab-nav-item-wrapper {
@@ -228,6 +342,11 @@
   color: #4f4f4f;
   cursor: pointer;
   transition: color $base-duration $base-timing;
+  @media all and (max-width: $mobile-bp) {
+    padding: 16px 30px 16px 35px;
+    font-size: 16px;
+    line-height: 22px;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -259,15 +378,48 @@
   line-height: 27px;
   color: #333;
   text-transform: uppercase;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 .card__tab-text {
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 8px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
-
+.description-sep {
+  @media all and (max-width: $mobile-bp) {
+    display: block;
+  }
+}
 // PROMO
 .card-promo__title {
   margin-bottom: 68px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 24px;
+  }
+}
+// COMMENT
+.card__comment {
+  border-bottom: 1px solid #78859d;
+  margin-bottom: 30px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 15px;
+  }
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+.card__comment-more-btn {
+  margin-top: 30px;
+  @media all and (max-width: $mobile-bp) {
+    margin-top: 15px;
+  }
 }

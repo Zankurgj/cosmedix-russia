@@ -5,7 +5,7 @@
     <article class="basket-breadcrumbs">
         <div class="c-container">
             {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
-            {{ breadcrumbs([['Блог'],[' Корзина']]) }}
+            {{ breadcrumbs([[' Корзина']]) }}
         </div>
     </article>
     <section class="basket">
@@ -157,7 +157,8 @@
                 <div class="basket_col-right">
                     <aside class="basket__sidebar">
                         <label class="basket__code-input-label">
-                            <input type="text" class="base-text-input" placeholder="Промокод">
+                            <input type="text" class="base-text-input base-text-input_basket-code"
+                                placeholder="Промокод">
                         </label>
                         <button class="btn-main basket__code-btn">Примениить</button>
                         <div class="basket__info">
@@ -170,8 +171,8 @@
                                 <span class="basket__info-item-cost">0 ₽</span>
                             </div>
                             <div class="basket__info-item">
-                                <span class="basket__info-item-text">Итого</span>
-                                <span class="basket__info-item-cost">3 864 ₽</span>
+                                <span class="basket__info-item-text basket__info-item-text_bold">Итого</span>
+                                <span class="basket__info-item-cost basket__info-item-cost_bold">3 864 ₽</span>
                             </div>
                         </div>
                         <button class="btn-main basket__info-btn">оформить заказ</button>

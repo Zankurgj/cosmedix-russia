@@ -1,31 +1,55 @@
 .checkout-page-container {
-  padding: 60px 0 30px;
+  padding: 10px 0 50px;
+  @media all and (max-width: $mobile-bp) {
+    position: static;
+  }
 }
 .checkout-breadcrumbs-section {
   margin-bottom: 18px;
+  @media all and (max-width: $mobile-bp) {
+    display: none;
+  }
 }
 .c-container_checkout {
   max-width: 1208px;
 }
 .checkout-page-title {
   margin-bottom: 55px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 20px;
+  }
 }
 .checkout__col-left {
   flex-basis: calc(100% - 388px);
   max-width: calc(100% - 388px);
   padding-right: 50px;
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 26px;
+  }
 }
 .checkout__col-right {
   width: 388px;
   flex: 0 0 auto;
+  @media all and (max-width: $mobile-bp) {
+    width: 100%;
+  }
 }
 .checkout__sidebar {
   position: sticky;
   top: 180px;
+  @media all and (max-width: $mobile-bp) {
+    position: static;
+  }
 }
 // FORM
 .checkout__field {
   margin-bottom: 44px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 24px;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -38,15 +62,19 @@
   }
 }
 .checkout__field-title {
-  float: left;
+  margin-bottom: 9px;
   font-size: 21px;
   line-height: 22px;
   color: #333;
   text-transform: uppercase;
-  margin-bottom: 9px;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: none;
+  }
 }
 .checkout__radio-wrapper {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   margin-bottom: 13px;
   &:last-child {
@@ -58,6 +86,10 @@
   font-size: 18px;
   line-height: 26px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .checkout__input-wrapper_col-small {
   flex-basis: 44%;
@@ -70,6 +102,9 @@
 }
 .checkout__textarea {
   height: 160px;
+  @media all and (max-width: $mobile-bp) {
+    height: 120px;
+  }
 }
 // COST BLOCK
 .checkout__cost-list {
@@ -77,16 +112,33 @@
   justify-content: space-between;
   padding: 15px 0 18px;
   border-bottom: 1px solid #78859d;
+  @media all and (max-width: $mobile-bp) {
+    padding: 12px 0;
+  }
 }
 .checkout__cost-text {
   font-size: 21px;
   line-height: 22px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.checkout__cost-text_bold {
+  font-weight: bold;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 .checkout__cost-total {
   display: flex;
   justify-content: space-between;
   margin: 48px 0 12px;
+  @media all and (max-width: $mobile-bp) {
+    margin: 26px 0;
+  }
 }
 .checkout__form-btn {
   display: block;
@@ -96,18 +148,40 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.05em;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 32px;
+  }
 }
 .checkout__checkbox-label {
   display: flex;
 }
 .checkout__checkbox {
   flex: 0 0 auto;
-  margin-top: 8px;
-  margin-right: 35px;
+  margin: 8px 35px 0 0;
+  @media all and (max-width: $mobile-bp) {
+    margin: 6px 24px 0 0;
+  }
 }
 .checkout__checkbox-text {
-  margin-right: 40px;
   font-size: 16px;
   line-height: 22px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.checkout__checkbox-link {
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+  text-decoration: underline;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.base-text-input_checkout-search {
+  padding: 12px 10px 12px 30px;
+  background-position: center left 8px;
 }

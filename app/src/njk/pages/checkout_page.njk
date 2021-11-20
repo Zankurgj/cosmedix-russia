@@ -26,11 +26,11 @@
                             </label>
                             <label class="checkout__input-wrapper">
                                 <span class="visually-hidden">E-Mail</span>
-                                <input type="email" class="base-text-input" placeholder="E-Mail">
+                                <input type="email" class="base-text-input" placeholder="E-Mail" required>
                             </label>
                             <label class="checkout__input-wrapper">
                                 <span class="visually-hidden">Город</span>
-                                <input type="text" class="base-text-input base-text-input_search"
+                                <input type="text" class="base-text-input base-text-input_search-search"
                                     placeholder="Москва, Россия">
                             </label>
                         </fieldset>
@@ -93,8 +93,8 @@
                                 <span class="checkout__cost-text">300 ₽</span>
                             </div>
                             <div class="checkout__cost-total">
-                                <span class="checkout__cost-text"><b>Итого</b></span>
-                                <span class="checkout__cost-text"><b>3 864 ₽</b></span>
+                                <span class="checkout__cost-text checkout__cost-text_bold">Итого</span>
+                                <span class="checkout__cost-text checkout__cost-text_bold">3 864 ₽</span>
                             </div>
                             <button type="submit" class="btn-main checkout__form-btn">оформить заказ</button>
                             <label class="checkout__checkbox-label">
@@ -106,8 +106,9 @@
                             <label class="checkout__checkbox-label">
                                 <input type="checkbox" class="base-checkbox">
                                 <span class="base-checkbox-fake checkout__checkbox"></span>
-                                <span class="checkout__checkbox-text">Принимаю условия обработки персональных
-                                    данных</span>
+                                <span class="checkout__checkbox-text">Принимаю <a href="#"
+                                        class="checkout__checkbox-link">условия обработки персональных
+                                        данных</a></span>
                             </label>
                         </aside>
                     </div>

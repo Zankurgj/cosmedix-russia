@@ -11,20 +11,38 @@
     <section class="lk">
         <div class="c-container">
             <div class="c-container_lk">
+                <h1 class="base-page-title lk-page-title lk-page-title_mobile">личный кабинет</h1>
                 <div class="c-row">
                     <div class="lk__col-left">
                         <aside class="lk__sidebar">
                             <p class="lk__sidebar__title">Личная информация</p>
-                            <a href="#" class="lk__sidebar__item">ЛИЧНЫЕ ДАННЫЕ</a>
-                            <a href="#" class="lk__sidebar__item">Текущие заказы</a>
-                            <a href="#" class="lk__sidebar__item">История заказов</a>
-                            <a href="#" class="lk__sidebar__item lk__sidebar__item_active">Бонусы</a>
-                            <a href="#" class="lk__sidebar__item">Корзина</a>
-                            <a href="#" class="lk__sidebar__item">отложенные</a>
+                            <button class="lk__sidebar-btn-spoiler lk__sidebar-btn-spoiler_opened js--toggle-lk-spoiler"
+                                type="button">Личная
+                                информация</button>
+                            <ul class="lk__sidebar-list js--lk-spoiler">
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">ЛИЧНЫЕ ДАННЫЕ</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">Текущие заказы</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">История заказов</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item lk__sidebar__item_active">Бонусы</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">Корзина</a>
+                                </li>
+                                <li class="lk__sidebar-list-item">
+                                    <a href="#" class="lk__sidebar__item">отложенные</a>
+                                </li>
+                            </ul>
                         </aside>
                     </div>
                     <div class="lk__col-right">
-                        <h1 class="base-page-title lk-page-title">Ваши бонусы</h1>
+                        <h1 class="base-page-title lk-page-title lk-page-title_bonus">Ваши бонусы</h1>
                         <label class="lk__bonus-input-wrapper">
                             <span class="visually-hidden">Количество бонусов</span>
                             <input type="text" class="base-text-input lk__bonus-input" value="3 864 ₽" readonly>

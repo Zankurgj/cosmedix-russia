@@ -1,11 +1,24 @@
 .s-checkout-page-container {
   padding: 60px 0 30px;
+  @media all and (max-width: $mobile-bp) {
+    padding: 50px 0;
+  }
+}
+.s-checkout-breadcrumbs-section {
+  margin-bottom: 18px;
+  @media all and (max-width: $mobile-bp) {
+    display: none;
+  }
 }
 .c-container_s-checkout {
   max-width: 978px;
 }
 .s-checkout__title {
   margin-bottom: 33px;
+  @media all and (max-width: $mobile-bp) {
+    text-align: center;
+    margin-bottom: 24px;
+  }
 }
 .s-checkout__subtitle {
   margin-bottom: 52px;
@@ -16,18 +29,31 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .s-checkout__text {
   font-size: 18px;
   line-height: 26px;
   color: #000;
   margin-bottom: 14px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 22px;
+  }
   &:last-child {
     margin-bottom: 0;
   }
 }
 .s-checkout__social-wrapper {
   margin: 30px 0 90px;
+  @media all and (max-width: $mobile-bp) {
+    margin: 24px 0 26px;
+  }
 }
 .s-checkout__social-title {
   margin-bottom: 15px;
@@ -50,6 +76,10 @@
   background-size: contain;
   transition: opacity $base-duration $base-timing;
   margin-right: 30px;
+  @media all and (max-width: $mobile-bp) {
+    width: 28px;
+    height: 28px;
+  }
   &:hover {
     opacity: 0.8;
   }

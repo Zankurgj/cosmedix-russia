@@ -1,0 +1,33 @@
+.filter-nav {
+  position: relative;
+  padding: 12px 0 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/img/catalog/mobile-nav-bg.png");
+}
+.filter-nav_mobile {
+  display: none;
+  @media all and (max-width: $mobile-bp) {
+    display: block;
+  }
+}
+.filter-nav__title {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.filter-nav__btn {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../images/icons/mobile-nav.svg");
+}

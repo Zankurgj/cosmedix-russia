@@ -18,17 +18,25 @@
                 <a href="/" class="main_header__mobile-logo">
                     <img class="main_header__mobile-logo-img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
                 </a>
-                <button class="btn-hamburger btn-hamburger_header js--btn-mobile-menu">
+                <button class="btn-hamburger btn-hamburger_header js--header-nav-toggle">
                     <span class="btn-hamburger__icon"></span>
                     <span class="visually-hidden">меню</span>
                 </button>
                 <div class="main_header__search">
-                    <label class="main_header__search-wrapper">
-                        <span class="visually-hidden">Окно поиска</span>
-                        <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
-                    </label>
-                    <button class="main_header__top_btn main_header__top_btn_search">
-                        <span class="visually-hidden">Поиск</span>
+                    <div class="main_header__search-field">
+                        <label class="main_header__search-wrapper js--header-search">
+                            <span class="visually-hidden">Окно поиска</span>
+                            <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
+                        </label>
+                        <button class="main_header__top_btn main_header__top_btn_search main_header__top_btn_search_field js--search-btn">
+                            <span class="visually-hidden">Поиск</span>
+                        </button>
+                    </div>
+                    <button class="main_header__top_btn main_header__top_btn_search show js--toggle-search">
+                        <span class="visually-hidden">Открыть поиск</span>
+                    </button>
+                    <button class="main_header__top_btn main_header__top_btn_search-close js--toggle-search">
+                        <span class="visually-hidden">Закрыть поиск</span>
                     </button>
                 </div>
                 <button class="main_header__top_btn main_header__top_btn_lk">
@@ -39,8 +47,12 @@
                 </button>
             </div>
         </div>
-        <div class="main_header__bottom">
+        <div class="main_header__bottom js--header-nav">
+            <div class="main_header-overlay js--header-nav-toggle"></div>
             <div class="c-container c-container_main_header">
+                <button class="main_header-btn-close js--header-nav-toggle" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                </button>
                 <a href="/" class="main_header__logo">
                     <span class="visually-hidden">Главная страница</span>
                     <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
@@ -89,6 +101,53 @@
     <div class="c-page__wrapper">
 
         <div class="card-page-container">
+            <div class="reviews-popup-wrapper" id="reviews-popup">
+                <div class="reviews-popup">
+                    <button class="popup-close quick-popup_close" onclick="$.fancybox.close()">
+                        <span class="visually-hidden">закрыть</span>
+                    </button>
+                    <form class="reviews-popup__inner">
+                        <p class="base-page-title reviews-popup-title">Оценить этот продукт</p>
+                        <div class="product_rating-group">
+                            <input class="product_rating-input" type="radio" name="raiting" id="raiting-1" value="1">
+                            <label class="product_rating-star" for="raiting-1" aria-label="1"></label>
+
+                            <input class="product_rating-input" type="radio" name="raiting" id="raiting-2" value="2">
+                            <label class="product_rating-star" for="raiting-2" aria-label="2"></label>
+
+                            <input class="product_rating-input" type="radio" name="raiting" id="raiting-3" value="3" checked>
+                            <label class="product_rating-star" for="raiting-3" aria-label="3"></label>
+
+                            <input class="product_rating-input" type="radio" name="raiting" id="raiting-4" value="4">
+                            <label class="product_rating-star" for="raiting-4" aria-label="4"></label>
+
+                            <input class="product_rating-input" type="radio" name="raiting" id="raiting-5" value="5">
+                            <label class="product_rating-star" for="raiting-5" aria-label="5"></label>
+                        </div>
+                        <div class="reviews-popup__input-block">
+                            <label class="reviews-popup__input-wrapper">
+                                <span class="visually-hidden">Ваше имя</span>
+                                <input type="text" class="base-text-input" placeholder="Ваше имя">
+                            </label>
+                            <label class="reviews-popup__input-wrapper">
+                                <span class="visually-hidden">Заголовок отызва</span>
+                                <input type="text" class="base-text-input" placeholder="Заголовок отызва">
+                            </label>
+                            <label class="reviews-popup__input-wrapper">
+                                <span class="visually-hidden">Ваш отзыв</span>
+                                <textarea class="base-text-input base-text-input_textarea reviews-popup__textarea" placeholder="Ваш отзыв"></textarea>
+                            </label>
+                        </div>
+                        <button class="btn-main reviews-popup__btn" type="submit">отправить заявку</button>
+                        <label class="reviews-popup__form-checkbox-wrapper">
+                            <input type="checkbox" class="base-checkbox" required>
+                            <span class="base-checkbox-fake reviews-popup__form-checkbox"></span>
+                            <span class="reviews-popup__form-checkbox-text">Согласен на обработку моих данных *</span>
+                        </label>
+                        <span class="reviews-popup__form-subtitle">*Обязательное поле</span>
+                    </form>
+                </div>
+            </div>
             <article class="card-breadcrumbs-section">
                 <div class="c-container">
 
@@ -172,16 +231,24 @@
                             <div class="card__product-slider-wrapper">
                                 <div class="card__product-slider js--product-slider">
                                     <div class="card__product-slide">
-                                        <img src="../images/img/card/slide1.png" alt="Продукция" class="card__product-slide__img">
+                                        <div class="card__product-slide__img-wrapper">
+                                            <img src="../images/img/card/slide1.png" alt="Продукция" class="card__product-slide__img">
+                                        </div>
                                     </div>
                                     <div class="card__product-slide">
-                                        <img src="../images/img/card/slide-nav2.png" alt="Продукция" class="card__product-slide__img">
+                                        <div class="card__product-slide__img-wrapper">
+                                            <img src="../images/img/card/slide-nav2.png" alt="Продукция" class="card__product-slide__img">
+                                        </div>
                                     </div>
                                     <div class="card__product-slide">
-                                        <img src="../images/img/card/slide-nav3.png" alt="Продукция" class="card__product-slide__img">
+                                        <div class="card__product-slide__img-wrapper">
+                                            <img src="../images/img/card/slide-nav3.png" alt="Продукция" class="card__product-slide__img">
+                                        </div>
                                     </div>
                                     <div class="card__product-slide">
-                                        <img src="../images/img/card/slide-nav1.png" alt="Продукция" class="card__product-slide__img">
+                                        <div class="card__product-slide__img-wrapper">
+                                            <img src="../images/img/card/slide-nav1.png" alt="Продукция" class="card__product-slide__img">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +256,7 @@
                         <div class="card__product-desc-col">
                             <h1 class="card__product-name">ТОНИК-МИСТС АНТИОКСИДАНТАМИ BENEFIT BALANCE</h1>
                             <span class="card__product-cost">3 864 ₽</span>
-                            <div class="card__product-stars">
+                            <div class="card__product-stars card__product-stars_desktop">
                                 <span class="card__product-star-icon"></span>
                                 <span class="card__product-star-icon"></span>
                                 <span class="card__product-star-icon"></span>
@@ -197,8 +264,22 @@
                                 <span class="card__product-star-icon"></span>
                             </div>
                             <p class="card__product-description">Финальный шаг в очищении кожи</p>
-                            <span class="card__description-text card__description-text_article">Артикул: 931102010</span>
+                            <div class="card__product-mobile-panel">
+                                <button class="card__btn-more" data-fancybox data-src="#reviews-popup">Оставить отзыв</button>
+                                <div class="card__product-stars">
+                                    <span class="card__product-star-icon"></span>
+                                    <span class="card__product-star-icon"></span>
+                                    <span class="card__product-star-icon"></span>
+                                    <span class="card__product-star-icon"></span>
+                                    <span class="card__product-star-icon"></span>
+                                </div>
+                            </div>
+                            <span class="card__description-text card__description-text_article card__description-text_article_desktop">Артикул:
+                        931102010</span>
                             <div class="card__product-bottom">
+                                <span class="card__description-text card__description-text_bottom-mobile">
+                            Артикул: <br>
+                            931102010</span>
                                 <div class="card__product-counter-wrapper">
                                     <span class="card__description-text card__description-text_counter-title">Кол-во</span>
 
@@ -214,8 +295,11 @@
                                     </div>
 
                                 </div>
-                                <span class="card__description-text card__description-text_bottom">Объем 150 мл</span>
-                                <button class="card__btn-more">Оставить отзыв</button>
+                                <span class="card__description-text card__description-text_bottom">
+                            <span class="description-sep">Объем</span>
+                                <span class="description-sep">150 мл</span>
+                                </span>
+                                <button class="card__btn-more card__btn-more_desktop" data-fancybox data-src="#reviews-popup">Оставить отзыв</button>
                             </div>
                             <button class="btn-main card__product-btn-basket">
                                 <span class="btn-main__basket-text">добавить в корзину</span>
@@ -269,8 +353,90 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab2">2</div>
-                                <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab3">3</div>
+                                <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab2">
+                                    2
+                                </div>
+                                <div class="card__tab-item" data-tab-name="cardNav" data-tab="productTab3">
+                                    <div class="card__comment-wrapper">
+
+                                        <div class="card__comment">
+                                            <div class="comment">
+                                                <div class="comment__head comment__head_stars">
+                                                    <div class="comment__head-avatar">
+                                                        <img src="../images/img/blog/ava1.png" alt="Пользователь" class="comment__head-avatar-img" aria-hidden="true">
+                                                    </div>
+                                                    <span class="comment__head-name">Alexana</span>
+                                                    <span class="comment__head-date">06 августа 2021, 14:08</span>
+                                                    <div class="comment__head-star-wrapper">
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="comment__inner">
+                                                    <p class="comment__text">
+                                                        Мощные ингредиенты в составе сыворотки Revert специально нацелены на уменьшение выраженности пигментных пятен. Комплекс растительных экстрактов нормализует выработку кожного сала и защищает от воздействия агрессивных факторов окружающей среды. Благодаря
+                                                        производному витамина С эта сыворотка освежает тусклую, уставшую кожу, выравнивая тон и даря коже сияние.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card__comment">
+                                            <div class="comment">
+                                                <div class="comment__head comment__head_stars">
+                                                    <div class="comment__head-avatar">
+                                                        <img src="../images/img/blog/ava1.png" alt="Пользователь" class="comment__head-avatar-img" aria-hidden="true">
+                                                    </div>
+                                                    <span class="comment__head-name">Alexana</span>
+                                                    <span class="comment__head-date">06 августа 2021, 14:08</span>
+                                                    <div class="comment__head-star-wrapper">
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="comment__inner">
+                                                    <p class="comment__text">
+                                                        Мощные ингредиенты в составе сыворотки Revert специально нацелены на уменьшение выраженности пигментных пятен. Комплекс растительных экстрактов нормализует выработку кожного сала и защищает от воздействия агрессивных факторов окружающей среды. Благодаря
+                                                        производному витамина С эта сыворотка освежает тусклую, уставшую кожу, выравнивая тон и даря коже сияние.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card__comment">
+                                            <div class="comment">
+                                                <div class="comment__head comment__head_stars">
+                                                    <div class="comment__head-avatar">
+                                                        <img src="../images/img/blog/ava1.png" alt="Пользователь" class="comment__head-avatar-img" aria-hidden="true">
+                                                    </div>
+                                                    <span class="comment__head-name">Alexana</span>
+                                                    <span class="comment__head-date">06 августа 2021, 14:08</span>
+                                                    <div class="comment__head-star-wrapper">
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                        <div class="comment__head-star"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="comment__inner">
+                                                    <p class="comment__text">
+                                                        Мощные ингредиенты в составе сыворотки Revert специально нацелены на уменьшение выраженности пигментных пятен. Комплекс растительных экстрактов нормализует выработку кожного сала и защищает от воздействия агрессивных факторов окружающей среды. Благодаря
+                                                        производному витамина С эта сыворотка освежает тусклую, уставшую кожу, выравнивая тон и даря коже сияние.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <button class="card__btn-more card__comment-more-btn">Еще 9 отзывов...</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -281,15 +447,15 @@
                     <h2 class="base-page-title card-promo__title">Рекомендуем</h2>
 
                     <div class="reccomend-promo">
-                        <div class="reccomend-promo__slider js--reccomend-slider">
+                        <div class="reccomend-promo__slider base-slider-arrow base-slider-arrow_reccomend  js--reccomend-slider">
 
                             <div class="reccomend-promo__slide">
                                 <div class="reccomend-promo__item">
-                                    <div class="reccomend-promo__img-block">
+                                    <a href="#" class="reccomend-promo__img-block">
 
                                         <img src='../images/img/common/reccomend1.png' alt="СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE" class="reccomend-promo__img">
-                                    </div>
-                                    <p class="reccomend-promo__title">СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE</p>
+                                    </a>
+                                    <a href="#" class="reccomend-promo__title">СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE</a>
                                     <p class="reccomend-promo__text">Шелковистая и гладкая кожа</p>
                                     <div class="reccomend-promo__bottom">
                                         <span class="reccomend-promo__cost">6 712₽</span>
@@ -307,15 +473,15 @@
 
                             <div class="reccomend-promo__slide">
                                 <div class="reccomend-promo__item">
-                                    <div class="reccomend-promo__img-block">
+                                    <a href="#" class="reccomend-promo__img-block">
 
                                         <span class="reccomend-promo__badge">
                         <span class="visually-hidden">выбор звезд</span>
                                         </span>
 
                                         <img src='../images/img/common/reccomend2.png' alt="НОЧНАЯ СЫВОРОТКА ДЛЯ БЫСТРОГО ОБНОВЛЕНИЯ С LG-РЕТИНЕКСОМ (24%) SERUM 24" class="reccomend-promo__img">
-                                    </div>
-                                    <p class="reccomend-promo__title">НОЧНАЯ СЫВОРОТКА ДЛЯ БЫСТРОГО ОБНОВЛЕНИЯ С LG-РЕТИНЕКСОМ (24%) SERUM 24</p>
+                                    </a>
+                                    <a href="#" class="reccomend-promo__title">НОЧНАЯ СЫВОРОТКА ДЛЯ БЫСТРОГО ОБНОВЛЕНИЯ С LG-РЕТИНЕКСОМ (24%) SERUM 24</a>
                                     <p class="reccomend-promo__text">Эликсир молодости</p>
                                     <div class="reccomend-promo__bottom">
                                         <span class="reccomend-promo__cost">10 168₽</span>
@@ -339,11 +505,11 @@
 
                             <div class="reccomend-promo__slide">
                                 <div class="reccomend-promo__item">
-                                    <div class="reccomend-promo__img-block">
+                                    <a href="#" class="reccomend-promo__img-block">
 
                                         <img src='../images/img/common/reccomend3.png' alt="СЫВОРОТКА ОЧИЩАЮЩАЯ ДЛЯ ПРОБЛЕМНОЙ КОЖИ CLARITY" class="reccomend-promo__img">
-                                    </div>
-                                    <p class="reccomend-promo__title">СЫВОРОТКА ОЧИЩАЮЩАЯ ДЛЯ ПРОБЛЕМНОЙ КОЖИ CLARITY</p>
+                                    </a>
+                                    <a href="#" class="reccomend-promo__title">СЫВОРОТКА ОЧИЩАЮЩАЯ ДЛЯ ПРОБЛЕМНОЙ КОЖИ CLARITY</a>
                                     <p class="reccomend-promo__text">Против воспалений и несовершенств кожи</p>
                                     <div class="reccomend-promo__bottom">
                                         <span class="reccomend-promo__cost">6 712₽</span>
@@ -365,15 +531,15 @@
 
                             <div class="reccomend-promo__slide">
                                 <div class="reccomend-promo__item">
-                                    <div class="reccomend-promo__img-block">
+                                    <a href="#" class="reccomend-promo__img-block">
 
                                         <span class="reccomend-promo__badge">
                         <span class="visually-hidden">выбор звезд</span>
                                         </span>
 
                                         <img src='../images/img/common/reccomend4.png' alt="СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE" class="reccomend-promo__img">
-                                    </div>
-                                    <p class="reccomend-promo__title">СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE</p>
+                                    </a>
+                                    <a href="#" class="reccomend-promo__title">СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE</a>
                                     <p class="reccomend-promo__text">Шелковистая и гладкая кожа</p>
                                     <div class="reccomend-promo__bottom">
                                         <span class="reccomend-promo__cost">6 712₽</span>
@@ -393,15 +559,15 @@
 
                             <div class="reccomend-promo__slide">
                                 <div class="reccomend-promo__item">
-                                    <div class="reccomend-promo__img-block">
+                                    <a href="#" class="reccomend-promo__img-block">
 
                                         <span class="reccomend-promo__badge">
                         <span class="visually-hidden">выбор звезд</span>
                                         </span>
 
                                         <img src='../images/img/common/reccomend1.png' alt="СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE" class="reccomend-promo__img">
-                                    </div>
-                                    <p class="reccomend-promo__title">СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE</p>
+                                    </a>
+                                    <a href="#" class="reccomend-promo__title">СЫВОРОТКА РЕМОДЕЛИРУЮЩАЯ REFINE</a>
                                     <p class="reccomend-promo__text">Шелковистая и гладкая кожа</p>
                                     <div class="reccomend-promo__bottom">
                                         <span class="reccomend-promo__cost">6 712₽</span>
@@ -447,13 +613,13 @@
                         <div class="footer-social__wrapper footer-social__wrapper_desktop">
                             <p class="footer-social__title">Присоединяйтесь</p>
                             <div class="footer-social__items-row">
-                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
                                     <span class="visually-hidden">Космедикс в инстаграм</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
                                     <span class="visually-hidden">Космедикс в фейсбук</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
                                     <span class="visually-hidden">Космедикс в ютуб</span>
                                 </a>
                             </div>
@@ -478,13 +644,13 @@
                         <div class="footer-social__wrapper footer-social__wrapper_mobile">
                             <p class="footer-social__title">Присоединяйтесь</p>
                             <div class="footer-social__items-row">
-                                <a href="#" class="footer-social__item footer-social__item_inst">
+                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
                                     <span class="visually-hidden">Космедикс в инстаграм</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_fb">
+                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
                                     <span class="visually-hidden">Космедикс в фейсбук</span>
                                 </a>
-                                <a href="#" class="footer-social__item footer-social__item_yt">
+                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
                                     <span class="visually-hidden">Космедикс в ютуб</span>
                                 </a>
                             </div>

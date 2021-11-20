@@ -9,10 +9,10 @@
         {% endif %}
         {% for promoItem in data.items %}
         <div class="double-promo-item__img-item">
-            <div class="double-promo-item__img-item__wrapper">
+            <a href="#" class="double-promo-item__img-item__wrapper">
                 <img src="{{promoItem.img}}" alt="{{promoItem.title}}" class="double-promo-item__img">
-            </div>
-            <p class="double-promo-item__img-name">{{promoItem.title}}</p>
+            </a>
+            <a href="#" class="double-promo-item__img-name">{{promoItem.title}}</a>
         </div>
         {% endfor %}
     </div>

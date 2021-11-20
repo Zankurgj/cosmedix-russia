@@ -9,48 +9,84 @@
         </div>
     </article>
     <section class="catalog-section">
+        <div class="filter-nav filter-nav_mobile">
+            <button class="filter-nav__btn js--filter-toggle" type="button">
+                <span class="visually-hidden">Открыть фильтры</span>
+            </button>
+            <p class="filter-nav__title">фильтр</p>
+        </div>
+        <ul class="catalog__nav-bottom">
+            <li class="catalog__nav-list-item">
+                <label class="catalog__nav-item-wrapper">
+                    <span class="visually-hidden">Филтровать по популярности</span>
+                    <input type="checkbox" class="catalog__nav-item-input">
+                    <span class="catalog__nav-item" aria-hidden="true">
+                        <img src="../images/icons/filter-star.svg" alt="" class="catalog__nav-item-icon" width="9"
+                            height="9">
+                    </span>
+                </label>
+            </li>
+            <li class="catalog__nav-list-item">
+                <label class="catalog__nav-item-wrapper">
+                    <span class="visually-hidden">Филтровать по алфавиту</span>
+                    <input type="checkbox" class="catalog__nav-item-input">
+                    <span class="catalog__nav-item" aria-hidden="true">
+                        <img src="../images/icons/filter-letter.svg" alt="" class="catalog__nav-item-icon" width="8"
+                            height="9">
+                    </span>
+                </label>
+            </li>
+            <li class="catalog__nav-list-item">
+                <label class="catalog__nav-item-wrapper">
+                    <span class="visually-hidden">Филтровать по цене</span>
+                    <input type="checkbox" class="catalog__nav-item-input">
+                    <span class="catalog__nav-item" aria-hidden="true">
+                        <img src="../images/icons/filter-cost.svg" alt="" class="catalog__nav-item-icon" width="8"
+                            height="9">
+                    </span>
+                </label>
+            </li>
+        </ul>
         <div class="c-container">
             <div class="c-row">
-                <div class="catalog__sidebar-col">
-                    <div class="base-sidebar catalog__sidebar">
+                <div class="catalog__sidebar-col js--filter-popup">
+                    <div class="catalog__sidebar-overlay js--filter-toggle"></div>
+                    <form class="base-sidebar catalog__sidebar">
+                        <button class="catalog__sidebar-btn-close js--filter-toggle" type="button">
+                            <span class="visually-hidden">Закрыть</span>
+                        </button>
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">КАТЕГОРИИ</p>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Очищение и увлажнение</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Сыворотки</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Маски</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Уход за телом</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Уход для глаз и губ</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Солнцезащитные средства</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Наборы</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Аксессуары </span>
-                            </div>
+                            {% set filterCategory = [
+                            ['Очищение и увлажнени'],
+                            ['Сыворотки'],
+                            ['Маски'],
+                            ['Уход за телом'],
+                            ['Уход для глаз и губ'],
+                            ['Солнцезащитные средства'],
+                            ['Наборы'],
+                            ['Аксессуары']
+                            ] %}
+                            {% for name in filterCategory %}
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                <span class="base-sidebar__text base-sidebar__text_active">{{name}}</span>
+                            </label>
+                            {% endfor %}
                         </div>
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">проблема</p>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Акне</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Морщины</span>
-                            </div>
-                            <div class="base-sidebar__item">
-                                <span class="base-sidebar__text">Пигментация</span>
-                            </div>
+                            {% set filterProblems = [
+                            ['Акне'],
+                            ['Морщины'],
+                            ['Пигментация']
+                            ] %}
+                            {% for name in filterProblems %}
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                <span class="base-sidebar__text base-sidebar__text_active">{{name}}</span>
+                            </label>
+                            {% endfor %}
                         </div>
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">Цена продажи</p>
@@ -58,9 +94,9 @@
                         </div>
                         <div class="base-sidebar__item-wrapper">
                             <button class="btn-main base-sidebar__search-btn" type="button">показать</button>
-                            <button class="btn-base-text base-sidebar__reset-btn">Сбросить</button>
+                            <button class="btn-base-text base-sidebar__reset-btn" type="submit">Сбросить</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="catalog__product-col">
                     <div class="c-row">
@@ -84,9 +120,9 @@
         </div>
     </section>
     <section class="catalog-promo">
-        <div class="c-container">
+        <div class="c-container c-container_catalog-promo">
             <h1 class="base-page-title catalog-promo_title">Рекомендуем</h1>
-            <div class="c-row">
+            <div class="c-row base-slider-arrow base-slider-arrow_catalog-promo js--double-promo-slider">
                 {% for i in range(0, 3) %}
                 <div class="catalog-promo__col">
                     {% set promoItemData = {
@@ -113,5 +149,5 @@
         </div>
     </section>
 </div>
-
+{% include "app/src/njk/components/basket_popup.njk" %}
 {% endblock %}

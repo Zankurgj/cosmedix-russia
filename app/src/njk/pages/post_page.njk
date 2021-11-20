@@ -2,7 +2,7 @@
 {% extends "app/src/njk/layout/index.njk" %}
 {% block content %}
 <div class="blog-page-container">
-    <article class="blog-breadcrumbs-section">
+    <article class="post-breadcrumbs-section">
         <div class="c-container">
             {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
             {{ breadcrumbs([['Блог']]) }}
@@ -11,7 +11,7 @@
     <section class="blog-section">
         <div class="c-container">
             <div class="c-row">
-                <div class="blog__sidebar-col">
+                <div class="blog__sidebar-col blog__sidebar-col_post">
                     <form class="base-sidebar blog__sidebar">
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">КАТЕГОРИИ</p>
@@ -44,6 +44,10 @@
                     </form>
                 </div>
                 <div class="blog__product-col">
+                    <div class="post__head post__head_mobile">
+                        <span class="post__head__item">Эфиры</span>
+                        <span class="post__head__item">11.08.2021</span>
+                    </div>
                     <h1 class="base-page-title base-page-title_post">Натуральное превосходство</h1>
                     <div class="post">
                         <div class="post__head">
@@ -104,13 +108,17 @@
                         </p>
                         <div class="post__footer">
                             <div class="post__footer__item">
-                                <button class="post__footer__like-btn">
+                                <button class="post__footer__like-btn js--post-like-btn">
                                     <span class="visually-hidden">Лайк</span>
                                 </button>
                                 <span class="post__footer__text">1050</span>
                             </div>
                             <div class="post__footer__item">
-                                <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                <!-- Неактивная иконка просмотра -->
+                                <!-- <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                    class="post__footer__icon" aria-hidden="true"> -->
+                                <!-- Активная иконка просмотра -->
+                                <img src="../images/icons/blog-eye-active.svg" alt="Иконка просмотра новости"
                                     class="post__footer__icon" aria-hidden="true">
                                 <span class="post__footer__text">205</span>
                             </div>

@@ -59,31 +59,36 @@
                     </div>
                 </div>
                 <div class="partner__video-wrapper">
-                    <button class="partner__video-btn">
+                    <a class="partner__video-btn" data-fancybox href="https://www.youtube.com/embed/MA9qNr8mlFA">
                         <span class="visually-hidden">Воспроизвести видео</span>
-                    </button>
+                    </a>
                 </div>
                 <form class="partner__form">
                     <p class="partner__form-title">Оставьте ваши контакты, и менеджер свяжется с вами</p>
                     <label class="partner__form-label">
                         <span class="visually-hidden">Имя</span>
-                        <input type="text" class="base-text-input" placeholder="Имя">
+                        <input type="text" class="base-text-input base-text-input_partner base-text-input_transparent"
+                            placeholder="Имя">
                     </label>
                     <label class="partner__form-label">
                         <span class="visually-hidden">Фамилия</span>
-                        <input type="text" class="base-text-input" placeholder="Фамилия">
+                        <input type="text" class="base-text-input base-text-input_partner base-text-input_transparent"
+                            placeholder="Фамилия">
                     </label>
                     <label class="partner__form-label">
                         <span class="visually-hidden">E-Mail</span>
-                        <input type="email" class="base-text-input" placeholder="E-Mail">
+                        <input type="email" class="base-text-input base-text-input_partner base-text-input_transparent"
+                            placeholder="E-Mail">
                     </label>
                     <label class="partner__form-label">
-                        <span class="visually-hidden">Имя</span>
-                        <input type="text" class="base-text-input base-text-input_search" placeholder="Москва, Россия">
+                        <span class="visually-hidden">Город</span>
+                        <input type="text"
+                            class="base-text-input base-text-input_partner base-text-input_transparent base-text-input_search base-text-input_search-partner"
+                            placeholder="Москва, Россия">
                     </label>
                     <button class="btn-main partner__form-btn" type="submit">отправить заявку</button>
                     <label class="partner__form-checkbox-wrapper">
-                        <input type="checkbox" class="base-checkbox">
+                        <input type="checkbox" class="base-checkbox" required>
                         <span class="base-checkbox-fake partner__form-checkbox"></span>
                         <span class="partner__form-checkbox-text">Согласен на обработку моих данных *</span>
                     </label>

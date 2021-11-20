@@ -1,0 +1,125 @@
+{% set pageTitle = 'Блог' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="prof-page-container">
+    <article class="prof-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Блог']]) }}
+        </div>
+    </article>
+    <div class="prof">
+        <div class="c-container c-container_prof-top">
+            <img class="prof__top-img" src="../images/img/prof/prof.jpg" alt="Продукция">
+        </div>
+        <div class="c-container c-container_prof-inner">
+            <section class="prof__inner">
+                <h1 class="base-page-title base-page-title_prof-inner">Дорогие коллеги!</h1>
+                <p class="prof__text">
+                    Добро пожаловать в семью Cosmedix. Мы ценим каждого нашего партнера и стремимся сделать общее
+                    сотрудничество плодотворным, комфортным и взаимовыгодным. Специально для вас мы разработали и
+                    запустили
+                    партнерскую программу. Теперь у вас есть возможность получать 20% комиссии с каждой покупки ваших
+                    клиентов всей линии домашнего ухода Cosmedix в нашем интернет магазине. Ваши клиенты получают 10%
+                    скидки
+                    при покупке любых продуктов в категории домашнего ухода.
+                </p>
+            </section>
+            <section class="prof__items-block">
+                <h2 class="prof__items-title">
+                    3 простых шага, чтобы подключиться к партнерской программе.
+                </h2>
+                <div class="prof__items">
+                    {% set profItems = [
+                    {
+                    img: '../images/img/prof/prof-item1.png',
+                    text:'Зарегистрировать личный кабинет, заполнив специальную форму'
+                    },
+                    {
+                    img: '../images/img/prof/prof-item2.png',
+                    text:'Ознакомиться с условиями партнерской программы и принять их '
+                    },
+                    {
+                    img: '../images/img/prof/prof-item3.png',
+                    text:'Получить уникальный код. Уникальная реферальная ссылка будет доступна сразу же при входе в
+                    личный кабинет'
+                    }
+                    ]
+                    %}
+                    {% for item in profItems%}
+                    <div class="prof__item">
+                        <div class="prof__item-img-col">
+                            <img src="{{item.img}}" alt="Иконка партнерской программы" class="prof__item-img"
+                                aria-hidden="true">
+                        </div>
+                        <div class="prof__item-text-col">
+                            <p class="prof__item-text">
+                                <span class="prof__item-number">{{loop.index}}.</span>
+                                {{item.text}}
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <p class="prof__text">
+                    Продвигайте код среди своих клиентов , отслеживайте транзакции в своем личном кабинете и получайте
+                    вознаграждение на свой банковский счет.
+                </p>
+            </section>
+            <form class="partner__form partner__form_prof">
+                <p class="partner__form-title">ЗАРЕГИСТРИРОВАТЬ ЛИЧНЫЙ КАБИНЕТ</p>
+                <label class="partner__form-label">
+                    <span class="visually-hidden">Имя</span>
+                    <input type="text" class="base-text-input base-text-input_partner base-text-input_transparent"
+                        placeholder="Имя">
+                </label>
+                <label class="partner__form-label">
+                    <span class="visually-hidden">Фамилия</span>
+                    <input type="text" class="base-text-input base-text-input_partner base-text-input_transparent"
+                        placeholder="Фамилия">
+                </label>
+                <label class="partner__form-label">
+                    <span class="visually-hidden">E-Mail</span>
+                    <input type="email" class="base-text-input base-text-input_partner base-text-input_transparent"
+                        placeholder="E-Mail">
+                </label>
+                <label class="partner__form-label">
+                    <span class="visually-hidden">Населенный пункт</span>
+                    <input type="text"
+                        class="base-text-input base-text-input_partner base-text-input_transparent base-text-input_search base-text-input_search-partner"
+                        placeholder="Населенный пункт">
+                </label>
+                <label class="partner__form-label">
+                    <span class="visually-hidden">Профессия</span>
+                    <input type="text" class="base-text-input base-text-input_partner base-text-input_transparent"
+                        placeholder="Профессия">
+                </label>
+                <label class="partner__form-label">
+                    <span class="visually-hidden">Общий стаж в косметологии</span>
+                    <input type="text" class="base-text-input base-text-input_partner base-text-input_transparent"
+                        placeholder="Общий стаж в косметологии">
+                </label>
+                <div class="partner__form-file-field">
+                    <p class="partner__form-file-text">Документ о медицинском образовании*</p>
+                    <label class="partner__form-file-label">
+                        <input type="file" class="base-file-input js--fileinput" accept=".pdf, .jpg, .jpeg, .png">
+                        <span
+                            class="base-text-input base-text-input_partner base-text-input_partner-file base-text-input_transparent js--fileinput-name">
+                            Название файла
+                        </span>
+                        <span class="btn-main partner__form-file-btn">Загрузить</span>
+                    </label>
+                    <p class="partner__form-file-text">* Файлы в форматах pdf, png, jpg (не более 5 МБ)</p>
+                </div>
+                <button class="btn-main partner__form-btn" type="submit">отправить заявку</button>
+                <label class="partner__form-checkbox-wrapper">
+                    <input type="checkbox" class="base-checkbox" required>
+                    <span class="base-checkbox-fake partner__form-checkbox"></span>
+                    <span class="partner__form-checkbox-text">Согласен на обработку моих данных *</span>
+                </label>
+                <span class="partner__form-subtitle">*Обязательное поле</span>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

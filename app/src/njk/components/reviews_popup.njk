@@ -1,0 +1,48 @@
+<div class="reviews-popup-wrapper" id="reviews-popup">
+    <div class="reviews-popup">
+        <button class="popup-close quick-popup_close" onclick="$.fancybox.close()">
+            <span class="visually-hidden">закрыть</span>
+        </button>
+        <form class="reviews-popup__inner">
+            <p class="base-page-title reviews-popup-title">Оценить этот продукт</p>
+            <div class="product_rating-group">
+                <input class="product_rating-input" type="radio" name="raiting" id="raiting-1" value="1">
+                <label class="product_rating-star" for="raiting-1" aria-label="1"></label>
+
+                <input class="product_rating-input" type="radio" name="raiting" id="raiting-2" value="2">
+                <label class="product_rating-star" for="raiting-2" aria-label="2"></label>
+
+                <input class="product_rating-input" type="radio" name="raiting" id="raiting-3" value="3" checked>
+                <label class="product_rating-star" for="raiting-3" aria-label="3"></label>
+
+                <input class="product_rating-input" type="radio" name="raiting" id="raiting-4" value="4">
+                <label class="product_rating-star" for="raiting-4" aria-label="4"></label>
+
+                <input class="product_rating-input" type="radio" name="raiting" id="raiting-5" value="5">
+                <label class="product_rating-star" for="raiting-5" aria-label="5"></label>
+            </div>
+            <div class="reviews-popup__input-block">
+                <label class="reviews-popup__input-wrapper">
+                    <span class="visually-hidden">Ваше имя</span>
+                    <input type="text" class="base-text-input" placeholder="Ваше имя">
+                </label>
+                <label class="reviews-popup__input-wrapper">
+                    <span class="visually-hidden">Заголовок отызва</span>
+                    <input type="text" class="base-text-input" placeholder="Заголовок отызва">
+                </label>
+                <label class="reviews-popup__input-wrapper">
+                    <span class="visually-hidden">Ваш отзыв</span>
+                    <textarea class="base-text-input base-text-input_textarea reviews-popup__textarea"
+                        placeholder="Ваш отзыв"></textarea>
+                </label>
+            </div>
+            <button class="btn-main reviews-popup__btn" type="submit">отправить заявку</button>
+            <label class="reviews-popup__form-checkbox-wrapper">
+                <input type="checkbox" class="base-checkbox" required>
+                <span class="base-checkbox-fake reviews-popup__form-checkbox"></span>
+                <span class="reviews-popup__form-checkbox-text">Согласен на обработку моих данных *</span>
+            </label>
+            <span class="reviews-popup__form-subtitle">*Обязательное поле</span>
+        </form>
+    </div>
+</div>

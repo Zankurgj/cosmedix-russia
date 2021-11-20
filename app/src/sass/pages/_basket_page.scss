@@ -1,32 +1,60 @@
 .basket-page-container {
   padding: 60px 0 30px;
+  @media all and (max-width: $mobile-bp) {
+    padding: 8px 0 18px;
+  }
 }
 .basket-breadcrumbs {
   margin-bottom: 18px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 8px;
+  }
 }
 .basket__title {
   margin-bottom: 56px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 8px;
+  }
 }
 .basket_col-left {
   flex-basis: calc(100% - 390px);
   max-width: calc(100% - 390px);
   padding-right: 50px;
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 28px;
+  }
 }
 .basket_col-right {
   flex: 0 0 auto;
   width: 390px;
+  @media all and (max-width: $mobile-bp) {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 .basket__sidebar {
   position: sticky;
   top: 180px;
+  @media all and (max-width: $mobile-bp) {
+    position: static;
+  }
 }
 // ITEM
 .basket__item {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   padding-right: 35px;
   border-bottom: 1px solid #78859d;
   min-height: 190px;
+  @media all and (max-width: $mobile-bp) {
+    padding: 18px 0 10px 20px;
+    min-height: auto;
+  }
   &:first-child {
     border-top: 1px solid #78859d;
   }
@@ -35,24 +63,51 @@
   display: flex;
   flex-basis: 55%;
   max-width: 55%;
+  @media all and (max-width: 1200px) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 .basket__item-second-col {
   display: flex;
   flex-basis: 45%;
   max-width: 45%;
   padding-top: 28px;
+  @media all and (max-width: 1200px) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 28px 0;
+  }
+  @media all and (max-width: $mobile-bp) {
+    align-items: flex-end;
+    padding: 0;
+  }
 }
 .basket__item-title-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 28px 10px;
+  flex-basis: calc(100% - 164px);
+  max-width: calc(100% - 164px);
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: calc(100% - 96px);
+    max-width: calc(100% - 96px);
+    padding: 0 0 0 26px;
+  }
 }
 .basket__item-counter-col {
   display: flex;
   justify-content: center;
   flex-basis: 50%;
   max-width: 50%;
+  @media all and (max-width: 1200px) {
+    width: 164px;
+    flex: 0 0 auto;
+  }
+  @media all and (max-width: 1200px) {
+    width: 96px;
+  }
 }
 .basket__item-counter__title {
   display: block;
@@ -64,6 +119,12 @@
 .basket__item-counter-empty-input {
   display: block;
   margin: 0 auto;
+  @media all and (max-width: $mobile-bp) {
+    height: 22px;
+    width: 22px;
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 .basket__item-cost-col {
   display: flex;
@@ -71,12 +132,28 @@
   flex-basis: 50%;
   max-width: 50%;
   padding-top: 19px;
+  @media all and (max-width: 1200px) {
+    flex-basis: calc(100% - 164px);
+    max-width: calc(100% - 164px);
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  @media all and (max-width: $mobile-bp) {
+    flex-basis: calc(100% - 96px);
+    max-width: calc(100% - 96px);
+    padding: 0 0 0 26px;
+  }
 }
 .basket__item-img-wrapper {
   flex: 0 0 auto;
   width: 164px;
   height: 164px;
   margin: 10px 0;
+  @media all and (max-width: $mobile-bp) {
+    width: 96px;
+    height: 96px;
+    margin: 0;
+  }
 }
 .basket__item-img {
   width: 100%;
@@ -109,13 +186,29 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #78859d;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  @media all and (max-width: $mobile-bp) {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333;
+  }
 }
 .basket__item-cost {
   font-weight: bold;
   font-size: 21px;
   line-height: 28px;
   text-transform: uppercase;
-  color: #333333;
+  color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 .basket__item-delete {
   position: absolute;
@@ -130,28 +223,52 @@
   &:hover {
     opacity: 0.8;
   }
+  @media all and (max-width: $mobile-bp) {
+    width: 20px;
+    height: 20px;
+    top: auto;
+    bottom: 10px;
+    right: 5px;
+  }
 }
 .basket__item-radio-label {
   position: relative;
   display: block;
   margin: 0 0 4px 0;
+  @media all and (max-width: $mobile-bp) {
+    margin: 0 0 8px 0;
+    &:first-of-type {
+      margin: 20px 0 8px 0;
+    }
+  }
 }
 
 .basket__item-radio-fake {
   position: absolute;
   top: 15px;
   left: -34px;
+  @media all and (max-width: $mobile-bp) {
+    top: 6px;
+    left: -20px;
+  }
 }
 .basket__item-radio-text {
   font-size: 21px;
   line-height: 27px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 // INFO
 .basket__code-input-label {
   display: block;
   margin-bottom: 24px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 12px;
+  }
 }
 .basket__code-btn {
   display: block;
@@ -171,6 +288,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 18px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 14px;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -179,12 +299,33 @@
   font-size: 21px;
   line-height: 22px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.basket__info-item-text_bold {
+  @media all and (max-width: $mobile-bp) {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 .basket__info-item-cost {
   font-weight: bold;
   font-size: 21px;
   line-height: 28px;
   color: #333;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+.basket__info-item-cost_bold {
+  @media all and (max-width: $mobile-bp) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 .basket__info-btn {
   display: block;
@@ -193,4 +334,11 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.05em;
+}
+.base-text-input_basket-code {
+  @media all and (max-width: $mobile-bp) {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 20px 11px 20px;
+  }
 }

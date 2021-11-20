@@ -6,6 +6,7 @@ export const initSliders = () => {
   initMpMobileSlider();
   initCardSlider();
   initReccomendSlider();
+  initDoublePromoSlider();
 };
 
 const initMpTopSlider = () => {
@@ -15,6 +16,7 @@ const initMpTopSlider = () => {
     infinite: true,
     arrows: false,
     dots: true,
+    appendDots: $(".js--mp-top-dots"),
     responsive: [
       {
         breakpoint: 1000,
@@ -28,12 +30,12 @@ const initMpTopSlider = () => {
 
 const initMpStarsSlider = () => {
   $(".js--mp-stars-slider").slick({
-    slidesToShow: 1,
     centerMode: true,
     variableWidth: true,
     infinite: true,
     arrows: false,
     dots: false,
+    touchThreshold: 20,
     responsive: [
       {
         breakpoint: 1000,
@@ -63,6 +65,38 @@ const initMpMobileSlider = () => {
             infinite: false,
             arrows: true,
             dots: false,
+          });
+        }
+      }
+    });
+  });
+};
+const initDoublePromoSlider = () => {
+  $(window).on("load resize orientationchange", function () {
+    $(".js--double-promo-slider").each(function () {
+      var $carousel = $(this);
+      /* Initializes a slick carousel only on mobile screens */
+      // slick on mobile
+      if ($(window).width() >= 1000) {
+        if ($carousel.hasClass("slick-initialized")) {
+          $carousel.slick("unslick");
+        }
+      } else {
+        if (!$carousel.hasClass("slick-initialized")) {
+          $carousel.slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: true,
+            dots: false,
+            responsive: [
+              {
+                breakpoint: 750,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },
+            ],
           });
         }
       }
@@ -99,5 +133,27 @@ const initReccomendSlider = () => {
     infinite: true,
     arrows: false,
     dots: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          arrows: true,
+        },
+      },
+    ],
   });
 };
