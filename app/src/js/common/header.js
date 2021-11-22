@@ -15,8 +15,10 @@ const initToggleSearchHandlerListener = () => {
   $(".js--toggle-search").on("click", toggleSearchHandler);
 };
 const toggleSearchHandler = (evt) => {
-  $(".js--toggle-search").toggleClass("show");
-  $(".js--search-btn").toggleClass("show");
   $(".js--header-search").toggleClass("show");
-  $(evt.currentTarget).removeClass("show");
+  if ($(".js--header-search").hasClass("show")) {
+    setTimeout(function () {
+      $(".js--header-search-input").focus();
+    }, 300);
+  }
 };

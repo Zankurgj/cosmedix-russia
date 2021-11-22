@@ -260,3 +260,45 @@
     left: 2px;
   }
 }
+// SEARCH
+.catalog__search {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 30px;
+  }
+}
+.catalog__search-label {
+  flex-grow: 1;
+  margin: 0;
+}
+.catalog__search-input {
+  width: 100%;
+  padding: 14px 6px;
+  border: 1px solid #78859d;
+  font-size: 14px;
+  line-height: 26px;
+  color: #333;
+  @media all and (max-width: $mobile-bp) {
+    padding: 6px 10px;
+  }
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+  &::placeholder {
+    color: #bdbdbd;
+  }
+}
+.catalog__search-btn {
+  flex: 0 0 auto;
+  width: 270px;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 140px;
+  }
+}

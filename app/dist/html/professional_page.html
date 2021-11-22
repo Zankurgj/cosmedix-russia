@@ -22,23 +22,21 @@
                     <span class="btn-hamburger__icon"></span>
                     <span class="visually-hidden">меню</span>
                 </button>
-                <div class="main_header__search">
-                    <div class="main_header__search-field">
-                        <label class="main_header__search-wrapper js--header-search">
-                            <span class="visually-hidden">Окно поиска</span>
-                            <input type="text" class="main_header__search-input" placeholder="Поиск по продуктам...">
-                        </label>
-                        <button class="main_header__top_btn main_header__top_btn_search main_header__top_btn_search_field js--search-btn">
-                            <span class="visually-hidden">Поиск</span>
-                        </button>
-                    </div>
-                    <button class="main_header__top_btn main_header__top_btn_search show js--toggle-search">
-                        <span class="visually-hidden">Открыть поиск</span>
+                <div class="main_header__search js--header-search">
+                    <label class="main_header__search-wrapper">
+                        <span class="visually-hidden">Окно поиска</span>
+                        <input type="search" class="main_header__search-input js--header-search-input" placeholder="Поиск по продуктам...">
+                    </label>
+                    <button class="main_header__search-btn main_header__search-btn_search">
+                        <span class="visually-hidden">Поиск</span>
                     </button>
-                    <button class="main_header__top_btn main_header__top_btn_search-close js--toggle-search">
+                    <button class="main_header__search-btn main_header__search-btn_close js--toggle-search">
                         <span class="visually-hidden">Закрыть поиск</span>
                     </button>
                 </div>
+                <button class="main_header__top_btn main_header__top_btn_search js--toggle-search">
+                    <span class="visually-hidden">Открыть поиск</span>
+                </button>
                 <button class="main_header__top_btn main_header__top_btn_lk">
                     <span class="visually-hidden">Личный кабинет</span>
                 </button>
@@ -127,7 +125,19 @@
             </article>
             <div class="prof">
                 <div class="c-container c-container_prof-top">
-                    <img class="prof__top-img" src="../images/img/prof/prof.jpg" alt="Продукция">
+                    <div class="prof__top">
+                        <p class="prof__top-text">
+                            партнерская
+                            <br>программа
+                            <br>для частных
+                            <br>профессионалов
+                        </p>
+                        <picture class="prof__top-img-container">
+                            <source srcset="../images/img/prof/prof-block-m.png" media="(max-width: 1000px)">
+                                <source srcset="../images/img/prof/prof-block.png">
+                                    <img class="prof__top-img" srcset="../images/img/prof/prof-block.png" alt="Специалисты">
+                        </picture>
+                    </div>
                 </div>
                 <div class="c-container c-container_prof-inner">
                     <section class="prof__inner">
@@ -211,7 +221,7 @@
                             <span class="visually-hidden">Общий стаж в косметологии</span>
                             <input type="text" class="base-text-input base-text-input_partner base-text-input_transparent" placeholder="Общий стаж в косметологии">
                         </label>
-                        <div class="partner__form-file-field">
+                        <div class="partner__form-file-field partner__form-file-field_prof">
                             <p class="partner__form-file-text">Документ о медицинском образовании*</p>
                             <label class="partner__form-file-label">
                                 <input type="file" class="base-file-input js--fileinput" accept=".pdf, .jpg, .jpeg, .png">

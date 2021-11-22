@@ -29,47 +29,38 @@
 .main_header__top_btn {
   display: block;
   height: 100%;
+  width: 40px;
   background-repeat: no-repeat;
   background-position: center;
   &:hover {
     opacity: 0.7;
   }
+  @media all and (max-width: $mobile-bp) {
+    width: 30px;
+  }
 }
 // SEACRH
 .main_header__search {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  height: 100%;
-  max-width: 500px;
-  margin-right: 90px;
-  flex-grow: 1;
-  @media all and (max-width: $mobile-bp) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    max-width: 100%;
-    width: 100%;
-    height: 41px;
-    background-color: rgba(156, 173, 204, 0.3);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 54px;
+  width: 100%;
+  max-width: 1280px;
+  background-color: #78859d;
+  display: none;
+  &.show {
+    display: flex;
   }
-}
-.main_header__search-field {
-  flex-grow: 1;
-  position: relative;
+  @media all and (max-width: $mobile-bp) {
+    height: 42px;
+  }
 }
 .main_header__search-wrapper {
-  width: 100%;
-  height: 100%;
+  flex-grow: 1;
   margin: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity $base-duration $base-timing,
-    visibility $base-duration $base-timing;
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  }
+  border-right: 1px solid #fff;
   @media all and (max-width: $mobile-bp) {
     display: flex;
     opacity: 1;
@@ -78,80 +69,63 @@
 }
 .main_header__search-input {
   width: 100%;
-  height: 100%;
-  padding: 11px 10px 12px;
-  background-color: #fff;
+  padding: 14px 34px;
+  background-color: transparent;
   border: none;
-  border-bottom: 1px solid #dee3ed;
   font-size: 14px;
-  line-height: 16px;
-  color: #333;
+  line-height: 26px;
+  color: #fff;
   @media all and (max-width: $mobile-bp) {
-    background-color: transparent;
+    padding: 6px 10px;
+  }
+  &::placeholder {
+    color: #fff;
+  }
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
   }
 }
-.main_header__top_btn_search-close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-image: url("../images/icons/close-popup.svg");
-  width: 30px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0s, visibility 0s;
-  &.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity $base-duration $base-duration $base-timing,
-      visibility $base-duration $base-timing;
-  }
+.main_header__search-btn {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-right: 1px solid #fff;
   @media all and (max-width: $mobile-bp) {
-    display: none;
+    width: 38px;
+    background-size: 45%;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:last-child {
+    border-right: none;
   }
 }
-.main_header__top_btn_search {
-  background-image: url("../images/icons/header-search.svg");
-  width: 30px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity $base-duration $base-timing,
-    visibility $base-duration $base-timing;
-  &.show {
-    opacity: 1;
-    visibility: visible;
-    @media all and (max-width: $mobile-bp) {
-      display: none;
-    }
-  }
-  @media all and (max-width: $mobile-bp) {
-    display: none;
-    width: 48px;
-    background-position: left 4px center;
-  }
+.main_header__search-btn_search {
+  background-image: url("../images/icons/header-search-w.svg");
 }
-.main_header__top_btn_search_field {
-  position: absolute;
-  right: 0;
-  top: 0;
-  @media all and (max-width: $mobile-bp) {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-  }
-  &.show {
-    @media all and (max-width: $mobile-bp) {
-      display: block;
-    }
-  }
+.main_header__search-btn_close {
+  background-image: url("../images/icons/header-close-w.svg");
 }
 // BTNS
 .main_header__top_btn_lk {
   background-image: url("../images/icons/header-lk.svg");
-  width: 40px;
 }
 .main_header__top_btn_basket {
   background-image: url("../images/icons/header-basket.svg");
-  width: 40px;
+}
+.main_header__top_btn_search {
+  background-image: url("../images/icons/header-search.svg");
+  margin-right: 60px;
+  @media all and (max-width: $mobile-bp) {
+    margin-right: 0;
+  }
 }
 // BOTTOM HEADER
 .main_header-overlay {
@@ -210,6 +184,11 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  @media all and (max-width: 500px) {
+    left: 64px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 .main_header__mobile-logo-img {
   display: none;
