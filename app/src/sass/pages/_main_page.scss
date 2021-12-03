@@ -50,8 +50,12 @@
   position: relative;
 }
 .mp-slide__img-wrapper {
+  display: block;
   position: relative;
   padding-top: 43%;
+  @media all and (max-width: $mobile-bp) {
+    padding-top: 90%;
+  }
 }
 .mp-slide__img {
   position: absolute;
@@ -347,6 +351,12 @@
   position: relative;
   width: 100%;
   padding-top: 100%;
+  @media all and (max-width: $mobile-bp) {
+    width: 206px;
+    height: 206px;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 .mp-bestsellers__item-img {
   display: block;
@@ -499,12 +509,19 @@
   height: 100%;
   width: 494px;
   padding: 0 50px;
+  @media all and (max-width: $mobile-bp) {
+    width: 375px;
+    padding: 0 0 0 20px;
+  }
 }
 .mp-stars__slider-img-block {
   flex: 0 0 auto;
   position: relative;
   margin-right: 28px;
   height: 369px;
+  @media all and (max-width: $mobile-bp) {
+    margin-right: 20px;
+  }
   &::after {
     content: "";
     position: absolute;

@@ -1,0 +1,243 @@
+{% set pageTitle = 'Блог' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="blog-page-container blog-page-container_ed">
+    <article class="blog-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Профессионалам'], ['Обучение']]) }}
+        </div>
+    </article>
+    <section class="blog-section">
+        <div class="c-container">
+            <div class="c-row">
+                <div class="blog__sidebar-col js--filter-popup">
+                    <div class="blog__sidebar-overlay js--filter-toggle"></div>
+                    <form class="base-sidebar blog__sidebar">
+                        <button class="blog__sidebar-btn-close js--filter-toggle" type="button">
+                            <span class="visually-hidden">Закрыть</span>
+                        </button>
+                        <div class="base-sidebar__item-wrapper">
+                            <p class="base-sidebar__title">КАТЕГОРИИ</p>
+                            {% set filterCategory = [
+                            ['От экспертов'],
+                            ['Видео обзоры'],
+                            ['Новинки'],
+                            ['Салонные процедуры'],
+                            ['Эфиры']
+                            ] %}
+                            {% for name in filterCategory %}
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                <span class="base-sidebar__text base-sidebar__text_active">{{name}}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                        <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
+                            <button class="btn-main base-sidebar__search-btn" type="submit">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn js--sidebar-checkbox-remove"
+                                type="button">Сбросить</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="blog__product-col">
+                    <h1 class="base-page-title blog-product-title blog-product-title_ed">Обучение</h1>
+                    <div class="filter-nav filter-nav_mobile filter-nav_blog-ed">
+                        <button class="filter-nav__btn js--filter-toggle" type="button">
+                            <span class="visually-hidden">Открыть фильтры</span>
+                        </button>
+                        <p class="filter-nav__title">фильтр</p>
+                    </div>
+                    <div class="ed-tab-container">
+                        <label class="ed-tab ed-tab_1">
+                            <input class="ed-tab__input js--toggle-tab-input" type="radio" name="ed-tab"
+                                data-tab-id="edTab1" checked>
+                            <span class="ed-tab__item">
+                                <span class="ed-tab__item-text">ПРОФЕССИОНАЛЬНЫЕ УХОДЫ COSMEDIX</span>
+                                <span class="ed-tab__item-line"></span>
+                            </span>
+                        </label>
+                        <label class="ed-tab ed-tab_2">
+                            <input class="ed-tab__input js--toggle-tab-input" type="radio" name="ed-tab"
+                                data-tab-id="edTab2">
+                            <span class="ed-tab__item">
+                                <span class="ed-tab__item-text">О Бренде</span>
+                                <span class="ed-tab__item-line"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="ed-tab-block show" data-tab-name="ed-tab" data-tab="edTab1">
+                        <div class="c-row">
+                            <div class="blog__item-col">
+                                <div class="blog-item">
+                                    <div class="blog-item__img-block">
+                                        <a href="#" class="blog-item__img-wrapper blog-item__img-wrapper_video">
+                                            <img src="../images/img/blog/blog.png" alt="Натуральное превосходство"
+                                                class="blog-item__img">
+                                        </a>
+                                    </div>
+                                    <div class="blog-item__text-block">
+                                        <div class="blog-item__head blog-item__head_right">
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-like-active.svg"
+                                                    alt="Иконка лайков новости" class="blog-item__head-icon">
+                                                <!-- <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_like"> -->
+                                                1050
+                                            </span>
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-eye-active.svg"
+                                                    alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_eye">
+                                                <!-- <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon"> -->
+                                                205
+                                            </span>
+                                        </div>
+                                        <div class="blog-item__inner">
+                                            <a href="#" class="blog-item__title blog-item__title_ed">Видео Урок 1</a>
+                                            <p class="blog-item__text">
+                                                COSMEDIX – первый представитель космецевтической индустрии, который
+                                                использует мощные природные ингредиенты....
+                                            </p>
+                                            <a href="#" class="btn-main blog-item__btn">подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% for i in range(0, 2) %}
+                            <div class="blog__item-col">
+                                <div class="blog-item">
+                                    <div class="blog-item__img-block">
+                                        <a href="#" class="blog-item__img-wrapper">
+                                            <img src="../images/img/blog/blog.png" alt="Натуральное превосходство"
+                                                class="blog-item__img">
+                                        </a>
+                                    </div>
+                                    <div class="blog-item__text-block">
+                                        <div class="blog-item__head blog-item__head_right">
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-like-active.svg"
+                                                    alt="Иконка лайков новости" class="blog-item__head-icon">
+                                                <!-- <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_like"> -->
+                                                1050
+                                            </span>
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-eye-active.svg"
+                                                    alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_eye">
+                                                <!-- <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon"> -->
+                                                205
+                                            </span>
+                                        </div>
+                                        <div class="blog-item__inner">
+                                            <a href="#" class="blog-item__title blog-item__title_ed">Видео Урок</a>
+                                            <p class="blog-item__text">
+                                                COSMEDIX – первый представитель космецевтической индустрии, который
+                                                использует мощные природные ингредиенты....
+                                            </p>
+                                            <a href="#" class="btn-main blog-item__btn">подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="ed-tab-block" data-tab-name="ed-tab" data-tab="edTab2">
+                        <div class="c-row">
+                            <div class="blog__item-col">
+                                <div class="blog-item">
+                                    <div class="blog-item__img-block">
+                                        <a href="#" class="blog-item__img-wrapper blog-item__img-wrapper_video">
+                                            <img src="../images/img/blog/blog.png" alt="Натуральное превосходство"
+                                                class="blog-item__img">
+                                        </a>
+                                    </div>
+                                    <div class="blog-item__text-block">
+                                        <div class="blog-item__head blog-item__head_right">
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-like-active.svg"
+                                                    alt="Иконка лайков новости" class="blog-item__head-icon">
+                                                <!-- <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_like"> -->
+                                                1050
+                                            </span>
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-eye-active.svg"
+                                                    alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_eye">
+                                                <!-- <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon"> -->
+                                                205
+                                            </span>
+                                        </div>
+                                        <div class="blog-item__inner">
+                                            <a href="#" class="blog-item__title blog-item__title_ed">Видео Урок 2</a>
+                                            <p class="blog-item__text">
+                                                COSMEDIX – первый представитель космецевтической индустрии, который
+                                                использует мощные природные ингредиенты....
+                                            </p>
+                                            <a href="#" class="btn-main blog-item__btn">подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% for i in range(0, 2) %}
+                            <div class="blog__item-col">
+                                <div class="blog-item">
+                                    <div class="blog-item__img-block">
+                                        <a href="#" class="blog-item__img-wrapper">
+                                            <img src="../images/img/blog/blog.png" alt="Натуральное превосходство"
+                                                class="blog-item__img">
+                                        </a>
+                                    </div>
+                                    <div class="blog-item__text-block">
+                                        <div class="blog-item__head blog-item__head_right">
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-like-active.svg"
+                                                    alt="Иконка лайков новости" class="blog-item__head-icon">
+                                                <!-- <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_like"> -->
+                                                1050
+                                            </span>
+                                            <span class="blog-item__head-text">
+                                                <!-- Активная -->
+                                                <img src="../images/icons/blog-eye-active.svg"
+                                                    alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon blog-item__head-icon_eye">
+                                                <!-- <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                                    class="blog-item__head-icon"> -->
+                                                205
+                                            </span>
+                                        </div>
+                                        <div class="blog-item__inner">
+                                            <a href="#" class="blog-item__title blog-item__title_ed">Видео Урок</a>
+                                            <p class="blog-item__text">
+                                                COSMEDIX – первый представитель космецевтической индустрии, который
+                                                использует мощные природные ингредиенты....
+                                            </p>
+                                            <a href="#" class="btn-main blog-item__btn">подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

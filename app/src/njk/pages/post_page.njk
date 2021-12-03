@@ -15,26 +15,19 @@
                     <form class="base-sidebar blog__sidebar">
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">КАТЕГОРИИ</p>
+                            {% set filterCategory = [
+                            ['От экспертов'],
+                            ['Видео обзоры'],
+                            ['Новинки'],
+                            ['Салонные процедуры'],
+                            ['Эфиры']
+                            ] %}
+                            {% for name in filterCategory %}
                             <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">От экспертов</span>
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                <span class="base-sidebar__text base-sidebar__text_active">{{name}}</span>
                             </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Видео обзоры</span>
-                            </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Новинки</span>
-                            </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Салонные процедуры</span>
-                            </label>
-                            <label class="base-sidebar__item">
-                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="sidebar">
-                                <span class="base-sidebar__text base-sidebar__text_active">Эфиры</span>
-                            </label>
+                            {% endfor %}
                         </div>
                         <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
                             <button class="btn-main base-sidebar__search-btn" type="submit">показать</button>

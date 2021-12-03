@@ -22,8 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
   initFileInputListener();
   initLikeBtnListener();
   initBaskedPopupListener();
+  initPartnersPopupListener();
 });
 
+const initPartnersPopupListener = () => {
+  $(".js--partners-popup-toggle").on("click", togglePartnersPopupHandler);
+};
+const togglePartnersPopupHandler = () => {
+  $(".js--partners-popup").toggleClass("show");
+};
 const initBaskedPopupListener = () => {
   $(".js--baket-popup-toggle").on("click", toggleBasketPopupHandler);
 };

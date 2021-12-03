@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Каталог</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="stylesheet" href="../../../dist/css/app.min.css" />
+</head>
+
+<body class="">
+    <header class="main_header">
+        <div class="main_header__top">
+            <div class="c-container c-container_main_header_top">
+                <a href="/" class="main_header__mobile-logo">
+                    <img class="main_header__mobile-logo-img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                </a>
+                <button class="btn-hamburger btn-hamburger_header js--header-nav-toggle">
+                    <span class="btn-hamburger__icon"></span>
+                    <span class="visually-hidden">меню</span>
+                </button>
+                <div class="main_header__search js--header-search">
+                    <label class="main_header__search-wrapper">
+                        <span class="visually-hidden">Окно поиска</span>
+                        <input type="search" class="main_header__search-input js--header-search-input" placeholder="Поиск по продуктам...">
+                    </label>
+                    <button class="main_header__search-btn main_header__search-btn_search">
+                        <span class="visually-hidden">Поиск</span>
+                    </button>
+                    <button class="main_header__search-btn main_header__search-btn_close js--toggle-search">
+                        <span class="visually-hidden">Закрыть поиск</span>
+                    </button>
+                </div>
+                <button class="main_header__top_btn main_header__top_btn_search js--toggle-search">
+                    <span class="visually-hidden">Открыть поиск</span>
+                </button>
+                <button class="main_header__top_btn main_header__top_btn_lk">
+                    <span class="visually-hidden">Личный кабинет</span>
+                </button>
+                <button class="main_header__top_btn main_header__top_btn_basket">
+                    <span class="visually-hidden">Корзина</span>
+                </button>
+            </div>
+        </div>
+        <div class="main_header__bottom js--header-nav">
+            <div class="main_header-overlay js--header-nav-toggle"></div>
+            <div class="c-container c-container_main_header">
+                <button class="main_header-btn-close js--header-nav-toggle" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                </button>
+                <a href="/" class="main_header__logo">
+                    <span class="visually-hidden">Главная страница</span>
+                    <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                </a>
+                <nav class="main_header__nav">
+                    <ul class="main_header__list">
+
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Главная</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">АКЦИИ</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Новинки</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Бестселлеры</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">КАТАЛОГ ПРОДУКТОВ</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item main_header__list-item_active ">Профессионалам</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">Адреса магазинов &amp;салонов</a>
+                        </li>
+
+                        <li class="main_header__list-item">
+                            <a href="#" class="main_header__nav-item ">НАШ БЛОГ</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="c-page__wrapper">
+
+        <div class="catalog-page-container">
+            <article class="catalog-breadcrumbs-section">
+                <div class="c-container">
+
+
+                    <ul class="breadcrumb-item-wrapper">
+                        <li class="breadcrumb-item__list">
+                            <a href="/" class="breadcrumb-item">
+            Главная
+        </a>
+                            /
+                        </li>
+
+
+                        <li class="breadcrumb-item__list">
+                            <span href="#" aria-current="page" class="breadcrumb-item">
+            Каталог
+        </span>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </article>
+            <section class="catalog-section">
+                <div class="filter-nav filter-nav_mobile">
+                    <button class="filter-nav__btn js--filter-toggle" type="button">
+                        <span class="visually-hidden">Открыть фильтры</span>
+                    </button>
+                    <p class="filter-nav__title">фильтр</p>
+                </div>
+                <ul class="catalog__nav-bottom">
+                    <li class="catalog__nav-list-item">
+                        <label class="catalog__nav-item-wrapper">
+                            <span class="visually-hidden">Филтровать по популярности</span>
+                            <input type="checkbox" class="catalog__nav-item-input">
+                            <span class="catalog__nav-item" aria-hidden="true">
+                        <img src="../images/icons/filter-star.svg" alt="" class="catalog__nav-item-icon" width="9"
+                            height="9">
+                    </span>
+                        </label>
+                    </li>
+                    <li class="catalog__nav-list-item">
+                        <label class="catalog__nav-item-wrapper">
+                            <span class="visually-hidden">Филтровать по алфавиту</span>
+                            <input type="checkbox" class="catalog__nav-item-input">
+                            <span class="catalog__nav-item" aria-hidden="true">
+                        <img src="../images/icons/filter-letter.svg" alt="" class="catalog__nav-item-icon" width="8"
+                            height="9">
+                    </span>
+                        </label>
+                    </li>
+                    <li class="catalog__nav-list-item">
+                        <label class="catalog__nav-item-wrapper">
+                            <span class="visually-hidden">Филтровать по цене</span>
+                            <input type="checkbox" class="catalog__nav-item-input">
+                            <span class="catalog__nav-item" aria-hidden="true">
+                        <img src="../images/icons/filter-cost.svg" alt="" class="catalog__nav-item-icon" width="8"
+                            height="9">
+                    </span>
+                        </label>
+                    </li>
+                </ul>
+                <div class="c-container">
+                    <div class="c-row">
+                        <div class="catalog__sidebar-col js--filter-popup">
+                            <div class="catalog__sidebar-overlay js--filter-toggle"></div>
+                            <form class="base-sidebar catalog__sidebar">
+                                <button class="catalog__sidebar-btn-close js--filter-toggle" type="button">
+                                    <span class="visually-hidden">Закрыть</span>
+                                </button>
+                                <div class="base-sidebar__item-wrapper">
+                                    <p class="base-sidebar__title">КАТЕГОРИИ</p>
+
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Очищение и увлажнени</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Сыворотки</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Маски</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Уход за телом</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Уход для глаз и губ</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Солнцезащитные средства</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Наборы</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Аксессуары</span>
+                                    </label>
+
+                                </div>
+                                <div class="base-sidebar__item-wrapper">
+                                    <p class="base-sidebar__title">проблема</p>
+
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Акне</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Морщины</span>
+                                    </label>
+
+                                    <label class="base-sidebar__item">
+                                        <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                        <span class="base-sidebar__text base-sidebar__text_active">Пигментация</span>
+                                    </label>
+
+                                </div>
+                                <div class="base-sidebar__item-wrapper">
+                                    <p class="base-sidebar__title">Цена продажи</p>
+                                    <div class="range-slider-wrapper">
+                                        <div class="range-slider-inputs">
+                                            <label class="range-slider-input-wrapper">
+                                                <span class="visually-hidden">Стартовое значение</span>
+                                                <input class="range-slider-input js--catalog-range-start" type="number">
+                                            </label>
+                                            <label class="range-slider-input-wrapper">
+                                                <span class="visually-hidden">Конечное значение</span>
+                                                <input class="range-slider-input js--catalog-range-stop" type="number">
+                                            </label>
+                                        </div>
+
+                                        <div class="range-slider js--catalog-range"></div>
+                                    </div>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            var slider = document.querySelector(".js--catalog-range");
+                                            var startRangeInput = document.querySelector(".js--catalog-range-start");
+                                            var stopRangeInput = document.querySelector(".js--catalog-range-stop");
+                                            var minVal = 0;
+                                            var maxVal = 8999;
+                                            noUiSlider.create(slider, {
+                                                start: [999, 4999],
+                                                connect: true,
+                                                range: {
+                                                    min: minVal,
+                                                    max: maxVal,
+                                                },
+                                            });
+                                    
+                                            slider.noUiSlider.on("update", function (values, handle) {
+                                                var value = Math.round(values[handle]);
+                                    
+                                                if (handle) {
+                                                    stopRangeInput.value = value;
+                                                } else {
+                                                    startRangeInput.value = value;
+                                                }
+                                            });
+                                            startRangeInput.addEventListener("change", function () {
+                                                slider.noUiSlider.set([this.value, null]);
+                                            });
+                                    
+                                            stopRangeInput.addEventListener("change", function () {
+                                                slider.noUiSlider.set([null, this.value]);
+                                            });
+                                        });
+                                    </script>
+                                </div>
+                                <div class="base-sidebar__item-wrapper">
+                                    <button class="btn-main base-sidebar__search-btn" type="button">показать</button>
+                                    <button class="btn-base-text base-sidebar__reset-btn" type="submit">Сбросить</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="catalog__product-col">
+                            <div class="catalog__search">
+                                <label class="catalog__search-label">
+                                    <span class="visually-hidden">Поиск</span>
+                                    <input type="search" class="catalog__search-input" placeholder="Сыворотка">
+                                </label>
+                                <button class="btn-main catalog__search-btn">Поиск</button>
+                            </div>
+                            <div class="c-row">
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="catalog__product-item-col">
+
+
+
+                                    <div class="catalog-item">
+                                        <a href="#" class="catalog-item__img-wrapper">
+
+                                            <span class="catalog-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                            </span>
+
+                                            <img src="../images/img/catalog/catalog-item.png" alt="СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R." class="catalog-item__img">
+                                        </a>
+                                        <a href="#" class="catalog-item__title">СЫВОРОТКА УСПОКАИВАЮЩАЯ C.P.R.</a>
+                                        <p class="catalog-item__text">Настоящее спасение от красноты и раздражения</p>
+                                        <div class="catalog-item__bottom">
+                                            <span class="catalog-item__cost">5 288 ₽</span>
+                                            <div class="catalog-item__stars">
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                                <div class="catalog-item__star-icon"></div>
+
+                                            </div>
+                                        </div>
+                                        <button class="btn-main catalog-item_btn js--baket-popup-toggle" type="button">добавить в корзину</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog-promo">
+                <div class="c-container c-container_catalog-promo">
+                    <h1 class="base-page-title catalog-promo_title">Рекомендуем</h1>
+                    <div class="c-row base-slider-arrow base-slider-arrow_catalog-promo js--double-promo-slider">
+
+                        <div class="catalog-promo__col">
+
+
+
+                            <div class="double-promo-item">
+                                <p class="double-promo-item__title">Люкс Уход МОЛОДАЯ КОЖА</p>
+                                <div class="double-promo-item__img-wrapper">
+
+                                    <span class="double-promo-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                    </span>
+
+
+                                    <div class="double-promo-item__img-item">
+                                        <a href="#" class="double-promo-item__img-item__wrapper">
+                                            <img src="../images/img/catalog/promo1.png" alt="МАСКА ДЛЯ ЛИЦА AWAKEN" class="double-promo-item__img">
+                                        </a>
+                                        <a href="#" class="double-promo-item__img-name">МАСКА ДЛЯ ЛИЦА AWAKEN</a>
+                                    </div>
+
+                                    <div class="double-promo-item__img-item">
+                                        <a href="#" class="double-promo-item__img-item__wrapper">
+                                            <img src="../images/img/catalog/promo2.png" alt="ANTI-AGE КРЕМ ДЛЯ ЛИЦА X-AGE" class="double-promo-item__img">
+                                        </a>
+                                        <a href="#" class="double-promo-item__img-name">ANTI-AGE КРЕМ ДЛЯ ЛИЦА X-AGE</a>
+                                    </div>
+
+                                </div>
+                                <div class="double-promo-item__bottom">
+                                    <span class="double-promo-item__text"><b>21 288 ₽</b></span>
+                                    <span class="double-promo-item__text"><b>Выгода:</b> 2 685 ₽</span>
+                                </div>
+                                <button class="btn-main double-promo-item__btn" type="button">
+                                    <span class="double-promo-item__btn-text">добавить в корзину</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="catalog-promo__col">
+
+
+
+                            <div class="double-promo-item">
+                                <p class="double-promo-item__title">Люкс Уход МОЛОДАЯ КОЖА</p>
+                                <div class="double-promo-item__img-wrapper">
+
+                                    <span class="double-promo-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                    </span>
+
+
+                                    <div class="double-promo-item__img-item">
+                                        <a href="#" class="double-promo-item__img-item__wrapper">
+                                            <img src="../images/img/catalog/promo1.png" alt="МАСКА ДЛЯ ЛИЦА AWAKEN" class="double-promo-item__img">
+                                        </a>
+                                        <a href="#" class="double-promo-item__img-name">МАСКА ДЛЯ ЛИЦА AWAKEN</a>
+                                    </div>
+
+                                    <div class="double-promo-item__img-item">
+                                        <a href="#" class="double-promo-item__img-item__wrapper">
+                                            <img src="../images/img/catalog/promo2.png" alt="ANTI-AGE КРЕМ ДЛЯ ЛИЦА X-AGE" class="double-promo-item__img">
+                                        </a>
+                                        <a href="#" class="double-promo-item__img-name">ANTI-AGE КРЕМ ДЛЯ ЛИЦА X-AGE</a>
+                                    </div>
+
+                                </div>
+                                <div class="double-promo-item__bottom">
+                                    <span class="double-promo-item__text"><b>21 288 ₽</b></span>
+                                    <span class="double-promo-item__text"><b>Выгода:</b> 2 685 ₽</span>
+                                </div>
+                                <button class="btn-main double-promo-item__btn" type="button">
+                                    <span class="double-promo-item__btn-text">добавить в корзину</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="catalog-promo__col">
+
+
+
+                            <div class="double-promo-item">
+                                <p class="double-promo-item__title">Люкс Уход МОЛОДАЯ КОЖА</p>
+                                <div class="double-promo-item__img-wrapper">
+
+                                    <span class="double-promo-item__badge">
+            <span class="visually-hidden">выбор звезд</span>
+                                    </span>
+
+
+                                    <div class="double-promo-item__img-item">
+                                        <a href="#" class="double-promo-item__img-item__wrapper">
+                                            <img src="../images/img/catalog/promo1.png" alt="МАСКА ДЛЯ ЛИЦА AWAKEN" class="double-promo-item__img">
+                                        </a>
+                                        <a href="#" class="double-promo-item__img-name">МАСКА ДЛЯ ЛИЦА AWAKEN</a>
+                                    </div>
+
+                                    <div class="double-promo-item__img-item">
+                                        <a href="#" class="double-promo-item__img-item__wrapper">
+                                            <img src="../images/img/catalog/promo2.png" alt="ANTI-AGE КРЕМ ДЛЯ ЛИЦА X-AGE" class="double-promo-item__img">
+                                        </a>
+                                        <a href="#" class="double-promo-item__img-name">ANTI-AGE КРЕМ ДЛЯ ЛИЦА X-AGE</a>
+                                    </div>
+
+                                </div>
+                                <div class="double-promo-item__bottom">
+                                    <span class="double-promo-item__text"><b>21 288 ₽</b></span>
+                                    <span class="double-promo-item__text"><b>Выгода:</b> 2 685 ₽</span>
+                                </div>
+                                <button class="btn-main double-promo-item__btn" type="button">
+                                    <span class="double-promo-item__btn-text">добавить в корзину</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="popup-basket-overlay js--baket-popup-toggle js--baket-popup"></div>
+        <div class="popup-basket js--baket-popup">
+            <button class="popup-close popup-close_basket js--baket-popup-toggle">
+                <span class="visually-hidden">закрыть</span>
+            </button>
+            <p class="popup-basket__title">корзина</p>
+            <p class="popup-basket__subtitle">3 товара</p>
+            <div class="popup-basket__inner">
+
+                <div class="popup-basket-item">
+                    <div class="popup-basket-item__img-col">
+                        <img src="../images/img/common/basket-popup-item.png" alt="ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE" class="popup-basket-item__img">
+                    </div>
+                    <div class="popup-basket-item__info-col">
+                        <p class="popup-basket-item__name">ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE</p>
+                        <p class="popup-basket-item__cost">1 x 3 864 ₽</p>
+                    </div>
+                </div>
+
+                <div class="popup-basket-item">
+                    <div class="popup-basket-item__img-col">
+                        <img src="../images/img/common/basket-popup-item.png" alt="ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE" class="popup-basket-item__img">
+                    </div>
+                    <div class="popup-basket-item__info-col">
+                        <p class="popup-basket-item__name">ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE</p>
+                        <p class="popup-basket-item__cost">1 x 3 864 ₽</p>
+                    </div>
+                </div>
+
+                <div class="popup-basket-item">
+                    <div class="popup-basket-item__img-col">
+                        <img src="../images/img/common/basket-popup-prize.png" alt="ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE" class="popup-basket-item__img">
+                    </div>
+                    <div class="popup-basket-item__info-col">
+                        <p class="popup-basket-item__name">ТОНИК-МИСТ С АНТИОКСИДАНТАМИ BENEFIT BALANCE</p>
+                        <p class="popup-basket-item__cost">1 x 0 ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-basket__bottom">
+                <div class="popup-basket-total">
+                    <span class="popup-basket-total__title">Всего:</span>
+                    <span class="popup-basket-total__cost">7 728 ₽</span>
+                </div>
+                <a href="#" class="btn-main popup-basket__btn">
+                    <span class="popup-basket__btn-text-icon">Перейти в корзину</span>
+                </a>
+            </div>
+        </div>
+        <div class="partners-popop-overlay show js--partners-popup-toggle js--partners-popup"></div>
+        <div class="partners-popop show js--partners-popup">
+            <div class="c-container c-container_partner-popup">
+                <p class="partners-popop__title">Уважаемые партнеры!</p>
+                <p class="partners-popop__text">
+                    Перед приобретением продуктов профессиональной линии Cosmedix рекомендуем посетить
+                </p>
+                <a href="#" class="partners-popop__text__link">раздел «Обучение»</a>
+                <p class="partners-popop__text">и познакомится с протоколами фирменных уходов бренда</p>
+            </div>
+        </div>
+
+    </div>
+    <footer class="main-footer">
+        <div class="c-container">
+            <div class="c-row c-row__main-footer">
+                <div class="main-footer__col">
+                    <div class="footer-social">
+                        <form class="email-form email-form_footer">
+                            <span class="email-form__title">Подписаться на рассылку</span>
+                            <div class="email-form__inner">
+                                <label class="email-form__label">
+                                    <input type="email" class="email-form__input" placeholder="E-mail">
+                                </label>
+                                <button class="btn-white-border btn-white-border_email-form" type="submit">подписаться</button>
+                            </div>
+                        </form>
+                        <a href="#" class="main-footer__text-link">Доставка и оплата</a>
+                        <div class="footer-social__wrapper footer-social__wrapper_desktop">
+                            <p class="footer-social__title">Присоединяйтесь</p>
+                            <div class="footer-social__items-row">
+                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
+                                    <span class="visually-hidden">Космедикс в инстаграм</span>
+                                </a>
+                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
+                                    <span class="visually-hidden">Космедикс в фейсбук</span>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
+                                    <span class="visually-hidden">Космедикс в ютуб</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main-footer__col">
+                    <div class="main-footer__empty-top">
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Политика
+                        конфидециальности</a>
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Пользовательское
+                        соглашение</a>
+                    </div>
+                </div>
+                <div class="main-footer__col">
+                    <div class="main-footer__empty-top">
+                        <p class="main-footer__text main-footer__list-item">ООО «Бьюти Концепт» (ГК ERSTA)</p>
+                        <a href="tel:+7-495-644-00-08" class="main-footer__text-link main-footer__list-item">+7 (495)
+                        644-00-08</a>
+                        <a href="mailto:info@cosmedix-russia.ru" class="main-footer__text-link main-footer__list-item">info@cosmedix-russia.ru</a>
+                        <div class="footer-social__wrapper footer-social__wrapper_mobile">
+                            <p class="footer-social__title">Присоединяйтесь</p>
+                            <div class="footer-social__items-row">
+                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
+                                    <span class="visually-hidden">Космедикс в инстаграм</span>
+                                </a>
+                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
+                                    <span class="visually-hidden">Космедикс в фейсбук</span>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
+                                    <span class="visually-hidden">Космедикс в ютуб</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../dist/js/app.min.js"></script>
+</body>
+
+</html>

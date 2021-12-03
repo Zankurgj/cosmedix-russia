@@ -1,0 +1,78 @@
+{% set pageTitle = 'Блог' %}
+{% extends "app/src/njk/layout/index.njk" %}
+{% block content %}
+<div class="blog-page-container blog-page-container_presentation">
+    <article class="post-breadcrumbs-section">
+        <div class="c-container">
+            {% from "app/src/njk/components/breadcrumbs.njk" import breadcrumbs %}
+            {{ breadcrumbs([['Блог']]) }}
+        </div>
+    </article>
+    <section class="blog-section">
+        <div class="c-container">
+            <div class="c-row">
+                <div class="blog__sidebar-col blog__sidebar-col_post">
+                    <form class="base-sidebar blog__sidebar">
+                        <div class="base-sidebar__item-wrapper">
+                            <p class="base-sidebar__title">КАТЕГОРИИ</p>
+                            {% set filterCategory = [
+                            ['От экспертов'],
+                            ['Видео обзоры'],
+                            ['Новинки'],
+                            ['Салонные процедуры'],
+                            ['Эфиры']
+                            ] %}
+                            {% for name in filterCategory %}
+                            <label class="base-sidebar__item">
+                                <input type="checkbox" class="base-sidebar__input js--sidebar-checkbox" name="filter">
+                                <span class="base-sidebar__text base-sidebar__text_active">{{name}}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                        <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
+                            <button class="btn-main base-sidebar__search-btn" type="submit">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn js--sidebar-checkbox-remove"
+                                type="button">Сбросить</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="blog__product-col">
+                    <h1 class="base-page-title base-page-title_post">Вебинар обзорный</h1>
+                    <div class="post">
+                        <div class="post__head post__head_ed ">
+                            <div class="post__footer">
+                                <div class="post__footer__item">
+                                    <button class="post__footer__like-btn js--post-like-btn">
+                                        <span class="visually-hidden">Лайк</span>
+                                    </button>
+                                    <span class="post__footer__text">1050</span>
+                                </div>
+                                <div class="post__footer__item">
+                                    <!-- Неактивная иконка просмотра -->
+                                    <!-- <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                        class="post__footer__icon" aria-hidden="true"> -->
+                                    <!-- Активная иконка просмотра -->
+                                    <img src="../images/icons/blog-eye-active.svg" alt="Иконка просмотра новости"
+                                        class="post__footer__icon" aria-hidden="true">
+                                    <span class="post__footer__text">205</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="post__text post__text_top">COSMEDIX — первый американский космецевтический бренд
+                            которому удалось
+                            эффетивно совместить высокую результативность средств без агрессивного воздействия на кожу.
+                        </p>
+                        <div class="post__file-block">
+                            <a href="#" class="post__file">
+                                <img src="../images/icons/pdf.png" alt="пдф" class="post__file-img" aria-hidden="true">
+                                <span>презентация о бренде.pdf</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

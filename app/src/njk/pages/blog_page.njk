@@ -20,11 +20,11 @@
                         <div class="base-sidebar__item-wrapper">
                             <p class="base-sidebar__title">КАТЕГОРИИ</p>
                             {% set filterCategory = [
-                            ['ОТ ЭКСПЕРТОВ'],
-                            ['ВИДЕО ОБЗОРЫ'],
-                            ['НОВИНКИ'],
-                            ['САЛОННЫЕ ПРОЦЕДУРЫ'],
-                            ['ЭФИРЫ']
+                            ['От экспертов'],
+                            ['Видео обзоры'],
+                            ['Новинки'],
+                            ['Салонные процедуры'],
+                            ['Эфиры']
                             ] %}
                             {% for name in filterCategory %}
                             <label class="base-sidebar__item">
@@ -33,9 +33,10 @@
                             </label>
                             {% endfor %}
                         </div>
-                        <div class="base-sidebar__item-wrapper">
-                            <button class="btn-main base-sidebar__search-btn" type="button">показать</button>
-                            <button class="btn-base-text base-sidebar__reset-btn" type="submit">Сбросить</button>
+                        <div class="base-sidebar__item-wrapper base-sidebar__item-wrapper_blog_bottom">
+                            <button class="btn-main base-sidebar__search-btn" type="submit">показать</button>
+                            <button class="btn-base-text base-sidebar__reset-btn js--sidebar-checkbox-remove"
+                                type="button">Сбросить</button>
                         </div>
                     </form>
                 </div>

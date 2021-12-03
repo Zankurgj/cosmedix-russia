@@ -1,0 +1,100 @@
+.ed-tab-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 35px;
+}
+.ed-tab {
+  display: block;
+  margin: 0;
+}
+.ed-tab_1 {
+  max-width: 53%;
+  flex-basis: 53%;
+}
+.ed-tab_2 {
+  max-width: 47%;
+  flex-basis: 47%;
+}
+.ed-tab__input {
+  @extend .visually-hidden;
+  &:checked + .ed-tab__item {
+    .ed-tab__item-text {
+      color: #78859d;
+    }
+    .ed-tab__item-line {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+.ed-tab__item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  &:hover {
+    .ed-tab__item-text {
+      color: #78859d;
+    }
+  }
+}
+.ed-tab__item-text {
+  padding: 0 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #dee3ed;
+  transition: color $base-duration $base-timing;
+  @media all and (max-width: 1300px) {
+    font-size: 18px;
+  }
+  @media all and (max-width: 1120px) {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+  @media all and (max-width: $mobile-bp) {
+    padding: 0;
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+  }
+}
+.ed-tab__item-line {
+  position: relative;
+  margin-top: auto;
+  height: 15px;
+  background-color: #dee3ed;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    background-image: url("../images/img/education/tab-line.png");
+    transition: opacity $base-duration $base-timing;
+  }
+}
+.ed-tab-block {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+.blog-product-title_ed {
+  @media all and (max-width: $mobile-bp) {
+    margin-bottom: 14px;
+  }
+}

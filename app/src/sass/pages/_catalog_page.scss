@@ -183,6 +183,13 @@
 }
 .catalog-promo_title {
   margin-bottom: 70px;
+  padding: 0 80px;
+  @media all and (max-width: $large-bp) {
+    padding: 0 40px;
+  }
+  @media all and (max-width: $desktop-bp) {
+    padding: 0 20px;
+  }
   @media all and (max-width: $mobile-bp) {
     margin-bottom: 34px;
   }
