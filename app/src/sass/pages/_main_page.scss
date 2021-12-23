@@ -916,8 +916,8 @@
   .slick-arrow {
     position: absolute;
     top: 50%;
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -927,11 +927,11 @@
     z-index: 5;
   }
   .slick-prev {
-    left: -16px;
+    left: -18px;
     background-image: url("../images/icons/arrow-prev.svg");
   }
   .slick-next {
-    right: -16px;
+    right: -18px;
     background-image: url("../images/icons/arrow-next.svg");
   }
   .slick-disabled {

@@ -16,6 +16,8 @@ const initMpTopSlider = () => {
     infinite: true,
     arrows: false,
     dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
     appendDots: $(".js--mp-top-dots"),
     responsive: [
       {
