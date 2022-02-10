@@ -1,10 +1,6 @@
 // TOP SLIDER
 .mp-slider-section {
   position: relative;
-  margin-bottom: 50px;
-  @media all and (max-width: $mobile-bp) {
-    margin-bottom: 30px;
-  }
 }
 .mp-slider {
   position: relative;
@@ -12,14 +8,13 @@
 .mp-slider__dots {
   position: absolute;
   left: 50%;
-  bottom: 128px;
+  bottom: 80px;
   transform: translateX(-50%);
   width: 100%;
   .slick-dots {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 388px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -47,12 +42,13 @@
   }
 }
 .mp-slide__inner {
+  display: block;
   position: relative;
 }
 .mp-slide__img-wrapper {
   display: block;
   position: relative;
-  padding-top: 43%;
+  padding-top: 34.8%;
   @media all and (max-width: $mobile-bp) {
     padding-top: 90%;
   }
@@ -120,19 +116,25 @@
 // ABOUT
 .mp-about-section {
   position: relative;
+  padding-top: 50px;
   margin-bottom: 70px;
   @media all and (max-width: $mobile-bp) {
+    padding-top: 30px;
     margin-bottom: 26px;
+    overflow: hidden;
   }
 }
 .mp-about__img {
   position: absolute;
   width: 100%;
-  top: 110px;
+  top: 220px;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
   user-select: none;
+  @media all and (max-width: $mobile-bp) {
+    top: 320px;
+  }
 }
 .base-page-title_mp-about {
   position: relative;
@@ -162,6 +164,9 @@
       width: 143px;
       height: 179px;
     }
+    @media all and (max-width: 490px) {
+      right: -30px;
+    }
   }
 }
 .base-page-title_mp-about-mobile {
@@ -178,6 +183,7 @@
   font-size: 18px;
   line-height: 26px;
   color: #333;
+  text-align: center;
   @media all and (max-width: $mobile-bp) {
     font-size: 16px;
     line-height: 22px;
@@ -218,9 +224,10 @@
   }
 }
 .mp-about__item-col-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  margin-top: 16px;
 }
 .mp-about__item-img {
   display: block;
@@ -406,7 +413,13 @@
   line-height: 17px;
   padding: 8px 15px 10px;
   @media all and (max-width: $mobile-bp) {
-    padding: 8px 12px 10px;
+    padding: 14px 12px 16px;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 .mp-bestsellers__item-btn_bottom {
@@ -738,7 +751,6 @@
     max-width: calc((100% - 10px) / 2);
     margin-right: 10px;
     &:last-child {
-      margin-top: 30%;
       margin-right: 0;
     }
   }
@@ -916,6 +928,7 @@
   .slick-arrow {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;

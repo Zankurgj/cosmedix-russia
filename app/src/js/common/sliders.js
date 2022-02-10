@@ -7,6 +7,7 @@ export const initSliders = () => {
   initCardSlider();
   initReccomendSlider();
   initDoublePromoSlider();
+  initMpAboutSlider();
 };
 
 const initMpTopSlider = () => {
@@ -71,6 +72,15 @@ const initMpMobileSlider = () => {
         }
       }
     });
+  });
+};
+const initMpAboutSlider = () => {
+  $(".js--mp-about-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: true,
+    dots: false,
   });
 };
 const initDoublePromoSlider = () => {

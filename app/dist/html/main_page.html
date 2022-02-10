@@ -13,6 +13,18 @@
 
 <body class="">
     <header class="main_header">
+        <div class="main_header__search js--header-search">
+            <label class="main_header__search-wrapper">
+                <span class="visually-hidden">Окно поиска</span>
+                <input type="search" class="main_header__search-input js--header-search-input" placeholder="Поиск по продуктам...">
+            </label>
+            <button class="main_header__search-btn main_header__search-btn_search">
+                <span class="visually-hidden">Поиск</span>
+            </button>
+            <button class="main_header__search-btn main_header__search-btn_close js--toggle-search">
+                <span class="visually-hidden">Закрыть поиск</span>
+            </button>
+        </div>
         <div class="main_header__top">
             <div class="c-container c-container_main_header_top">
                 <a href="/" class="main_header__mobile-logo">
@@ -22,25 +34,13 @@
                     <span class="btn-hamburger__icon"></span>
                     <span class="visually-hidden">меню</span>
                 </button>
-                <div class="main_header__search js--header-search">
-                    <label class="main_header__search-wrapper">
-                        <span class="visually-hidden">Окно поиска</span>
-                        <input type="search" class="main_header__search-input js--header-search-input" placeholder="Поиск по продуктам...">
-                    </label>
-                    <button class="main_header__search-btn main_header__search-btn_search">
-                        <span class="visually-hidden">Поиск</span>
-                    </button>
-                    <button class="main_header__search-btn main_header__search-btn_close js--toggle-search">
-                        <span class="visually-hidden">Закрыть поиск</span>
-                    </button>
-                </div>
-                <button class="main_header__top_btn main_header__top_btn_search js--toggle-search">
+                <button class="main_header__top_btn main_header__top_btn__ds main_header__top_btn_search js--toggle-search">
                     <span class="visually-hidden">Открыть поиск</span>
                 </button>
-                <button class="main_header__top_btn main_header__top_btn_lk">
+                <button class="main_header__top_btn main_header__top_btn__ds main_header__top_btn_lk">
                     <span class="visually-hidden">Личный кабинет</span>
                 </button>
-                <button class="main_header__top_btn main_header__top_btn_basket">
+                <button class="main_header__top_btn main_header__top_btn__ds main_header__top_btn_basket">
                     <span class="visually-hidden">Корзина</span>
                 </button>
             </div>
@@ -51,10 +51,23 @@
                 <button class="main_header-btn-close js--header-nav-toggle" type="button">
                     <span class="visually-hidden">Закрыть</span>
                 </button>
-                <a href="/" class="main_header__logo">
-                    <span class="visually-hidden">Главная страница</span>
-                    <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
-                </a>
+                <div class="main_header__bottom-head">
+                    <a href="/" class="main_header__logo">
+                        <span class="visually-hidden">Главная страница</span>
+                        <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                    </a>
+                    <div class="main_header__bottom-head__btns">
+                        <button class="main_header__top_btn main_header__top_btn_search js--toggle-search">
+                            <span class="visually-hidden">Открыть поиск</span>
+                        </button>
+                        <button class="main_header__top_btn main_header__top_btn_lk">
+                            <span class="visually-hidden">Личный кабинет</span>
+                        </button>
+                        <button class="main_header__top_btn main_header__top_btn_basket">
+                            <span class="visually-hidden">Корзина</span>
+                        </button>
+                    </div>
+                </div>
                 <nav class="main_header__nav">
                     <ul class="main_header__list">
 
@@ -103,71 +116,43 @@
                 <div class="mp-slider js--mp-top-slider">
 
                     <div class="mp-slide">
-                        <div class="mp-slide__inner">
+                        <a href="#" class="mp-slide__inner">
                             <picture class="mp-slide__img-wrapper">
                                 <source srcset="../images/img/main-page/top-slider-img-m.png" media="(max-width: 1000px)">
-                                    <source srcset="../images/img/main-page/top-slider-img.jpg">
-                                        <img class="mp-slide__img" srcset="../images/img/main-page/top-slider-img.jpg" alt="баннер">
+                                    <source srcset="https://via.placeholder.com/1440x500.png">
+                                        <img class="mp-slide__img" srcset="https://via.placeholder.com/1440x500.png" alt="баннер">
                             </picture>
-                            <div class="mp-slide__text-inner">
-                                <div class="c-container mp-slide__container">
-                                    <p class="mp-slide__text mp-slide__text_bold">Косметика,</p>
-                                    <p class="mp-slide__text">которая работает</p>
-                                    <a href="#" class="btn-main btn-main_mp-slide">В каталог</a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="mp-slide">
-                        <div class="mp-slide__inner">
+                        <a href="#" class="mp-slide__inner">
                             <picture class="mp-slide__img-wrapper">
                                 <source srcset="../images/img/main-page/top-slider-img-m.png" media="(max-width: 1000px)">
-                                    <source srcset="../images/img/main-page/top-slider-img.jpg">
-                                        <img class="mp-slide__img" srcset="../images/img/main-page/top-slider-img.jpg" alt="баннер">
+                                    <source srcset="https://via.placeholder.com/1440x500.png">
+                                        <img class="mp-slide__img" srcset="https://via.placeholder.com/1440x500.png" alt="баннер">
                             </picture>
-                            <div class="mp-slide__text-inner">
-                                <div class="c-container mp-slide__container">
-                                    <p class="mp-slide__text mp-slide__text_bold">Косметика,</p>
-                                    <p class="mp-slide__text">которая работает</p>
-                                    <a href="#" class="btn-main btn-main_mp-slide">В каталог</a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="mp-slide">
-                        <div class="mp-slide__inner">
+                        <a href="#" class="mp-slide__inner">
                             <picture class="mp-slide__img-wrapper">
                                 <source srcset="../images/img/main-page/top-slider-img-m.png" media="(max-width: 1000px)">
-                                    <source srcset="../images/img/main-page/top-slider-img.jpg">
-                                        <img class="mp-slide__img" srcset="../images/img/main-page/top-slider-img.jpg" alt="баннер">
+                                    <source srcset="https://via.placeholder.com/1440x500.png">
+                                        <img class="mp-slide__img" srcset="https://via.placeholder.com/1440x500.png" alt="баннер">
                             </picture>
-                            <div class="mp-slide__text-inner">
-                                <div class="c-container mp-slide__container">
-                                    <p class="mp-slide__text mp-slide__text_bold">Косметика,</p>
-                                    <p class="mp-slide__text">которая работает</p>
-                                    <a href="#" class="btn-main btn-main_mp-slide">В каталог</a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="mp-slide">
-                        <div class="mp-slide__inner">
+                        <a href="#" class="mp-slide__inner">
                             <picture class="mp-slide__img-wrapper">
                                 <source srcset="../images/img/main-page/top-slider-img-m.png" media="(max-width: 1000px)">
-                                    <source srcset="../images/img/main-page/top-slider-img.jpg">
-                                        <img class="mp-slide__img" srcset="../images/img/main-page/top-slider-img.jpg" alt="баннер">
+                                    <source srcset="https://via.placeholder.com/1440x500.png">
+                                        <img class="mp-slide__img" srcset="https://via.placeholder.com/1440x500.png" alt="баннер">
                             </picture>
-                            <div class="mp-slide__text-inner">
-                                <div class="c-container mp-slide__container">
-                                    <p class="mp-slide__text mp-slide__text_bold">Косметика,</p>
-                                    <p class="mp-slide__text">которая работает</p>
-                                    <a href="#" class="btn-main btn-main_mp-slide">В каталог</a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
@@ -178,144 +163,132 @@
             <section class="mp-about-section">
                 <img src="../images/img/main-page/mp-bg1.png" alt="Фон" class="mp-about__img" aria-hidden="true">
                 <div class="c-container c-container_mp-about">
-                    <h1 class="base-page-title base-page-title_mp-about">COSMEDIX. НА ШАГ ВПЕРЕДИ!</h1>
-                    <h1 class="base-page-title base-page-title_mp-about base-page-title_mp-about-mobile">COSMEDIX. <br> НА ШАГ
-                ВПЕРЕДИ!</h1>
+                    <h1 class="base-page-title base-page-title_mp-about">COSMEDIX. ПРОДУКТЫ, КОТОРЫЕ РАБОТАЮТ</h1>
+                    <h1 class="base-page-title base-page-title_mp-about base-page-title_mp-about-mobile">COSMEDIX. <br>
+                ПРОДУКТЫ, КОТОРЫЕ РАБОТАЮТ</h1>
                     <p class="mp-about__text">COSMEDIX – американский бренд космецевтики, основанный в 1999 году в штате Атланта. На сегодняшний день – это единственный бренд, которому удалось создать высокоэффективные средства с быстрым результатом без побочных эффектов на коже.
-                        <br>COSMEDIX производит запатентованные рецептурные системы, которые успешно внедряет в свои продуктовые линии. Каждая линия бренда  уникальна и основана на изобретениях и новейших технологиях, аналогов которых нет в мире.
-                        <br>Благодаря удачному воплощению высоких концентрации активных веществ и мягкости воздействия на кожу, позволило бренду создать уникальную линию продуктов домашнего ухода , которая может использоваться без специальных назначений косметолога,
-                        а также получить признание ведущих косметологов мира. Препараты Cosmedix активно используют и рекоммендуют косметологи Голливуда, а мировые звезды выбирают бренд для ежедневного ухода за лицом и телом.
                     </p>
                     <div class="mp-about__items-inner">
-                        <div class="c-row c-row_mp-about base-slider-arrow js--mp-mobile-slider">
-                            <div class="mp-about__item-col">
+                        <div class="base-slider-arrow base-slider-arrow_mp-about js--mp-about-slider">
 
 
-                                <div class="mp-about__item">
-                                    <div class="mp-about__item-col-img">
-                                        <img src="../images/img/main-page/about1.png" alt="Продукция" class="mp-about__item-img">
-                                        <p class="mp-about__item-title">CLEAN. Чистота ингредиентов и натуральность</p>
+                            <div class="mp-about__slide">
+                                <div class="c-row c-row_mp-about">
+                                    <div class="mp-about__item-col">
+                                        <div class="mp-about__item">
+                                            <div class="mp-about__item-col-img">
+                                                <img src="../images/img/main-page/about1.png" alt="Продукция" class="mp-about__item-img">
+                                                <p class="mp-about__item-title">CLEAN. Чистота ингредиентов и натуральность</p>
+                                            </div>
+                                            <div class="mp-about__item-col-text">
+                                                <p class="mp-about__item-text">Натуральные и растительные ингредиенты; Мягкие, но эффективные ана-кислоты; Инкапсулированный витамин А; Омолаживающие пептиды; Мощные антиоксиданты; Эфирные масла.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="mp-about__item-col-text">
-                                        <p class="mp-about__item-text">Натуральные и растительные ингредиенты; Мягкие, но эффективные ана-кислоты; Инкапсулированный витамин А; Омолаживающие пептиды; Мощные антиоксиданты; Эфирные масла.</p>
+                                    <div class="mp-about__item-col">
+                                        <div class="mp-about__item">
+                                            <div class="mp-about__item-col-img">
+                                                <img src="../images/img/main-page/about2.png" alt="Продукция" class="mp-about__item-img">
+                                                <p class="mp-about__item-title">CLINICAL. Доказанная эффективность</p>
+                                            </div>
+                                            <div class="mp-about__item-col-text">
+                                                <p class="mp-about__item-text">Формулы cosmedix эффективно работают даже с самыми серьёзными проблемами кожи.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="mp-about__item">
-                                    <div class="mp-about__item-col-img">
-                                        <img src="../images/img/main-page/about2.png" alt="Продукция" class="mp-about__item-img">
-                                        <p class="mp-about__item-title">CLINICAL. Доказанная эффективность</p>
-                                    </div>
-                                    <div class="mp-about__item-col-text">
-                                        <p class="mp-about__item-text">формулы cosmedix эффективно работают даже с самыми серьёзными проблемами кожи.</p>
-                                    </div>
-                                </div>
-
-                                <div class="mp-about__item">
-                                    <div class="mp-about__item-col-img">
-                                        <img src="../images/img/main-page/about3.png" alt="Продукция" class="mp-about__item-img">
-                                        <p class="mp-about__item-title">ТЕХНОЛОГИЯ ХИРАЛЬНОЙ КОРРЕКЦИИ</p>
-                                    </div>
-                                    <div class="mp-about__item-col-text">
-                                        <p class="mp-about__item-text">Молекулы входящие в состав COSMEDIX лучше распознаются рецепторами кожи, как следствие, более эффективны.
-                                        </p>
-                                    </div>
-                                </div>
-
                             </div>
-                            <div class="mp-about__item-col">
 
-
-                                <div class="mp-about__item">
-                                    <div class="mp-about__item-col-img">
-                                        <img src="../images/img/main-page/about4.png" alt="Продукция" class="mp-about__item-img">
-                                        <p class="mp-about__item-title">КОМПЛЕКС AGP RETINOL</p>
+                            <div class="mp-about__slide">
+                                <div class="c-row c-row_mp-about">
+                                    <div class="mp-about__item-col">
+                                        <div class="mp-about__item">
+                                            <div class="mp-about__item-col-img">
+                                                <img src="../images/img/main-page/about3.png" alt="Продукция" class="mp-about__item-img">
+                                                <p class="mp-about__item-title">ТЕХНОЛОГИЯ ХИРАЛЬНОЙ КОРРЕКЦИИ</p>
+                                            </div>
+                                            <div class="mp-about__item-col-text">
+                                                <p class="mp-about__item-text">Молекулы входящие в состав COSMEDIX лучше распознаются рецепторами кожи, как следствие, более эффективны.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="mp-about__item-col-text">
-                                        <p class="mp-about__item-text">позволяет осуществлять быструю доставку высокодозированного ретинола без риска воспалительных реакций.
-                                        </p>
+                                    <div class="mp-about__item-col">
+                                        <div class="mp-about__item">
+                                            <div class="mp-about__item-col-img">
+                                                <img src="../images/img/main-page/about4.png" alt="Продукция" class="mp-about__item-img">
+                                                <p class="mp-about__item-title">КОМПЛЕКС AGP RETINOL</p>
+                                            </div>
+                                            <div class="mp-about__item-col-text">
+                                                <p class="mp-about__item-text">Позволяет осуществлять быструю доставку высокодозированного ретинола без риска воспалительных реакций.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="mp-about__item">
-                                    <div class="mp-about__item-col-img">
-                                        <img src="../images/img/main-page/about5.png" alt="Продукция" class="mp-about__item-img">
-                                        <p class="mp-about__item-title">СОБСТВЕННАЯ ЗАПАТЕНТОВАННАЯ ФОРМУЛА LG-RETINEX</p>
-                                    </div>
-                                    <div class="mp-about__item-col-text">
-                                        <p class="mp-about__item-text">Содержит сразу два высокодозированных ретинойда: ретинол и ретиналь . это инновационный комплекс – аналог омолаживающих рецептурных препаратов , обладающий гипоаллергенными свойствами.</p>
-                                    </div>
-                                </div>
-
-                                <div class="mp-about__item">
-                                    <div class="mp-about__item-col-img">
-                                        <img src="../images/img/main-page/about6.png" alt="Продукция" class="mp-about__item-img">
-                                        <p class="mp-about__item-title">LUXURIOUS. Роскошь текстур</p>
-                                    </div>
-                                    <div class="mp-about__item-col-text">
-                                        <p class="mp-about__item-text">СOSMEDIX уникален своим разнообразием ярких и насыщенных палитр. Насыщенная текстура средств приятно взаимодействует с кожей, превращая повседневный уход в несравнимое удовольствие.</p>
-                                    </div>
-                                </div>
-
                             </div>
+
+                            <div class="mp-about__slide">
+                                <div class="c-row c-row_mp-about">
+                                    <div class="mp-about__item-col">
+                                        <div class="mp-about__item">
+                                            <div class="mp-about__item-col-img">
+                                                <img src="../images/img/main-page/about5.png" alt="Продукция" class="mp-about__item-img">
+                                                <p class="mp-about__item-title">СОБСТВЕННАЯ ЗАПАТЕНТОВАННАЯ ФОРМУЛА LG-RETINEX</p>
+                                            </div>
+                                            <div class="mp-about__item-col-text">
+                                                <p class="mp-about__item-text">Содержит сразу два высокодозированных ретинойда: ретинол и ретиналь . это инновационный комплекс – аналог омолаживающих рецептурных препаратов , обладающий гипоаллергенными свойствами.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mp-about__item-col">
+                                        <div class="mp-about__item">
+                                            <div class="mp-about__item-col-img">
+                                                <img src="../images/img/main-page/about6.png" alt="Продукция" class="mp-about__item-img">
+                                                <p class="mp-about__item-title">LUXURIOUS. Роскошь текстур</p>
+                                            </div>
+                                            <div class="mp-about__item-col-text">
+                                                <p class="mp-about__item-text">СOSMEDIX уникален своим разнообразием ярких и насыщенных палитр. Насыщенная текстура средств приятно взаимодействует с кожей, превращая повседневный уход в несравнимое удовольствие.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="mp-bestsellers-section">
-                <div class="c-container mp-bestsellers-container">
-                    <h1 class="base-page-title mp-bestsellers__mobile-title">Bestsellers</h1>
-                    <div class="c-row mp-bestsellers__row mp-bestsellers__slider base-slider-arrow js--mp-mobile-slider">
-                        <div class="mp-bestsellers__col mp-bestsellers__col_small">
-                            <div class="mp-bestsellers__item-small">
-                                <div class="mp-bestsellers__item-img-wrapper">
-                                    <img src="../images/img/main-page/bestsellers1.png" alt="Lumi CRYSTAL" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                                </div>
-                                <p class="mp-bestsellers__item-title">Lumi CRYSTAL</p>
-                                <p class="mp-bestsellers__item-text">Притягательная сила ваших губ</p>
-                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
-                            </div>
-                            <div class="mp-bestsellers__item-small">
-                                <div class="mp-bestsellers__item-img-wrapper">
-                                    <img src="../images/img/main-page/bestsellers2.png" alt="Purity Balance" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                                </div>
-                                <p class="mp-bestsellers__item-title">Purity Balance</p>
-                                <p class="mp-bestsellers__item-text">Чистая кожа с максимальным увлажнением
-                                </p>
-                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+            <section class="mp-catalog-section">
+                <div class="c-container c-container_mp-catalog">
+                    <div class="c-row c-row_mp-catalog">
+                        <div class="mp-catalog__col mp-catalog__col_small">
+                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
+                                <img src="../images/img/main-page/catalog1.png" alt="Продукция" class="mp-catalog-item__img">
+                                <p class="mp-catalog-item__title mp-catalog-item__title_blue">Очищение
+                                    <br>и увлажнение</p>
+                            </a>
+                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
+                                <img src="../images/img/main-page/catalog2.png" alt="Продукция" class="mp-catalog-item__img">
+                                <p class="mp-catalog-item__title mp-catalog-item__title_gray">ОТ МОРЩИН</p>
+                            </a>
+                        </div>
+                        <div class="mp-catalog__col mp-catalog__col_big">
+                            <div class="mp-catalog-item mp-catalog-item_big">
+                                <h1 class="base-page-title base-page-title_mp-catalog">каталог</h1>
+                                <img src="../images/img/main-page/catalog3.png" alt="Продукция" class="mp-catalog-item__img">
+                                <a href="#" class="btn-main btn-main_mp-catalog">В каталог</a>
                             </div>
                         </div>
-                        <div class="mp-bestsellers__col mp-bestsellers__col_big">
-                            <div class="mp-bestsellers__item-big">
-                                <div class="base-page-title mp-bestsellers__page-title">Bestsellers</div>
-                                <div class="mp-bestsellers_outer-inner">
-                                    <p class="mp-bestsellers__item-title">Opti CRYSTAL</p>
-                                    <p class="mp-bestsellers__item-text">Красота
-                                        <br>и молодость ваших глаз
-                                    </p>
-                                    <a href="#" class="btn-main mp-bestsellers__item-btn mp-bestsellers__item-btn_bottom">подробнее...</a>
-                                </div>
-                                <img src="../images/img/main-page/bestsellers3.png" alt="Opti CRYSTAL" class="mp-bestsellers__item-img mp-bestsellers__item-img_full">
-                            </div>
-                        </div>
-                        <div class="mp-bestsellers__col mp-bestsellers__col_small">
-                            <div class="mp-bestsellers__item-small">
-                                <div class="mp-bestsellers__item-img-wrapper">
-                                    <img src="../images/img/main-page/bestsellers4.png" alt="ENHANCE" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                                </div>
-                                <p class="mp-bestsellers__item-title">ENHANCE</p>
-                                <p class="mp-bestsellers__item-text">Объем и совершенство ваших губ</p>
-                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
-                            </div>
-                            <div class="mp-bestsellers__item-small">
-                                <div class="mp-bestsellers__item-img-wrapper">
-                                    <img src="../images/img/main-page/bestsellers5.png" alt="Shineless" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
-                                </div>
-                                <p class="mp-bestsellers__item-title">Shineless</p>
-                                <p class="mp-bestsellers__item-text">Ровная кожа без жирного блеска
-                                </p>
-                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
-                            </div>
+                        <div class="mp-catalog__col mp-catalog__col_small">
+                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
+                                <img src="../images/img/main-page/catalog4.png" alt="Продукция" class="mp-catalog-item__img">
+                                <p class="mp-catalog-item__title mp-catalog-item__title_pink">от акне</p>
+                            </a>
+                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
+                                <img src="../images/img/main-page/catalog5.png" alt="Продукция" class="mp-catalog-item__img">
+                                <p class="mp-catalog-item__title mp-catalog-item__title_green">ОТ ПИГМЕНТАЦИИ</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -394,6 +367,64 @@
                     <p class="mp-stars__text">Формулы COSMEDIX разработаны на основе чистых, натуральных ингредиентов растительного происхождения в комбинации с активными веществами фармакологического уровня эффективности. Космецевтические продукты COSMEDIX позволяют избавиться
                         от многих серьезных проблем с кожей у женщин и мужчин различного возраста, благодаря хирально правильной коррекции и мощным активным ингредиентам.
                     </p>
+                </div>
+            </section>
+            <section class="mp-bestsellers-section">
+                <div class="c-container mp-bestsellers-container">
+                    <h1 class="base-page-title mp-bestsellers__mobile-title">Bestsellers</h1>
+                    <div class="c-row mp-bestsellers__row mp-bestsellers__slider base-slider-arrow js--mp-mobile-slider">
+                        <div class="mp-bestsellers__col mp-bestsellers__col_small">
+                            <div class="mp-bestsellers__item-small">
+                                <div class="mp-bestsellers__item-img-wrapper">
+                                    <img src="../images/img/main-page/bestsellers1.png" alt="Lumi CRYSTAL" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                                </div>
+                                <p class="mp-bestsellers__item-title">Lumi CRYSTAL</p>
+                                <p class="mp-bestsellers__item-text">Притягательная сила ваших губ</p>
+                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                            </div>
+                            <div class="mp-bestsellers__item-small">
+                                <div class="mp-bestsellers__item-img-wrapper">
+                                    <img src="../images/img/main-page/bestsellers2.png" alt="Purity Balance" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                                </div>
+                                <p class="mp-bestsellers__item-title">Purity Balance</p>
+                                <p class="mp-bestsellers__item-text">Чистая кожа с максимальным увлажнением
+                                </p>
+                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                            </div>
+                        </div>
+                        <div class="mp-bestsellers__col mp-bestsellers__col_big">
+                            <div class="mp-bestsellers__item-big">
+                                <div class="base-page-title mp-bestsellers__page-title">Bestsellers</div>
+                                <div class="mp-bestsellers_outer-inner">
+                                    <p class="mp-bestsellers__item-title">Opti CRYSTAL</p>
+                                    <p class="mp-bestsellers__item-text">Красота
+                                        <br>и молодость ваших глаз
+                                    </p>
+                                    <a href="#" class="btn-main mp-bestsellers__item-btn mp-bestsellers__item-btn_bottom">подробнее...</a>
+                                </div>
+                                <img src="../images/img/main-page/bestsellers3.png" alt="Opti CRYSTAL" class="mp-bestsellers__item-img mp-bestsellers__item-img_full">
+                            </div>
+                        </div>
+                        <div class="mp-bestsellers__col mp-bestsellers__col_small">
+                            <div class="mp-bestsellers__item-small">
+                                <div class="mp-bestsellers__item-img-wrapper">
+                                    <img src="../images/img/main-page/bestsellers4.png" alt="ENHANCE" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                                </div>
+                                <p class="mp-bestsellers__item-title">ENHANCE</p>
+                                <p class="mp-bestsellers__item-text">Объем и совершенство ваших губ</p>
+                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                            </div>
+                            <div class="mp-bestsellers__item-small">
+                                <div class="mp-bestsellers__item-img-wrapper">
+                                    <img src="../images/img/main-page/bestsellers5.png" alt="Shineless" class="mp-bestsellers__item-img mp-bestsellers__item-img_bg">
+                                </div>
+                                <p class="mp-bestsellers__item-title">Shineless</p>
+                                <p class="mp-bestsellers__item-text">Ровная кожа без жирного блеска
+                                </p>
+                                <a href="#" class="btn-main mp-bestsellers__item-btn">подробнее...</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="mp-feature-section">
@@ -549,41 +580,6 @@
 
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="mp-catalog-section">
-                <div class="c-container c-container_mp-catalog">
-                    <div class="c-row c-row_mp-catalog">
-                        <div class="mp-catalog__col mp-catalog__col_small">
-                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
-                                <img src="../images/img/main-page/catalog1.png" alt="Продукция" class="mp-catalog-item__img">
-                                <p class="mp-catalog-item__title mp-catalog-item__title_blue">Очищение
-                                    <br>и увлажнение</p>
-                            </a>
-                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
-                                <img src="../images/img/main-page/catalog2.png" alt="Продукция" class="mp-catalog-item__img">
-                                <p class="mp-catalog-item__title mp-catalog-item__title_gray">ОТ МОРЩИН</p>
-                            </a>
-                        </div>
-                        <div class="mp-catalog__col mp-catalog__col_big">
-                            <div class="mp-catalog-item mp-catalog-item_big">
-                                <h1 class="base-page-title base-page-title_mp-catalog">каталог</h1>
-                                <img src="../images/img/main-page/catalog3.png" alt="Продукция" class="mp-catalog-item__img">
-                                <a href="#" class="btn-main btn-main_mp-catalog">В каталог</a>
-                            </div>
-                        </div>
-                        <div class="mp-catalog__col mp-catalog__col_small">
-                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
-                                <img src="../images/img/main-page/catalog4.png" alt="Продукция" class="mp-catalog-item__img">
-                                <p class="mp-catalog-item__title mp-catalog-item__title_pink">от акне</p>
-                            </a>
-                            <a href="#" class="mp-catalog-item mp-catalog-item_small">
-                                <img src="../images/img/main-page/catalog5.png" alt="Продукция" class="mp-catalog-item__img">
-                                <p class="mp-catalog-item__title mp-catalog-item__title_green">ОТ ПИГМЕНТАЦИИ</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </section>
             <section class="mp-blog-section">
                 <div class="c-container">
@@ -599,13 +595,13 @@
                                     <span class="mp-blog-item__header__text">Эфиры</span>
                                     <span class="mp-blog-item__header__text">11.08.2021</span>
                                     <span class="mp-blog-item__header__text">
-                            <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
-                                class="mp-blog-item__header__icon">
-                            1050</span>
+                                <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                    class="mp-blog-item__header__icon">
+                                1050</span>
                                     <span class="mp-blog-item__header__text">
-                            <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
-                                class="mp-blog-item__header__icon">
-                            205</span>
+                                <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                    class="mp-blog-item__header__icon">
+                                205</span>
                                 </div>
                                 <div class="mp-blog-item__inner">
                                     <a href="#" class="mp-blog-item__title">Натуральное превосходство</a>
@@ -624,13 +620,13 @@
                                     <span class="mp-blog-item__header__text">Эфиры</span>
                                     <span class="mp-blog-item__header__text">11.08.2021</span>
                                     <span class="mp-blog-item__header__text">
-                            <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
-                                class="mp-blog-item__header__icon">
-                            1050</span>
+                                <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                    class="mp-blog-item__header__icon">
+                                1050</span>
                                     <span class="mp-blog-item__header__text">
-                            <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
-                                class="mp-blog-item__header__icon">
-                            205</span>
+                                <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                    class="mp-blog-item__header__icon">
+                                205</span>
                                 </div>
                                 <div class="mp-blog-item__inner">
                                     <a href="#" class="mp-blog-item__title">Натуральное превосходство</a>
@@ -649,13 +645,13 @@
                                     <span class="mp-blog-item__header__text">Эфиры</span>
                                     <span class="mp-blog-item__header__text">11.08.2021</span>
                                     <span class="mp-blog-item__header__text">
-                            <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
-                                class="mp-blog-item__header__icon">
-                            1050</span>
+                                <img src="../images/icons/blog-like.svg" alt="Иконка лайков новости"
+                                    class="mp-blog-item__header__icon">
+                                1050</span>
                                     <span class="mp-blog-item__header__text">
-                            <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
-                                class="mp-blog-item__header__icon">
-                            205</span>
+                                <img src="../images/icons/blog-eye.svg" alt="Иконка просмотра новости"
+                                    class="mp-blog-item__header__icon">
+                                205</span>
                                 </div>
                                 <div class="mp-blog-item__inner">
                                     <a href="#" class="mp-blog-item__title">Натуральное превосходство</a>
@@ -668,54 +664,51 @@
                     </div>
                 </div>
             </section>
-        </div>
+            </div>
 
-    </div>
-    <footer class="main-footer">
-        <div class="c-container">
-            <div class="c-row c-row__main-footer">
-                <div class="main-footer__col">
-                    <div class="footer-social">
-                        <form class="email-form email-form_footer">
-                            <span class="email-form__title">Подписаться на рассылку</span>
-                            <div class="email-form__inner">
-                                <label class="email-form__label">
-                                    <input type="email" class="email-form__input" placeholder="E-mail">
-                                </label>
-                                <button class="btn-white-border btn-white-border_email-form" type="submit">подписаться</button>
-                            </div>
-                        </form>
-                        <a href="#" class="main-footer__text-link">Доставка и оплата</a>
-                        <div class="footer-social__wrapper footer-social__wrapper_desktop">
-                            <p class="footer-social__title">Присоединяйтесь</p>
-                            <div class="footer-social__items-row">
-                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
-                                    <span class="visually-hidden">Космедикс в инстаграм</span>
-                                </a>
-                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
-                                    <span class="visually-hidden">Космедикс в фейсбук</span>
-                                </a>
-                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
-                                    <span class="visually-hidden">Космедикс в ютуб</span>
-                                </a>
+        </div>
+        <footer class="main-footer">
+            <div class="c-container">
+                <div class="c-row c-row__main-footer">
+                    <div class="main-footer__col">
+                        <div class="footer-social">
+                            <form class="email-form email-form_footer">
+                                <span class="email-form__title">Подписаться на рассылку</span>
+                                <div class="email-form__inner">
+                                    <label class="email-form__label">
+                                        <input type="email" class="email-form__input" placeholder="E-mail">
+                                    </label>
+                                    <button class="btn-white-border btn-white-border_email-form" type="submit">подписаться</button>
+                                </div>
+                            </form>
+                            <div class="footer-social__wrapper footer-social__wrapper_desktop">
+                                <p class="footer-social__title">Присоединяйтесь</p>
+                                <div class="footer-social__items-row">
+                                    <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
+                                        <span class="visually-hidden">Космедикс в инстаграм</span>
+                                    </a>
+                                    <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
+                                        <span class="visually-hidden">Космедикс в фейсбук</span>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
+                                        <span class="visually-hidden">Космедикс в ютуб</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="main-footer__col">
-                    <div class="main-footer__empty-top">
-                        <a href="#" class="main-footer__text-link main-footer__list-item">Политика
-                        конфидециальности</a>
-                        <a href="#" class="main-footer__text-link main-footer__list-item">Пользовательское
-                        соглашение</a>
                     </div>
-                </div>
-                <div class="main-footer__col">
-                    <div class="main-footer__empty-top">
-                        <p class="main-footer__text main-footer__list-item">ООО «Бьюти Концепт» (ГК ERSTA)</p>
+                    <div class="main-footer__col">
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Политика
+                    конфидециальности</a>
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Пользовательское
+                    соглашение</a>
+                        <a href="#" class="main-footer__text-link main-footer__list-item">Доставка и оплата</a>
+                    </div>
+                    <div class="main-footer__col">
+                        <p class="main-footer__text main-footer__list-item">ИП Зонова Элеонора Михайловна</p>
                         <a href="tel:+7-495-644-00-08" class="main-footer__text-link main-footer__list-item">+7 (495)
-                        644-00-08</a>
+                    644-00-08</a>
                         <a href="mailto:info@cosmedix-russia.ru" class="main-footer__text-link main-footer__list-item">info@cosmedix-russia.ru</a>
                         <div class="footer-social__wrapper footer-social__wrapper_mobile">
                             <p class="footer-social__title">Присоединяйтесь</p>
@@ -734,9 +727,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script src="../../../dist/js/app.min.js"></script>
+        </footer>
+        <script src="../../../dist/js/app.min.js"></script>
 </body>
 
 </html>

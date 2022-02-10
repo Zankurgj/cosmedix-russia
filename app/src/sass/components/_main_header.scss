@@ -14,6 +14,7 @@
   height: 58px;
   background-color: #dee3ed;
   @media all and (max-width: $mobile-bp) {
+    display: block;
     position: relative;
     height: 50px;
     background-color: #fff;
@@ -28,8 +29,8 @@
 }
 .main_header__top_btn {
   display: block;
-  height: 100%;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   background-repeat: no-repeat;
   background-position: center;
   &:hover {
@@ -37,6 +38,12 @@
   }
   @media all and (max-width: $mobile-bp) {
     width: 30px;
+  }
+}
+.main_header__top_btn__ds {
+  display: none;
+  @media all and (max-width: $mobile-bp) {
+    display: block;
   }
 }
 // SEACRH
@@ -118,11 +125,10 @@
   background-image: url("../images/icons/header-lk.svg");
 }
 .main_header__top_btn_basket {
-  background-image: url("../images/icons/header-basket.svg");
+  background-image: url("../images/icons/basket-new.svg");
 }
 .main_header__top_btn_search {
   background-image: url("../images/icons/header-search.svg");
-  margin-right: 60px;
   @media all and (max-width: $mobile-bp) {
     margin-right: 0;
   }
@@ -144,7 +150,7 @@
   }
 }
 .main_header__bottom {
-  height: 98px;
+  // height: 116px;
   @media all and (max-width: $mobile-bp) {
     position: fixed;
     top: 0;
@@ -161,6 +167,18 @@
       opacity: 1;
       transition: opacity 0.2s $base-duration $base-timing;
     }
+  }
+}
+.main_header__bottom-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 0 10px;
+}
+.main_header__bottom-head__btns {
+  display: flex;
+  @media all and (max-width: $mobile-bp) {
+    display: none;
   }
 }
 .c-container_main_header {
@@ -200,7 +218,6 @@
 }
 .main_header__logo {
   display: table;
-  padding: 20px 0 0 10px;
   @media all and (max-width: $mobile-bp) {
     padding: 0;
     margin-bottom: 40px;

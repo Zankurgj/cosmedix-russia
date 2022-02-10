@@ -13,6 +13,18 @@
 
 <body class="">
     <header class="main_header">
+        <div class="main_header__search js--header-search">
+            <label class="main_header__search-wrapper">
+                <span class="visually-hidden">Окно поиска</span>
+                <input type="search" class="main_header__search-input js--header-search-input" placeholder="Поиск по продуктам...">
+            </label>
+            <button class="main_header__search-btn main_header__search-btn_search">
+                <span class="visually-hidden">Поиск</span>
+            </button>
+            <button class="main_header__search-btn main_header__search-btn_close js--toggle-search">
+                <span class="visually-hidden">Закрыть поиск</span>
+            </button>
+        </div>
         <div class="main_header__top">
             <div class="c-container c-container_main_header_top">
                 <a href="/" class="main_header__mobile-logo">
@@ -22,25 +34,13 @@
                     <span class="btn-hamburger__icon"></span>
                     <span class="visually-hidden">меню</span>
                 </button>
-                <div class="main_header__search js--header-search">
-                    <label class="main_header__search-wrapper">
-                        <span class="visually-hidden">Окно поиска</span>
-                        <input type="search" class="main_header__search-input js--header-search-input" placeholder="Поиск по продуктам...">
-                    </label>
-                    <button class="main_header__search-btn main_header__search-btn_search">
-                        <span class="visually-hidden">Поиск</span>
-                    </button>
-                    <button class="main_header__search-btn main_header__search-btn_close js--toggle-search">
-                        <span class="visually-hidden">Закрыть поиск</span>
-                    </button>
-                </div>
-                <button class="main_header__top_btn main_header__top_btn_search js--toggle-search">
+                <button class="main_header__top_btn main_header__top_btn__ds main_header__top_btn_search js--toggle-search">
                     <span class="visually-hidden">Открыть поиск</span>
                 </button>
-                <button class="main_header__top_btn main_header__top_btn_lk">
+                <button class="main_header__top_btn main_header__top_btn__ds main_header__top_btn_lk">
                     <span class="visually-hidden">Личный кабинет</span>
                 </button>
-                <button class="main_header__top_btn main_header__top_btn_basket">
+                <button class="main_header__top_btn main_header__top_btn__ds main_header__top_btn_basket">
                     <span class="visually-hidden">Корзина</span>
                 </button>
             </div>
@@ -51,10 +51,23 @@
                 <button class="main_header-btn-close js--header-nav-toggle" type="button">
                     <span class="visually-hidden">Закрыть</span>
                 </button>
-                <a href="/" class="main_header__logo">
-                    <span class="visually-hidden">Главная страница</span>
-                    <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
-                </a>
+                <div class="main_header__bottom-head">
+                    <a href="/" class="main_header__logo">
+                        <span class="visually-hidden">Главная страница</span>
+                        <img class="main_header__logo_img" src="../images/icons/header-logo.svg" alt="Логотип Космедикс">
+                    </a>
+                    <div class="main_header__bottom-head__btns">
+                        <button class="main_header__top_btn main_header__top_btn_search js--toggle-search">
+                            <span class="visually-hidden">Открыть поиск</span>
+                        </button>
+                        <button class="main_header__top_btn main_header__top_btn_lk">
+                            <span class="visually-hidden">Личный кабинет</span>
+                        </button>
+                        <button class="main_header__top_btn main_header__top_btn_basket">
+                            <span class="visually-hidden">Корзина</span>
+                        </button>
+                    </div>
+                </div>
                 <nav class="main_header__nav">
                     <ul class="main_header__list">
 
@@ -184,7 +197,6 @@
                                 <button class="btn-white-border btn-white-border_email-form" type="submit">подписаться</button>
                             </div>
                         </form>
-                        <a href="#" class="main-footer__text-link">Доставка и оплата</a>
                         <div class="footer-social__wrapper footer-social__wrapper_desktop">
                             <p class="footer-social__title">Присоединяйтесь</p>
                             <div class="footer-social__items-row">
@@ -203,32 +215,29 @@
 
                 </div>
                 <div class="main-footer__col">
-                    <div class="main-footer__empty-top">
-                        <a href="#" class="main-footer__text-link main-footer__list-item">Политика
-                        конфидециальности</a>
-                        <a href="#" class="main-footer__text-link main-footer__list-item">Пользовательское
-                        соглашение</a>
-                    </div>
+                    <a href="#" class="main-footer__text-link main-footer__list-item">Политика
+                    конфидециальности</a>
+                    <a href="#" class="main-footer__text-link main-footer__list-item">Пользовательское
+                    соглашение</a>
+                    <a href="#" class="main-footer__text-link main-footer__list-item">Доставка и оплата</a>
                 </div>
                 <div class="main-footer__col">
-                    <div class="main-footer__empty-top">
-                        <p class="main-footer__text main-footer__list-item">ООО «Бьюти Концепт» (ГК ERSTA)</p>
-                        <a href="tel:+7-495-644-00-08" class="main-footer__text-link main-footer__list-item">+7 (495)
-                        644-00-08</a>
-                        <a href="mailto:info@cosmedix-russia.ru" class="main-footer__text-link main-footer__list-item">info@cosmedix-russia.ru</a>
-                        <div class="footer-social__wrapper footer-social__wrapper_mobile">
-                            <p class="footer-social__title">Присоединяйтесь</p>
-                            <div class="footer-social__items-row">
-                                <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
-                                    <span class="visually-hidden">Космедикс в инстаграм</span>
-                                </a>
-                                <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
-                                    <span class="visually-hidden">Космедикс в фейсбук</span>
-                                </a>
-                                <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
-                                    <span class="visually-hidden">Космедикс в ютуб</span>
-                                </a>
-                            </div>
+                    <p class="main-footer__text main-footer__list-item">ИП Зонова Элеонора Михайловна</p>
+                    <a href="tel:+7-495-644-00-08" class="main-footer__text-link main-footer__list-item">+7 (495)
+                    644-00-08</a>
+                    <a href="mailto:info@cosmedix-russia.ru" class="main-footer__text-link main-footer__list-item">info@cosmedix-russia.ru</a>
+                    <div class="footer-social__wrapper footer-social__wrapper_mobile">
+                        <p class="footer-social__title">Присоединяйтесь</p>
+                        <div class="footer-social__items-row">
+                            <a href="https://www.instagram.com/cosmedix_RU/" target="_blank" class="footer-social__item footer-social__item_inst">
+                                <span class="visually-hidden">Космедикс в инстаграм</span>
+                            </a>
+                            <a href="https://www.facebook.com/CosmedixRussia/" target="_blank" class="footer-social__item footer-social__item_fb">
+                                <span class="visually-hidden">Космедикс в фейсбук</span>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCSqJpARNfv5LZdMPA_m9JnQ" target="_blank" class="footer-social__item footer-social__item_yt">
+                                <span class="visually-hidden">Космедикс в ютуб</span>
+                            </a>
                         </div>
                     </div>
                 </div>

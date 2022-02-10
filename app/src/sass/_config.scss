@@ -32,12 +32,12 @@ body {
 
 // BASE CLASSES
 .c-page__wrapper {
-  padding-top: 156px;
+  padding-top: 155px;
   width: 100%;
   min-width: 0;
   flex-grow: 1;
   @media all and (max-width: $mobile-bp) {
-    padding-top: 55px;
+    padding-top: 50px;
   }
 }
 .c-container-fluid {
