@@ -23,7 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
   initLikeBtnListener();
   initBaskedPopupListener();
   initPartnersPopupListener();
+  initSpoilerBtnHandler();
 });
+
+const initSpoilerBtnHandler = () => {
+  $(".js--spoiler-btn").on("click", toggleMenuSpoiler);
+};
+const toggleMenuSpoiler = (evt) => {
+  const btn = $(evt.currentTarget);
+  const spoilerInner = btn.siblings(".js--spoiler-inner");
+  btn.toggleClass("menu__spoiler-item_opened");
+  spoilerInner.slideToggle(300);
+};
 
 const initPartnersPopupListener = () => {
   $(".js--partners-popup-toggle").on("click", togglePartnersPopupHandler);

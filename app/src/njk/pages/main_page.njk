@@ -16,12 +16,9 @@
             </div>
             {% endfor %}
         </div>
-        <div class="mp-slider__dots c-container js--mp-top-dots">
-
-        </div>
+        <div class="mp-slider__dots c-container js--mp-top-dots"></div>
     </section>
     <section class="mp-about-section">
-        <img src="../images/img/main-page/mp-bg1.png" alt="Фон" class="mp-about__img" aria-hidden="true">
         <div class="c-container c-container_mp-about">
             <h1 class="base-page-title base-page-title_mp-about">COSMEDIX. ПРОДУКТЫ, КОТОРЫЕ РАБОТАЮТ</h1>
             <h1 class="base-page-title base-page-title_mp-about base-page-title_mp-about-mobile">COSMEDIX. <br>
@@ -291,6 +288,7 @@
         <div class="c-container c-container_mp-feature">
             <h1 class="base-page-title base-page-title_mp-feature">УНИКАЛЬНЫЕ АКТИВНЫЕ <br> КОМПОНЕНТЫ COSMEDIX: </h1>
             {% set featureData = [
+            [
             {
             img: '../images/img/main-page/feature1.png',
             title: 'ЖИДКИЕ <br>
@@ -304,7 +302,9 @@
             img: '../images/img/main-page/feature2.png',
             title: 'СПИНОВЫЕ <br> ЛОВУШКИ',
             text: 'Это химические вещества, активно борющиеся со свободными радикалами.'
-            },
+            }
+            ],
+            [
             {
             img: '../images/img/main-page/feature3.png',
             title: 'ТЕПРЕНОН',
@@ -316,58 +316,36 @@
             title: 'БАКУЧИОЛ',
             text: 'Природный заменитель ретинола. Незаменим для тех, кто по каким- либо причинам не может использовать
             ретинол, но при этом, желает получить эффект сравнимый с ретинолом.'
-            },
+            }
+            ],
+            [
             {
             img: '../images/img/main-page/feature5.png',
             title: 'Тетрагексилдецил <br> аскорбат',
             text: 'Модифицированная форма витамина С (Тетрагексилдецил аскорбат), которая способна проникать в самые
             глубокие слои кожи.'
             }
+            ]
             ] %}
-            <div class="c-row c-row_mp-feature">
+            <div class="mp-feature__slider base-slider-arrow js--mp-about-slider">
                 {% for item in featureData %}
-                <div class="mp-feature-item-col">
-                    <div class="mp-feature-item">
-                        <div class="mp-feature-item__left-side">
-                            <img src="{{item.img}}" alt="Продукция" class="mp-feature-item__img">
-                            <p class="mp-feature-item__title">{{item.title|safe}}</p>
+                <div class="mp-feature__slide">
+                    <div class="c-row c-row_mp-feature__slide">
+                        {% for slide in item %}
+                        <div class="mp-feature-item-col">
+                            <div class="mp-feature-item">
+                                <div class="mp-feature-item__left-side">
+                                    <img src="{{slide.img}}" alt="Продукция" class="mp-feature-item__img">
+                                    <p class="mp-feature-item__title">{{slide.title|safe}}</p>
+                                </div>
+                                <div class="mp-feature-item__right-side">
+                                    <p class="mp-feature-item__text">{{slide.text}}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mp-feature-item__right-side">
-                            <p class="mp-feature-item__text">{{item.text}}</p>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
-                {% endfor %}
-            </div>
-            <div class="mp-feature__mobile-slider base-slider-arrow js--mp-mobile-slider">
-                <div class="mp-feature__mobile-slide">
-                    {% for item in featureData %}
-                    {% if (loop.index <= 3) %} <div class="mp-feature-item mp-feature-item_mobile">
-                        <div class="mp-feature-item__left-side">
-                            <img src="{{item.img}}" alt="Продукция" class="mp-feature-item__img">
-                            <p class="mp-feature-item__title">{{item.title|safe}}</p>
-                        </div>
-                        <div class="mp-feature-item__right-side">
-                            <p class="mp-feature-item__text">{{item.text}}</p>
-                        </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-
-            <div class="mp-feature__mobile-slide">
-                {% for item in featureData %}
-                {% if (loop.index > 3) %}
-                <div class="mp-feature-item mp-feature-item_mobile">
-                    <div class="mp-feature-item__left-side">
-                        <img src="{{item.img}}" alt="Продукция" class="mp-feature-item__img">
-                        <p class="mp-feature-item__title">{{item.title|safe}}</p>
-                    </div>
-                    <div class="mp-feature-item__right-side">
-                        <p class="mp-feature-item__text">{{item.text}}</p>
-                    </div>
-                </div>
-                {% endif %}
                 {% endfor %}
             </div>
         </div>

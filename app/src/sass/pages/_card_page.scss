@@ -178,7 +178,7 @@
 }
 // DESCRIPTION
 .card__product-name {
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   font-weight: bold;
   font-size: 36px;
   line-height: 46px;
@@ -187,14 +187,22 @@
   color: #78859d;
   text-transform: uppercase;
   @media all and (max-width: $mobile-bp) {
-    margin-bottom: 32px;
+    margin-bottom: 10px;
     font-size: 16px;
     line-height: 24px;
   }
 }
+.card__product-subname {
+  font-size: 21px;
+  line-height: 27px;
+  text-align: center;
+  color: #7d828c;
+  @media all and (max-width: $mobile-bp) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .card__product-cost {
-  display: block;
-  margin-bottom: 13px;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
@@ -220,7 +228,8 @@
   justify-content: center;
 }
 .card__product-stars_desktop {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  justify-content: flex-end;
   @media all and (max-width: $mobile-bp) {
     display: none;
   }
@@ -238,9 +247,9 @@
   }
 }
 .card__product-description {
-  margin-bottom: 8px;
-  font-size: 21px;
-  line-height: 27px;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 26px;
   text-align: center;
   color: #333;
   @media all and (max-width: $mobile-bp) {
@@ -268,21 +277,20 @@
   text-align: center;
 }
 .card__description-text_article_desktop {
-  margin-bottom: 67px;
-  @media all and (max-width: $mobile-bp) {
-    display: none;
-  }
+  margin-bottom: 20px;
 }
 .card__product-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-bottom: 37px;
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
   @media all and (max-width: $mobile-bp) {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 30px;
   }
+}
+.card__product-bottom__text {
+  margin-bottom: 26px;
 }
 .card__product-counter-wrapper {
   margin-right: 23px;
@@ -296,7 +304,7 @@
 .card__description-text_bottom {
   margin-right: 23px;
   @media all and (max-width: $mobile-bp) {
-    margin: 0;
+    margin-right: 10px;
   }
 }
 .card__btn-more {
@@ -430,11 +438,6 @@
     line-height: 20px;
   }
 }
-.description-sep {
-  @media all and (max-width: $mobile-bp) {
-    display: block;
-  }
-}
 // PROMO
 .card-promo__title {
   margin-bottom: 68px;
@@ -456,7 +459,17 @@
 }
 .card__comment-more-btn {
   margin-top: 30px;
+  margin-bottom: 34px;
   @media all and (max-width: $mobile-bp) {
     margin-top: 15px;
   }
+}
+.card__comment-btn {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px;
+  width: 100%;
+  max-width: 390px;
 }
